@@ -1,0 +1,785 @@
+Do you prefer this or do you prefer this?
+One of them works.
+OK.
+Hi, everyone.
+So I'm Abhi, and the team's here.
+Shubham, this is Antonio, and Jesus.
+We're here all day, and I'm going
+to give you a little bit of a brief about who we are,
+what we do, just some background context.
+Give some context of what the day-to-day situation is
+of who our users are.
+And then we'll give you a demo of our platform.
+So we have to, the entire challenge
+is about making the day of genomic pathology
+better, which means you have to understand what
+the platform is that we have, which is called SOFIA DDM.
+DDM stands for democratizing data-driven medicine.
+So that's the challenge, right?
+You have to go get the platform APIs,
+come up with creative ways to optimize the workflow,
+and then so on.
+How many of you are familiar with genomics?
+OK, so we have some slides here,
+which for those of you who raised their hands,
+can snooze, because we've got a little bit
+of a basic crash course.
+But I think we'll just go through it, right?
+So let me get started.
+But before I do that, we are here
+to support you, not just with your specific questions
+around the API, the challenge, the platform,
+but then if you have questions around technology,
+working in not such a big, but not such a small tech
+company, what it takes, general career advice,
+and so on and so forth, I'd be happy to help.
+OK, so a little bit about SOFIA genetics.
+For those of you who attended the talk yesterday,
+I don't think all of you were there.
+So the company is around 15 years old, roughly, right?
+Headquartered in Switzerland, born out of EPFL,
+and it's inspirational for all of you.
+The founder has actually worked in the lab, UV,
+as a biologist.
+He's done experiments, and they did a PhD and stuff,
+and then went on to found this company 15 years ago.
+He and a couple of other guys, starting out of EPFL,
+and now company IPO in 2021.
+Today has 400 employees, 400, 430 employees,
+has customers across the world,
+serving 800-plus institutions,
+and doing more than 2 and 1 half million
+genomic profiles.
+And yeah, lots of IP, lots of great business stuff,
+very cool tech, and great people to work with.
+Most of my colleagues, I joined the company
+four and a half years ago, before we
+had the big pharma and robotics.
+Most of the colleagues there have backgrounds
+in physics, in biology, in technology.
+A lot of them came right out of academia
+and jumped right into this and haven't left the company
+since.
+A lot have come from different industries,
+so it's a good mix of.
+So if I were to give you one piece of care advice,
+when you go on, start work for companies like that.
+Don't jump into a big corporate, you'll get lost.
+Unless you're in a rotation program.
+Or do your own thing, yeah?
+That's one piece of advice I would give.
+So the whole idea about social genetics
+and biodemocratizing data-driven medicine
+is the whole vision was to be
+able to connect data points, and it
+can create intelligence to help patients
+across the world, regardless of where they are.
+Because people are people, and diseases are diseases.
+They don't discriminate between geography and race
+and then so on.
+So the pattern and the information
+that you can find that help one patient,
+let's say over here, the example being in Istanbul,
+should be able to help similar patients
+of similar nature in, let's say, here in Zurich.
+That was the whole thing.
+And how do you make that connection?
+How do you help people in the labs or hospitals
+provide insights and information
+to make data-driven decisions and not only experience
+this?
+So that was the whole thing, grand big vision.
+How do you bring that to life?
+You bring that to life really by the platform
+that has created the cloud-based, decentralized
+analytics platform.
+And the whole idea really is to take different modalities
+of data, genomics, radiomics, clinical,
+bring that together, harmonize it,
+connect all the data points, and create
+the necessary insights to help with specific decisions
+to be made.
+The company obviously had to start somewhere.
+So the focus was really on genomics,
+because around that time, genomics was starting
+to come big.
+And the majority of our customers
+are in the genomics space.
+And that's the workflow we will be describing to you about.
+So who are the users and who are our customers?
+There are two.
+One is in the lab, in the genomic professional,
+geneticists, bioinformaticians, pathologists,
+and so on.
+Those who actually process the genomic data,
+understand all the information,
+and create what we call a genomic report, which
+is then given to our second set of users,
+were oncologists and clinicians who take that information
+and make decisions for patients.
+And they also use the platform that we
+have to derive certain insights and link it
+to medicine and different medicines.
+But that's not the use case we will talk about today.
+We'll be focusing on the lab professional.
+Obviously, something like genomics
+and also all the modalities serves both oncology
+and bioinformatics.
+So with that, very, very brief background.
+I'll hand over to Shubham.
+By the way, be nice to him.
+Before this, he worked in a non-health care industry,
+in the travel and hospitality industry.
+But he's learned genomics fairly, very quickly
+since he was a tiny kid.
+This is the first time I'm going to hear him
+give a genomic ratcheting.
+No pressure.
+And yes, maybe half of you guys know who that is.
+Let's start.
+Hold it closer.
+No, you have to hold it closer.
+Hold it closer to the line.
+So that I know, but I don't know this.
+I have a question.
+OK.
+OK, so let's start with genomics 101.
+The first part is, what are variants?
+Because you're going to be hearing a lot of most
+of our students are conflicted variants.
+So a variant is essentially a variation of a person's DNA
+from, let's say, a person's gene.
+There are two sort of categories
+that we break them into.
+One is germline, which is essentially inherited.
+You can inherit from your parents,
+or there can be something that is, when a person is
+conceptualized, let's say, when they are born,
+it is essentially a de novo variation.
+Or it can be acquired.
+So it can be a variation that your DNA has acquired
+over your legacy.
+There are multiple different risk factors
+that can actually cause that to happen.
+So the key takeaway from this side of the issue
+is cancer is not a single event.
+It is, let's say, a process that can take years,
+or let's say decades.
+So it starts with DNA damage, mutation,
+then it goes on to, let's say, a particular size
+where there is no regulation possible by the tumour
+compressor.
+It reaches a particular mass at which
+the station becomes cancer.
+And if it is allowed to go without treatment,
+it can go into a metastasis stage, which
+is sort of a stage.
+Then what does the journey look like for a patient?
+So they said a pretty long journey
+for a particular patient.
+It starts with somebody having some symptoms.
+At some point, they decide that this does not seem to go away.
+I should do a CTF, see my GP.
+They go there.
+The GP tries to resolve it.
+They observe it for some time.
+That is when they would actually send it.
+They would refer it for a particular scan,
+for some particular test.
+If the scan shows something unusual,
+that is when they would involve an oncologist.
+The oncologist would essentially look at it, observe it.
+And if they see merit, this is when
+they would recommend essentially doing a biopsy,
+after which essentially actually
+H plus E scanning is done, or let's say,
+a genomic testing is actually recommended.
+If this is actually, at that point,
+they know whether the tumour is aggressive,
+what kind of tumour it is, how to essentially approach it,
+what the treatment can look like,
+and this is where essentially the treatment starts.
+And of course, after that,
+there is a continuous process of scans,
+monitoring, et cetera.
+So this, the vertical, the horizontal bar below
+essentially is a loop that will sort of continue.
+An important takeaway from this is this surgery,
+sorry, this genomic testing is essentially
+the part where the actual treatment essentially starts.
+And hence, this is a sort of very critical step
+for the patient themselves,
+and they are actually looking forward
+to feeling better as soon as they can.
+So this was sort of the genomic samples.
+Now let's move on to a day in the life of a pathologist.
+So a genomic pathologist.
+She, looking at the genomic analysis
+is not the only job that she does.
+She had actually a varied set of responsibilities.
+She would be doing administrative work.
+She has lab director duties.
+She would be doing vet lab stuff.
+She would have to do departmental reviews.
+She would have to do hematopathyology
+and molecular surveys.
+So there are actually quite a varied set of things
+that she needs to do in her day,
+and it's not just essentially looking
+at the genomic results.
+But as I said earlier,
+this is what her day probably looks like,
+looking at my emails, departmental meetings,
+microscopy work, tissue assessment, technical validation.
+And on top of that,
+she might have a long list of cases
+which are waiting for the treatment, right?
+And essentially, each of these cases
+are actual patients who are looking forward
+to getting back from the pathology lab.
+So, and on top of this,
+as you know, the complexity is exploding.
+So, 35% of the FDA approved treatments today
+require some sort of genomic analysis.
+The knowledge which used to double,
+let's say in 50 years, is now doubling every year.
+So the knowledge that a pathologist would have
+would be relevant half as much next year.
+So there is no chance a pathologist can keep up
+with all the publications of the new knowledge
+that is coming out.
+Plus, the data from each genomic analysis
+is also exploding, right?
+Like we talked about this yesterday,
+almost seven and a half data bytes of data each year.
+Each analysis has as much as 100 gigabytes plus.
+And like we discussed,
+there are so many pressures pulling on pathologists
+on every case, so many responsibilities.
+The data is coming from disparate technologies.
+The literature is evolving.
+And of course, you have a pressure to increase the output.
+That is sort of cool.
+So, imagine this.
+On a Monday, you arrive in the lab.
+There have been genomic analysis
+that have been running since the weekend overnight.
+You log in through SOFIA, and there are essentially
+so many analysis which are waiting for you.
+So you have to actually work on those,
+provide your interpretation, create a report,
+and this is when the patient will actually know
+what their analysis says.
+And essentially what she does,
+actually on a case-by-case basis,
+is what I told you would now come in,
+and actually show you guys the data.
+Please pay attention to this part,
+because this is the interface
+that you have to sort of work on this,
+and try to optimize them.
+So now we are going to see how VDM works in practice.
+This part actually will be very helpful
+for understanding the challenge later on.
+So I will just show you after about the challenge,
+and this part will help you really
+to get a bit of context of how it works.
+Okay, so let's sign in.
+And actually will be exactly the same thing.
+Okay, perfect.
+So here indeed is our testing account,
+and we prepared some accounts
+for indeed the different teams in the Akaton.
+So let's just hit one for the sake of this demo.
+Okay, getting here you will see already the landscape.
+There are different parts, different products
+also that Sophia Genetics offers.
+We'll focus right now on Sophia VDM for genomics,
+which is this one.
+And indeed we arrived on the landscape
+for web genomics.
+So here let's make a small connection
+on what also Shubham explained about
+Somatica in general,
+and essentially there are different applications.
+So at Sophia Genetics we have hundreds actually
+of different products.
+And if you think of a product,
+you can think that as a set of genes.
+So we say in general like a gene panel,
+which help the pathologists to figure it out
+and to search exactly for a specific disease,
+for example,
+where there could be some interesting mutations.
+So here in this demo account
+we prepared a few examples,
+and we will focus on the
+hereditary cancer solutions.
+So here in this,
+just for making again the connection
+with the part of Shubham,
+the hereditary cancer solution
+is related to the germline,
+enhanced clinical exosolution
+also related to germlines,
+MSK access instead is the somatic one.
+So just as a reminder,
+this one it means that the patient
+came to the hospital
+and the analysis were then taken from the blood.
+If it was a somatic,
+it would have been a tumor sample.
+So let's go on the hereditary cancer run.
+So here is the finder essentially
+where we can find the different runs
+which has been uploaded.
+In here there are different leaders.
+For the sake of time I will not go through
+the different solutions
+and the different tool that we have.
+However, let's focus on a specific run.
+So there is a concept quite important
+about run analysis and interpretations.
+A run essentially it's a series,
+it's a batch of different analysis
+which has been done together.
+You have to imagine that
+when you are in a laboratory
+you don't do one analysis by yourself.
+You try to connect everything together
+and have batches all together.
+And this is reflected here as well.
+So you have in this specific run
+which is called the hereditary cancer run,
+you have different samples.
+This means essentially in general
+one sample corresponds to one patient.
+Let's open one
+and you can see here a third level
+which is the interpretation.
+The interpretation essentially is
+you can think that about
+the evaluation, the assessment
+which is done by the pathologist
+while checking that specific sample.
+You can have different people in a lab
+and you can really have different assessments
+so indeed you can have different interpretations
+which are created.
+I just opened one
+and here you end up in the main landscape
+of social genetics
+for a specific interpretation.
+For, let's say,
+the navigator, let's say, is in the top left
+so you can always know where you are
+by looking here.
+And there are five main tasks.
+The first one is the overview.
+You can think that a little bit as a summary
+and how you link the information,
+the detailed information
+which is present in the other tasks.
+So here the idea is that
+a pathologist came, have a look,
+okay, this is the situation,
+now I can go more in the details.
+There are some parts which are related
+to the quality.
+I will not go through in details
+but the idea here is that,
+for example, you can have some biases
+during the lab preparation
+to link the analysis.
+So you want to know, for example,
+hey, is my sample good enough?
+I'm confident about what I'm seeing or not.
+And this kind of information
+you can find in the quality tab.
+The gene information, the gene tab
+is present here.
+Again, for the sake of time,
+I will not go too much into it
+but this really takes the concept
+that an analysis, an application
+is based on a gene panel.
+Gene panel means several genes
+and you can really have some information
+which are very relevant at the gene level
+and you will see them here.
+Now where I want to spend maybe
+a little bit more time
+is about on the variant table.
+The variant table is a list of mutations
+essentially that you have.
+So as Shubham said,
+we are comparing the sample
+coming from the patient
+against the reference gene.
+Here essentially you have the differences.
+Now you have to imagine that
+a large number of mutations
+are completely fine.
+In general, if you want to have an idea,
+you can divide essentially
+those mutations in three parts.
+Something which is benign.
+So it's fine.
+There are differences compared to the reference
+but that's completely okay.
+And in general you see here
+with more on the color green
+in this screen here.
+Then you have a bucket of variants
+that we don't know much.
+They are called VUS,
+Variants of Unknown Significance.
+And you see them in blue here.
+And then I will just remove one filter.
+You might have also some pathogenic ones
+which are in the indirect column.
+Without going too much in details,
+however, you will see that
+there are a lot of information
+which are present in the analysis.
+We have really quite a lot of information
+because this is actually what
+the pathologies will look like.
+If they have to go deeper
+and understand well how a mutation works,
+if it's really pathogenic or not,
+they need to have more details.
+So they need to go deeper and deeper.
+For doing that and also for helping
+the pathologies to navigate
+through those lists of good.
+This information, this quantity of information,
+there is also a series of filters
+that can be filled.
+Again, for the sake of time,
+I will not go through it.
+But here the main idea is that
+really you can build filters.
+For example, you have the different columns
+which are present here.
+And then indeed you can select
+some of those information
+and then you can pick up some category
+or put filters greater than a certain value,
+lower than a certain value,
+whatever is more relevant for the pathologies.
+Maybe a couple of things before finishing.
+There are also some information
+that can be included by the pathologies.
+For example, you can say,
+I really believe that this information here,
+this variant here is really pathogenic.
+I'm going essentially to apply that
+and then creating a plug.
+This is a bit of what also
+Abi was saying at the beginning
+about creating the community
+and sharing this information
+in different fashion.
+Those information are shared.
+So, for example, if I'm plugging something here
+because I strongly believe
+and I have evidences about that,
+this information is propagated, right?
+And other clients around the world
+can see also those information.
+Finally, we can indeed add
+this information to a report.
+Typically, there is a button
+for doing this information
+and going into the record.
+Indeed, you can see that variant
+popping up there.
+So here, I will stop here.
+As you can imagine,
+I try to be very concise
+to summarize all the information
+in a few minutes.
+However, please,
+in the person who are following up
+in our session, don't hesitate.
+I'm happy also to continue
+with the explanation
+to go a little bit more deeper.
+So, yeah, available anytime.
+And on that, I'll pass to Jesus
+for showing the chat.
+Ah, yeah, okay.
+Sure thing.
+On request, we are also
+showing a record.
+So, okay, we can preview that.
+The reason we do that
+is because, okay,
+you've been in this platform,
+you have all this information,
+you make your data selection.
+What's the ultimate output?
+The ultimate output,
+believe it or not,
+is this PDF.
+That goes out with the signatures, okay?
+That's the reality, right?
+So, if someone is more
+sort of integrated work,
+it will be a JSON
+that will get into some
+electronic health record system, right?
+So, after all of this
+fancy analysis and AI
+and bioinformatics pipelines
+and, you know, fancy AI
+and machine learning
+to synthesize the data,
+it's this PDF.
+Yes.
+That's good.
+So, yeah?
+Come on.
+Thank you.
+Yeah.
+So, now I will just tell you
+a little bit about
+what we would like you to do.
+Okay.
+So, basically the goal
+of the hackathon is rather open.
+We would like you to build something
+that is going to improve
+this workflow that we have just discussed.
+And we would like you to build something
+on top of the PDF, obviously,
+not something that might,
+nice idea that you have
+that you can build on Monday.
+Today you have to build something
+on top of the PDF
+that is going to improve the workflow
+for the pathogenesis.
+For the pathologist
+or for any of the users
+of Soviet Union, right?
+So, for example,
+you can build something
+that is going to look
+at everything that is in the interface,
+apply some NLM into it
+and come up with some sort of
+automatic report,
+like what we said,
+the report is what is being shared
+with the other doctors,
+with the other people
+that are treating the patients.
+So, the more precise
+that is, the better,
+but this is something
+that is also very important
+and generally is an obstacle
+that we have in our space
+is that it has to be precise.
+So, you cannot just say
+to Claude or to Chad GPT
+just write whatever
+because any hallucination
+can be very critical
+for the patient
+because if it is not correct
+then the patient will get misdiagnosed.
+So, this is something
+that you need to take into account.
+You can also work on
+pre-flagging the variants.
+So, this would be,
+you have all these variants
+with all that information.
+We try to flag it for our users,
+but maybe you can come up
+with a different system.
+For this, we will provide you
+an API that you can use
+to query all the information
+of those variants.
+You can also create
+some sort of filter editor,
+let's say,
+in which you just write
+a sentence and it is going
+to just show you the variants
+that meet that filter.
+Or you can also work
+on the pathologist
+by improving the way
+in which he handles
+some of the cases.
+He or she will have
+maybe hundreds of cases
+that he needs to go through.
+So, you can work on something
+that is going to make this faster.
+That is also good.
+Or any other thing
+that you can think of.
+Okay, so this is an open problem.
+You can do whatever you want.
+Play around with Sophia DDM.
+It's a test account, okay?
+So, it's a test instance.
+In theory, we expect
+that it's going to handle
+any load that you give it,
+but yeah, okay.
+Relax a little bit,
+but generally it should work, okay?
+So, you can do
+whatever you want.
+If you have problems,
+you can contact me.
+You can contact Antonio
+or you can contact Zubam
+or Abhi.
+That should not be a problem.
+Yeah?
+No?
+Okay, I'll just shout.
+I do that all day.
+So, I think the key point is
+we need to get information
+to patients faster.
+That's your challenge.
+You have this interface.
+You have the data.
+You have the data.
+And the problem statement
+requires a combination
+of genomics knowledge,
+variants, VUS,
+RACAV, and so on and so forth.
+It requires some sort of
+process know-how and thinking
+and because, you know,
+a lot of it is
+how do you manage the workflow
+and how do you process things faster
+or I have a lab.
+I have 120 people.
+I have 200 reports a day.
+How do I handle that?
+And obviously,
+it requires tech knowledge
+because you're going to be
+working with APIs and tech
+and whatever else
+that you guys want to use.
+Right?
+And obviously,
+it requires data science
+knowledge because you might
+want to apply AI
+in some context or the other.
+Right?
+So, again,
+it's very multidisciplinary.
+Right?
+Do not be...
+I'm just trying to make
+some encouragement.
+It seems complicated,
+but when you really
+take a step back,
+it can be very, very simple.
+Right?
+So, embrace the simplicity
+and give us some creative
+solutions to solve that problem.
+How to get the information
+out to patients faster.
+I think that in the
+interest of time,
+I'm just going to go very quickly.
+So, as we already said
+multiple times,
+we are going to be here.
+We are going to share
+with the guys
+that take this challenge,
+the credentials to log into
+the interface that
+Antonia just showed
+and some information
+on how it works
+and also the APIs
+that you can connect to.
+And, yeah,
+I think that that's it.
+Ah, yes.
+How we will evaluate your build.
+So, basically,
+we are interested in,
+as Avi said,
+we are interested
+in making things faster
+so that our patients
+or not our patients,
+the patients of the hospitals
+that work with us
+have a better treatment
+and have a...
+so that it is to a better outcome.
+Right?
+So, we are going to be
+judging how much
+you are going to be improving
+our user experience, let's say.
+What's important is that
+generally in tech,
+people are judging the software
+by the time that people spend
+in the software.
+In our case,
+it's a bit the opposite.
+We want people to spend
+as little as possible
+in our software
+so that they provide the results
+to the user
+as soon as possible.
+Right?
+But, as I said,
+these results have to be correct.
+We are going to judge
+on the technical execution,
+so we would like you
+to explain to us
+what you are doing.
+If you don't get to the end,
+explain to us how you would build it
+and we are going to evaluate this.
+And we are also going to
+evaluate the innovation.
+So, the more that you impress us,
+the more a new idea this is,
+the better the score is going to be.
+Okay.
+Now, they say this is
+what I want to share with you
+and this is who we are.
+Yep.
+Okay.
+So, most of you are interested
+maybe if you didn't,
+take a photo of this one,
+of all the information
+that will be provided.
+We are going to share
+the information.
+We will share the full email
+also the demo video.
+Okay.
+Thank you.
+Thank you.

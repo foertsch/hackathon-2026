@@ -1,0 +1,3140 @@
+1
+00:00:00,080 --> 00:00:04,280
+Do you prefer this or do you prefer this?
+
+2
+00:00:04,280 --> 00:00:05,080
+One of them works.
+
+3
+00:00:08,279 --> 00:00:09,759
+OK.
+
+4
+00:00:09,759 --> 00:00:10,240
+Hi, everyone.
+
+5
+00:00:10,240 --> 00:00:13,119
+So I'm Abhi, and the team's here.
+
+6
+00:00:13,119 --> 00:00:19,079
+Shubham, this is Antonio, and Jesus.
+
+7
+00:00:19,079 --> 00:00:22,079
+We're here all day, and I'm going
+
+8
+00:00:22,079 --> 00:00:24,559
+to give you a little bit of a brief about who we are,
+
+9
+00:00:24,559 --> 00:00:29,079
+what we do, just some background context.
+
+10
+00:00:29,079 --> 00:00:32,600
+Give some context of what the day-to-day situation is
+
+11
+00:00:32,600 --> 00:00:36,159
+of who our users are.
+
+12
+00:00:36,159 --> 00:00:39,359
+And then we'll give you a demo of our platform.
+
+13
+00:00:39,359 --> 00:00:42,759
+So we have to, the entire challenge
+
+14
+00:00:42,759 --> 00:00:48,280
+is about making the day of genomic pathology
+
+15
+00:00:48,280 --> 00:00:50,759
+better, which means you have to understand what
+
+16
+00:00:50,759 --> 00:00:54,840
+the platform is that we have, which is called SOFIA DDM.
+
+17
+00:00:54,840 --> 00:01:00,840
+DDM stands for democratizing data-driven medicine.
+
+18
+00:01:00,840 --> 00:01:03,200
+So that's the challenge, right?
+
+19
+00:01:03,200 --> 00:01:04,959
+You have to go get the platform APIs,
+
+20
+00:01:04,959 --> 00:01:08,159
+come up with creative ways to optimize the workflow,
+
+21
+00:01:08,159 --> 00:01:11,159
+and then so on.
+
+22
+00:01:11,159 --> 00:01:16,269
+How many of you are familiar with genomics?
+
+23
+00:01:16,269 --> 00:01:17,950
+OK, so we have some slides here,
+
+24
+00:01:17,950 --> 00:01:20,670
+which for those of you who raised their hands,
+
+25
+00:01:20,670 --> 00:01:22,670
+can snooze, because we've got a little bit
+
+26
+00:01:22,670 --> 00:01:23,829
+of a basic crash course.
+
+27
+00:01:23,829 --> 00:01:26,269
+But I think we'll just go through it, right?
+
+28
+00:01:26,269 --> 00:01:29,069
+So let me get started.
+
+29
+00:01:29,069 --> 00:01:32,030
+But before I do that, we are here
+
+30
+00:01:32,030 --> 00:01:34,629
+to support you, not just with your specific questions
+
+31
+00:01:34,629 --> 00:01:37,549
+around the API, the challenge, the platform,
+
+32
+00:01:37,549 --> 00:01:39,829
+but then if you have questions around technology,
+
+33
+00:01:39,829 --> 00:01:43,390
+working in not such a big, but not such a small tech
+
+34
+00:01:43,390 --> 00:01:48,150
+company, what it takes, general career advice,
+
+35
+00:01:48,150 --> 00:01:51,030
+and so on and so forth, I'd be happy to help.
+
+36
+00:01:51,030 --> 00:01:54,909
+OK, so a little bit about SOFIA genetics.
+
+37
+00:01:55,069 --> 00:01:57,269
+For those of you who attended the talk yesterday,
+
+38
+00:01:57,269 --> 00:01:59,750
+I don't think all of you were there.
+
+39
+00:01:59,750 --> 00:02:04,469
+So the company is around 15 years old, roughly, right?
+
+40
+00:02:04,469 --> 00:02:06,790
+Headquartered in Switzerland, born out of EPFL,
+
+41
+00:02:06,790 --> 00:02:08,789
+and it's inspirational for all of you.
+
+42
+00:02:08,789 --> 00:02:12,669
+The founder has actually worked in the lab, UV,
+
+43
+00:02:12,669 --> 00:02:13,870
+as a biologist.
+
+44
+00:02:13,870 --> 00:02:17,870
+He's done experiments, and they did a PhD and stuff,
+
+45
+00:02:17,870 --> 00:02:24,189
+and then went on to found this company 15 years ago.
+
+46
+00:02:24,189 --> 00:02:28,789
+He and a couple of other guys, starting out of EPFL,
+
+47
+00:02:28,789 --> 00:02:34,509
+and now company IPO in 2021.
+
+48
+00:02:34,509 --> 00:02:38,750
+Today has 400 employees, 400, 430 employees,
+
+49
+00:02:38,750 --> 00:02:40,909
+has customers across the world,
+
+50
+00:02:40,909 --> 00:02:46,430
+serving 800-plus institutions,
+
+51
+00:02:46,430 --> 00:02:49,629
+and doing more than 2 and 1 half million
+
+52
+00:02:49,629 --> 00:02:53,270
+genomic profiles.
+
+53
+00:02:53,270 --> 00:02:56,150
+And yeah, lots of IP, lots of great business stuff,
+
+54
+00:02:56,150 --> 00:03:00,509
+very cool tech, and great people to work with.
+
+55
+00:03:00,509 --> 00:03:02,469
+Most of my colleagues, I joined the company
+
+56
+00:03:02,469 --> 00:03:04,069
+four and a half years ago, before we
+
+57
+00:03:04,069 --> 00:03:06,629
+had the big pharma and robotics.
+
+58
+00:03:06,629 --> 00:03:08,789
+Most of the colleagues there have backgrounds
+
+59
+00:03:08,789 --> 00:03:11,069
+in physics, in biology, in technology.
+
+60
+00:03:14,349 --> 00:03:16,430
+A lot of them came right out of academia
+
+61
+00:03:16,430 --> 00:03:18,710
+and jumped right into this and haven't left the company
+
+62
+00:03:18,710 --> 00:03:20,189
+since.
+
+63
+00:03:20,189 --> 00:03:21,949
+A lot have come from different industries,
+
+64
+00:03:21,949 --> 00:03:25,550
+so it's a good mix of.
+
+65
+00:03:25,550 --> 00:03:28,189
+So if I were to give you one piece of care advice,
+
+66
+00:03:28,189 --> 00:03:31,110
+when you go on, start work for companies like that.
+
+67
+00:03:31,110 --> 00:03:33,189
+Don't jump into a big corporate, you'll get lost.
+
+68
+00:03:33,189 --> 00:03:35,789
+Unless you're in a rotation program.
+
+69
+00:03:35,789 --> 00:03:37,629
+Or do your own thing, yeah?
+
+70
+00:03:37,629 --> 00:03:41,069
+That's one piece of advice I would give.
+
+71
+00:03:41,069 --> 00:03:42,830
+So the whole idea about social genetics
+
+72
+00:03:42,830 --> 00:03:44,909
+and biodemocratizing data-driven medicine
+
+73
+00:03:44,909 --> 00:03:48,310
+is the whole vision was to be
+
+74
+00:03:48,310 --> 00:03:50,710
+able to connect data points, and it
+
+75
+00:03:50,710 --> 00:03:53,349
+can create intelligence to help patients
+
+76
+00:03:53,349 --> 00:03:56,469
+across the world, regardless of where they are.
+
+77
+00:03:56,469 --> 00:04:00,669
+Because people are people, and diseases are diseases.
+
+78
+00:04:00,669 --> 00:04:03,189
+They don't discriminate between geography and race
+
+79
+00:04:03,189 --> 00:04:05,310
+and then so on.
+
+80
+00:04:05,310 --> 00:04:07,830
+So the pattern and the information
+
+81
+00:04:07,830 --> 00:04:10,110
+that you can find that help one patient,
+
+82
+00:04:10,110 --> 00:04:13,270
+let's say over here, the example being in Istanbul,
+
+83
+00:04:13,270 --> 00:04:15,669
+should be able to help similar patients
+
+84
+00:04:15,669 --> 00:04:19,310
+of similar nature in, let's say, here in Zurich.
+
+85
+00:04:19,310 --> 00:04:20,310
+That was the whole thing.
+
+86
+00:04:20,310 --> 00:04:22,269
+And how do you make that connection?
+
+87
+00:04:22,269 --> 00:04:25,829
+How do you help people in the labs or hospitals
+
+88
+00:04:25,829 --> 00:04:27,629
+provide insights and information
+
+89
+00:04:27,629 --> 00:04:31,949
+to make data-driven decisions and not only experience
+
+90
+00:04:31,949 --> 00:04:33,870
+this?
+
+91
+00:04:33,870 --> 00:04:36,709
+So that was the whole thing, grand big vision.
+
+92
+00:04:36,709 --> 00:04:39,470
+How do you bring that to life?
+
+93
+00:04:39,470 --> 00:04:41,949
+You bring that to life really by the platform
+
+94
+00:04:41,949 --> 00:04:45,350
+that has created the cloud-based, decentralized
+
+95
+00:04:45,389 --> 00:04:46,949
+analytics platform.
+
+96
+00:04:46,949 --> 00:04:50,149
+And the whole idea really is to take different modalities
+
+97
+00:04:50,149 --> 00:04:52,709
+of data, genomics, radiomics, clinical,
+
+98
+00:04:52,709 --> 00:04:54,389
+bring that together, harmonize it,
+
+99
+00:04:54,389 --> 00:04:56,269
+connect all the data points, and create
+
+100
+00:04:56,269 --> 00:04:59,910
+the necessary insights to help with specific decisions
+
+101
+00:04:59,910 --> 00:05:01,470
+to be made.
+
+102
+00:05:01,470 --> 00:05:03,470
+The company obviously had to start somewhere.
+
+103
+00:05:03,470 --> 00:05:05,670
+So the focus was really on genomics,
+
+104
+00:05:05,670 --> 00:05:08,670
+because around that time, genomics was starting
+
+105
+00:05:08,670 --> 00:05:10,750
+to come big.
+
+106
+00:05:10,750 --> 00:05:14,350
+And the majority of our customers
+
+107
+00:05:14,350 --> 00:05:16,189
+are in the genomics space.
+
+108
+00:05:16,189 --> 00:05:19,389
+And that's the workflow we will be describing to you about.
+
+109
+00:05:19,389 --> 00:05:21,949
+So who are the users and who are our customers?
+
+110
+00:05:21,949 --> 00:05:22,949
+There are two.
+
+111
+00:05:22,949 --> 00:05:29,470
+One is in the lab, in the genomic professional,
+
+112
+00:05:29,470 --> 00:05:31,870
+geneticists, bioinformaticians, pathologists,
+
+113
+00:05:31,870 --> 00:05:32,750
+and so on.
+
+114
+00:05:32,750 --> 00:05:35,149
+Those who actually process the genomic data,
+
+115
+00:05:35,149 --> 00:05:37,709
+understand all the information,
+
+116
+00:05:37,709 --> 00:05:40,269
+and create what we call a genomic report, which
+
+117
+00:05:40,269 --> 00:05:42,629
+is then given to our second set of users,
+
+118
+00:05:42,750 --> 00:05:47,430
+were oncologists and clinicians who take that information
+
+119
+00:05:47,430 --> 00:05:49,029
+and make decisions for patients.
+
+120
+00:05:52,430 --> 00:05:54,829
+And they also use the platform that we
+
+121
+00:05:54,829 --> 00:05:57,790
+have to derive certain insights and link it
+
+122
+00:05:57,790 --> 00:05:59,350
+to medicine and different medicines.
+
+123
+00:05:59,350 --> 00:06:02,069
+But that's not the use case we will talk about today.
+
+124
+00:06:02,069 --> 00:06:04,029
+We'll be focusing on the lab professional.
+
+125
+00:06:07,509 --> 00:06:09,029
+Obviously, something like genomics
+
+126
+00:06:09,029 --> 00:06:12,029
+and also all the modalities serves both oncology
+
+127
+00:06:12,029 --> 00:06:17,230
+and bioinformatics.
+
+128
+00:06:17,230 --> 00:06:20,470
+So with that, very, very brief background.
+
+129
+00:06:20,470 --> 00:06:22,069
+I'll hand over to Shubham.
+
+130
+00:06:22,069 --> 00:06:25,189
+By the way, be nice to him.
+
+131
+00:06:25,189 --> 00:06:28,870
+Before this, he worked in a non-health care industry,
+
+132
+00:06:28,870 --> 00:06:31,829
+in the travel and hospitality industry.
+
+133
+00:06:31,829 --> 00:06:34,310
+But he's learned genomics fairly, very quickly
+
+134
+00:06:34,310 --> 00:06:36,269
+since he was a tiny kid.
+
+135
+00:06:36,269 --> 00:06:38,870
+This is the first time I'm going to hear him
+
+136
+00:06:38,870 --> 00:06:42,149
+give a genomic ratcheting.
+
+137
+00:06:42,149 --> 00:06:42,870
+No pressure.
+
+138
+00:06:43,870 --> 00:06:53,750
+And yes, maybe half of you guys know who that is.
+
+139
+00:06:53,750 --> 00:06:55,230
+Let's start.
+
+140
+00:06:55,230 --> 00:06:56,230
+Hold it closer.
+
+141
+00:06:56,230 --> 00:06:57,709
+No, you have to hold it closer.
+
+142
+00:06:57,709 --> 00:06:59,189
+Hold it closer to the line.
+
+143
+00:06:59,189 --> 00:07:01,189
+So that I know, but I don't know this.
+
+144
+00:07:01,189 --> 00:07:02,189
+I have a question.
+
+145
+00:07:02,189 --> 00:07:04,189
+OK.
+
+146
+00:07:04,189 --> 00:07:08,670
+OK, so let's start with genomics 101.
+
+147
+00:07:08,670 --> 00:07:11,350
+The first part is, what are variants?
+
+148
+00:07:11,350 --> 00:07:14,670
+Because you're going to be hearing a lot of most
+
+149
+00:07:14,670 --> 00:07:17,509
+of our students are conflicted variants.
+
+150
+00:07:17,509 --> 00:07:23,589
+So a variant is essentially a variation of a person's DNA
+
+151
+00:07:23,589 --> 00:07:26,550
+from, let's say, a person's gene.
+
+152
+00:07:26,550 --> 00:07:29,470
+There are two sort of categories
+
+153
+00:07:29,470 --> 00:07:31,149
+that we break them into.
+
+154
+00:07:31,149 --> 00:07:34,629
+One is germline, which is essentially inherited.
+
+155
+00:07:34,629 --> 00:07:36,310
+You can inherit from your parents,
+
+156
+00:07:36,310 --> 00:07:41,350
+or there can be something that is, when a person is
+
+157
+00:07:41,350 --> 00:07:43,709
+conceptualized, let's say, when they are born,
+
+158
+00:07:43,709 --> 00:07:47,029
+it is essentially a de novo variation.
+
+159
+00:07:47,029 --> 00:07:48,149
+Or it can be acquired.
+
+160
+00:07:48,149 --> 00:07:51,230
+So it can be a variation that your DNA has acquired
+
+161
+00:07:51,230 --> 00:07:53,269
+over your legacy.
+
+162
+00:07:53,269 --> 00:07:55,589
+There are multiple different risk factors
+
+163
+00:07:55,589 --> 00:08:00,069
+that can actually cause that to happen.
+
+164
+00:08:00,069 --> 00:08:04,269
+So the key takeaway from this side of the issue
+
+165
+00:08:04,269 --> 00:08:06,670
+is cancer is not a single event.
+
+166
+00:08:06,670 --> 00:08:10,509
+It is, let's say, a process that can take years,
+
+167
+00:08:10,509 --> 00:08:11,949
+or let's say decades.
+
+168
+00:08:11,949 --> 00:08:15,389
+So it starts with DNA damage, mutation,
+
+169
+00:08:15,389 --> 00:08:19,470
+then it goes on to, let's say, a particular size
+
+170
+00:08:19,470 --> 00:08:22,470
+where there is no regulation possible by the tumour
+
+171
+00:08:22,470 --> 00:08:24,829
+compressor.
+
+172
+00:08:24,829 --> 00:08:28,389
+It reaches a particular mass at which
+
+173
+00:08:28,389 --> 00:08:29,750
+the station becomes cancer.
+
+174
+00:08:29,750 --> 00:08:32,070
+And if it is allowed to go without treatment,
+
+175
+00:08:32,070 --> 00:08:34,269
+it can go into a metastasis stage, which
+
+176
+00:08:34,269 --> 00:08:38,879
+is sort of a stage.
+
+177
+00:08:38,879 --> 00:08:43,759
+Then what does the journey look like for a patient?
+
+178
+00:08:43,759 --> 00:08:45,559
+So they said a pretty long journey
+
+179
+00:08:45,559 --> 00:08:47,720
+for a particular patient.
+
+180
+00:08:47,720 --> 00:08:51,240
+It starts with somebody having some symptoms.
+
+181
+00:08:51,240 --> 00:08:54,360
+At some point, they decide that this does not seem to go away.
+
+182
+00:08:54,360 --> 00:08:58,960
+I should do a CTF, see my GP.
+
+183
+00:08:58,960 --> 00:09:00,120
+They go there.
+
+184
+00:09:00,120 --> 00:09:02,000
+The GP tries to resolve it.
+
+185
+00:09:02,000 --> 00:09:03,480
+They observe it for some time.
+
+186
+00:09:03,480 --> 00:09:06,080
+That is when they would actually send it.
+
+187
+00:09:06,080 --> 00:09:08,240
+They would refer it for a particular scan,
+
+188
+00:09:08,240 --> 00:09:10,759
+for some particular test.
+
+189
+00:09:10,759 --> 00:09:13,399
+If the scan shows something unusual,
+
+190
+00:09:13,480 --> 00:09:16,960
+that is when they would involve an oncologist.
+
+191
+00:09:16,960 --> 00:09:20,639
+The oncologist would essentially look at it, observe it.
+
+192
+00:09:20,639 --> 00:09:23,240
+And if they see merit, this is when
+
+193
+00:09:23,240 --> 00:09:27,480
+they would recommend essentially doing a biopsy,
+
+194
+00:09:27,480 --> 00:09:30,080
+after which essentially actually
+
+195
+00:09:30,080 --> 00:09:32,960
+H plus E scanning is done, or let's say,
+
+196
+00:09:32,960 --> 00:09:36,600
+a genomic testing is actually recommended.
+
+197
+00:09:36,600 --> 00:09:39,360
+If this is actually, at that point,
+
+198
+00:09:39,360 --> 00:09:41,159
+they know whether the tumour is aggressive,
+
+199
+00:09:41,200 --> 00:09:45,159
+what kind of tumour it is, how to essentially approach it,
+
+200
+00:09:45,159 --> 00:09:46,360
+what the treatment can look like,
+
+201
+00:09:46,360 --> 00:09:48,960
+and this is where essentially the treatment starts.
+
+202
+00:09:48,960 --> 00:09:49,799
+And of course, after that,
+
+203
+00:09:49,799 --> 00:09:52,279
+there is a continuous process of scans,
+
+204
+00:09:52,279 --> 00:09:53,519
+monitoring, et cetera.
+
+205
+00:09:53,519 --> 00:09:58,519
+So this, the vertical, the horizontal bar below
+
+206
+00:09:58,519 --> 00:10:03,360
+essentially is a loop that will sort of continue.
+
+207
+00:10:03,360 --> 00:10:06,960
+An important takeaway from this is this surgery,
+
+208
+00:10:06,960 --> 00:10:09,759
+sorry, this genomic testing is essentially
+
+209
+00:10:09,799 --> 00:10:13,120
+the part where the actual treatment essentially starts.
+
+210
+00:10:13,120 --> 00:10:17,039
+And hence, this is a sort of very critical step
+
+211
+00:10:17,039 --> 00:10:18,600
+for the patient themselves,
+
+212
+00:10:18,600 --> 00:10:19,840
+and they are actually looking forward
+
+213
+00:10:19,840 --> 00:10:23,279
+to feeling better as soon as they can.
+
+214
+00:10:23,279 --> 00:10:26,080
+So this was sort of the genomic samples.
+
+215
+00:10:26,080 --> 00:10:31,779
+Now let's move on to a day in the life of a pathologist.
+
+216
+00:10:31,779 --> 00:10:34,019
+So a genomic pathologist.
+
+217
+00:10:35,100 --> 00:10:39,179
+She, looking at the genomic analysis
+
+218
+00:10:39,179 --> 00:10:41,100
+is not the only job that she does.
+
+219
+00:10:41,100 --> 00:10:44,580
+She had actually a varied set of responsibilities.
+
+220
+00:10:44,580 --> 00:10:47,500
+She would be doing administrative work.
+
+221
+00:10:49,019 --> 00:10:50,659
+She has lab director duties.
+
+222
+00:10:51,539 --> 00:10:52,899
+She would be doing vet lab stuff.
+
+223
+00:10:52,899 --> 00:10:56,179
+She would have to do departmental reviews.
+
+224
+00:10:56,179 --> 00:10:58,580
+She would have to do hematopathyology
+
+225
+00:10:58,580 --> 00:10:59,899
+and molecular surveys.
+
+226
+00:10:59,899 --> 00:11:02,340
+So there are actually quite a varied set of things
+
+227
+00:11:02,340 --> 00:11:04,019
+that she needs to do in her day,
+
+228
+00:11:04,019 --> 00:11:05,779
+and it's not just essentially looking
+
+229
+00:11:05,779 --> 00:11:10,700
+at the genomic results.
+
+230
+00:11:10,700 --> 00:11:12,419
+But as I said earlier,
+
+231
+00:11:12,419 --> 00:11:14,779
+this is what her day probably looks like,
+
+232
+00:11:14,779 --> 00:11:17,259
+looking at my emails, departmental meetings,
+
+233
+00:11:17,259 --> 00:11:20,980
+microscopy work, tissue assessment, technical validation.
+
+234
+00:11:20,980 --> 00:11:22,740
+And on top of that,
+
+235
+00:11:22,740 --> 00:11:25,179
+she might have a long list of cases
+
+236
+00:11:25,179 --> 00:11:27,100
+which are waiting for the treatment, right?
+
+237
+00:11:27,100 --> 00:11:28,980
+And essentially, each of these cases
+
+238
+00:11:28,980 --> 00:11:31,139
+are actual patients who are looking forward
+
+239
+00:11:31,139 --> 00:11:36,070
+to getting back from the pathology lab.
+
+240
+00:11:36,070 --> 00:11:37,789
+So, and on top of this,
+
+241
+00:11:37,789 --> 00:11:40,230
+as you know, the complexity is exploding.
+
+242
+00:11:40,230 --> 00:11:45,230
+So, 35% of the FDA approved treatments today
+
+243
+00:11:46,350 --> 00:11:48,350
+require some sort of genomic analysis.
+
+244
+00:11:49,990 --> 00:11:51,750
+The knowledge which used to double,
+
+245
+00:11:52,789 --> 00:11:55,470
+let's say in 50 years, is now doubling every year.
+
+246
+00:11:55,470 --> 00:11:57,750
+So the knowledge that a pathologist would have
+
+247
+00:11:57,750 --> 00:12:00,830
+would be relevant half as much next year.
+
+248
+00:12:00,830 --> 00:12:03,750
+So there is no chance a pathologist can keep up
+
+249
+00:12:03,750 --> 00:12:05,509
+with all the publications of the new knowledge
+
+250
+00:12:05,509 --> 00:12:07,350
+that is coming out.
+
+251
+00:12:07,350 --> 00:12:09,789
+Plus, the data from each genomic analysis
+
+252
+00:12:09,789 --> 00:12:11,590
+is also exploding, right?
+
+253
+00:12:11,590 --> 00:12:14,350
+Like we talked about this yesterday,
+
+254
+00:12:14,350 --> 00:12:18,190
+almost seven and a half data bytes of data each year.
+
+255
+00:12:18,190 --> 00:12:23,740
+Each analysis has as much as 100 gigabytes plus.
+
+256
+00:12:23,740 --> 00:12:25,059
+And like we discussed,
+
+257
+00:12:25,059 --> 00:12:28,379
+there are so many pressures pulling on pathologists
+
+258
+00:12:28,379 --> 00:12:31,139
+on every case, so many responsibilities.
+
+259
+00:12:32,019 --> 00:12:34,899
+The data is coming from disparate technologies.
+
+260
+00:12:34,899 --> 00:12:36,659
+The literature is evolving.
+
+261
+00:12:36,659 --> 00:12:39,019
+And of course, you have a pressure to increase the output.
+
+262
+00:12:39,019 --> 00:12:42,940
+That is sort of cool.
+
+263
+00:12:42,940 --> 00:12:44,940
+So, imagine this.
+
+264
+00:12:46,139 --> 00:12:48,940
+On a Monday, you arrive in the lab.
+
+265
+00:12:48,940 --> 00:12:50,220
+There have been genomic analysis
+
+266
+00:12:50,220 --> 00:12:53,460
+that have been running since the weekend overnight.
+
+267
+00:12:53,460 --> 00:12:57,419
+You log in through SOFIA, and there are essentially
+
+268
+00:12:57,419 --> 00:13:01,019
+so many analysis which are waiting for you.
+
+269
+00:13:01,019 --> 00:13:03,700
+So you have to actually work on those,
+
+270
+00:13:03,700 --> 00:13:05,779
+provide your interpretation, create a report,
+
+271
+00:13:05,779 --> 00:13:08,500
+and this is when the patient will actually know
+
+272
+00:13:08,500 --> 00:13:09,899
+what their analysis says.
+
+273
+00:13:10,899 --> 00:13:12,899
+And essentially what she does,
+
+274
+00:13:12,899 --> 00:13:14,899
+actually on a case-by-case basis,
+
+275
+00:13:14,899 --> 00:13:16,899
+is what I told you would now come in,
+
+276
+00:13:16,899 --> 00:13:18,899
+and actually show you guys the data.
+
+277
+00:13:18,899 --> 00:13:20,899
+Please pay attention to this part,
+
+278
+00:13:20,899 --> 00:13:22,899
+because this is the interface
+
+279
+00:13:22,899 --> 00:13:24,899
+that you have to sort of work on this,
+
+280
+00:13:24,899 --> 00:13:34,970
+and try to optimize them.
+
+281
+00:13:34,970 --> 00:13:38,970
+So now we are going to see how VDM works in practice.
+
+282
+00:13:38,970 --> 00:13:40,970
+This part actually will be very helpful
+
+283
+00:13:40,970 --> 00:13:42,970
+for understanding the challenge later on.
+
+284
+00:13:42,970 --> 00:13:45,970
+So I will just show you after about the challenge,
+
+285
+00:13:45,970 --> 00:13:47,970
+and this part will help you really
+
+286
+00:13:47,970 --> 00:13:49,970
+to get a bit of context of how it works.
+
+287
+00:13:49,970 --> 00:13:52,970
+Okay, so let's sign in.
+
+288
+00:13:52,970 --> 00:13:59,269
+And actually will be exactly the same thing.
+
+289
+00:14:11,539 --> 00:14:12,539
+Okay, perfect.
+
+290
+00:14:12,539 --> 00:14:14,539
+So here indeed is our testing account,
+
+291
+00:14:14,539 --> 00:14:17,539
+and we prepared some accounts
+
+292
+00:14:17,539 --> 00:14:19,539
+for indeed the different teams in the Akaton.
+
+293
+00:14:19,539 --> 00:14:23,539
+So let's just hit one for the sake of this demo.
+
+294
+00:14:24,539 --> 00:14:26,539
+Okay, getting here you will see already the landscape.
+
+295
+00:14:26,539 --> 00:14:28,539
+There are different parts, different products
+
+296
+00:14:28,539 --> 00:14:30,539
+also that Sophia Genetics offers.
+
+297
+00:14:30,539 --> 00:14:33,539
+We'll focus right now on Sophia VDM for genomics,
+
+298
+00:14:33,539 --> 00:14:35,539
+which is this one.
+
+299
+00:14:36,539 --> 00:14:39,539
+And indeed we arrived on the landscape
+
+300
+00:14:39,539 --> 00:14:41,539
+for web genomics.
+
+301
+00:14:41,539 --> 00:14:43,539
+So here let's make a small connection
+
+302
+00:14:43,539 --> 00:14:45,539
+on what also Shubham explained about
+
+303
+00:14:45,539 --> 00:14:46,539
+Somatica in general,
+
+304
+00:14:46,539 --> 00:14:48,539
+and essentially there are different applications.
+
+305
+00:14:48,539 --> 00:14:50,539
+So at Sophia Genetics we have hundreds actually
+
+306
+00:14:50,539 --> 00:14:51,539
+of different products.
+
+307
+00:14:51,539 --> 00:14:53,539
+And if you think of a product,
+
+308
+00:14:53,539 --> 00:14:56,539
+you can think that as a set of genes.
+
+309
+00:14:56,539 --> 00:14:58,539
+So we say in general like a gene panel,
+
+310
+00:14:58,539 --> 00:15:02,539
+which help the pathologists to figure it out
+
+311
+00:15:02,539 --> 00:15:05,539
+and to search exactly for a specific disease,
+
+312
+00:15:05,539 --> 00:15:06,539
+for example,
+
+313
+00:15:06,539 --> 00:15:09,539
+where there could be some interesting mutations.
+
+314
+00:15:09,539 --> 00:15:11,539
+So here in this demo account
+
+315
+00:15:11,539 --> 00:15:13,539
+we prepared a few examples,
+
+316
+00:15:13,539 --> 00:15:15,539
+and we will focus on the
+
+317
+00:15:15,539 --> 00:15:17,539
+hereditary cancer solutions.
+
+318
+00:15:17,539 --> 00:15:19,539
+So here in this,
+
+319
+00:15:19,539 --> 00:15:21,539
+just for making again the connection
+
+320
+00:15:21,539 --> 00:15:22,539
+with the part of Shubham,
+
+321
+00:15:22,539 --> 00:15:24,539
+the hereditary cancer solution
+
+322
+00:15:24,539 --> 00:15:26,539
+is related to the germline,
+
+323
+00:15:26,539 --> 00:15:28,539
+enhanced clinical exosolution
+
+324
+00:15:28,539 --> 00:15:30,539
+also related to germlines,
+
+325
+00:15:30,539 --> 00:15:32,539
+MSK access instead is the somatic one.
+
+326
+00:15:32,539 --> 00:15:35,539
+So just as a reminder,
+
+327
+00:15:35,539 --> 00:15:37,539
+this one it means that the patient
+
+328
+00:15:37,539 --> 00:15:38,539
+came to the hospital
+
+329
+00:15:38,539 --> 00:15:41,539
+and the analysis were then taken from the blood.
+
+330
+00:15:41,539 --> 00:15:42,539
+If it was a somatic,
+
+331
+00:15:42,539 --> 00:15:44,539
+it would have been a tumor sample.
+
+332
+00:15:44,539 --> 00:15:49,539
+So let's go on the hereditary cancer run.
+
+333
+00:15:49,539 --> 00:15:51,539
+So here is the finder essentially
+
+334
+00:15:51,539 --> 00:15:53,539
+where we can find the different runs
+
+335
+00:15:53,539 --> 00:15:56,539
+which has been uploaded.
+
+336
+00:15:56,539 --> 00:15:59,539
+In here there are different leaders.
+
+337
+00:15:59,539 --> 00:16:01,539
+For the sake of time I will not go through
+
+338
+00:16:01,539 --> 00:16:02,539
+the different solutions
+
+339
+00:16:02,539 --> 00:16:04,539
+and the different tool that we have.
+
+340
+00:16:04,539 --> 00:16:08,539
+However, let's focus on a specific run.
+
+341
+00:16:08,539 --> 00:16:10,539
+So there is a concept quite important
+
+342
+00:16:10,539 --> 00:16:14,539
+about run analysis and interpretations.
+
+343
+00:16:14,539 --> 00:16:17,539
+A run essentially it's a series,
+
+344
+00:16:17,539 --> 00:16:20,539
+it's a batch of different analysis
+
+345
+00:16:20,539 --> 00:16:21,539
+which has been done together.
+
+346
+00:16:21,539 --> 00:16:23,539
+You have to imagine that
+
+347
+00:16:23,539 --> 00:16:24,539
+when you are in a laboratory
+
+348
+00:16:24,539 --> 00:16:27,539
+you don't do one analysis by yourself.
+
+349
+00:16:27,539 --> 00:16:30,539
+You try to connect everything together
+
+350
+00:16:30,539 --> 00:16:31,539
+and have batches all together.
+
+351
+00:16:31,539 --> 00:16:33,539
+And this is reflected here as well.
+
+352
+00:16:33,539 --> 00:16:35,539
+So you have in this specific run
+
+353
+00:16:35,539 --> 00:16:37,539
+which is called the hereditary cancer run,
+
+354
+00:16:37,539 --> 00:16:40,539
+you have different samples.
+
+355
+00:16:40,539 --> 00:16:41,539
+This means essentially in general
+
+356
+00:16:41,539 --> 00:16:44,539
+one sample corresponds to one patient.
+
+357
+00:16:44,539 --> 00:16:46,539
+Let's open one
+
+358
+00:16:46,539 --> 00:16:48,539
+and you can see here a third level
+
+359
+00:16:48,539 --> 00:16:50,539
+which is the interpretation.
+
+360
+00:16:50,539 --> 00:16:52,539
+The interpretation essentially is
+
+361
+00:16:52,539 --> 00:16:54,539
+you can think that about
+
+362
+00:16:54,539 --> 00:16:56,539
+the evaluation, the assessment
+
+363
+00:16:56,539 --> 00:16:58,539
+which is done by the pathologist
+
+364
+00:16:58,539 --> 00:17:01,539
+while checking that specific sample.
+
+365
+00:17:01,539 --> 00:17:03,539
+You can have different people in a lab
+
+366
+00:17:03,539 --> 00:17:05,539
+and you can really have different assessments
+
+367
+00:17:05,539 --> 00:17:07,539
+so indeed you can have different interpretations
+
+368
+00:17:07,539 --> 00:17:08,539
+which are created.
+
+369
+00:17:08,539 --> 00:17:10,539
+I just opened one
+
+370
+00:17:10,539 --> 00:17:15,299
+and here you end up in the main landscape
+
+371
+00:17:15,299 --> 00:17:17,299
+of social genetics
+
+372
+00:17:17,299 --> 00:17:19,299
+for a specific interpretation.
+
+373
+00:17:19,299 --> 00:17:21,299
+For, let's say,
+
+374
+00:17:21,299 --> 00:17:23,299
+the navigator, let's say, is in the top left
+
+375
+00:17:23,299 --> 00:17:25,299
+so you can always know where you are
+
+376
+00:17:25,299 --> 00:17:26,299
+by looking here.
+
+377
+00:17:26,299 --> 00:17:29,299
+And there are five main tasks.
+
+378
+00:17:29,299 --> 00:17:30,299
+The first one is the overview.
+
+379
+00:17:30,299 --> 00:17:33,299
+You can think that a little bit as a summary
+
+380
+00:17:33,299 --> 00:17:35,299
+and how you link the information,
+
+381
+00:17:35,299 --> 00:17:36,299
+the detailed information
+
+382
+00:17:36,299 --> 00:17:37,299
+which is present in the other tasks.
+
+383
+00:17:37,299 --> 00:17:39,299
+So here the idea is that
+
+384
+00:17:39,299 --> 00:17:41,299
+a pathologist came, have a look,
+
+385
+00:17:41,299 --> 00:17:42,299
+okay, this is the situation,
+
+386
+00:17:42,299 --> 00:17:44,299
+now I can go more in the details.
+
+387
+00:17:44,299 --> 00:17:46,299
+There are some parts which are related
+
+388
+00:17:46,299 --> 00:17:47,299
+to the quality.
+
+389
+00:17:47,299 --> 00:17:49,299
+I will not go through in details
+
+390
+00:17:49,299 --> 00:17:50,299
+but the idea here is that,
+
+391
+00:17:50,299 --> 00:17:52,299
+for example, you can have some biases
+
+392
+00:17:52,299 --> 00:17:53,299
+during the lab preparation
+
+393
+00:17:53,299 --> 00:17:54,299
+to link the analysis.
+
+394
+00:17:54,299 --> 00:17:56,299
+So you want to know, for example,
+
+395
+00:17:56,299 --> 00:17:58,299
+hey, is my sample good enough?
+
+396
+00:17:58,299 --> 00:18:00,299
+I'm confident about what I'm seeing or not.
+
+397
+00:18:00,299 --> 00:18:01,299
+And this kind of information
+
+398
+00:18:01,299 --> 00:18:03,299
+you can find in the quality tab.
+
+399
+00:18:03,299 --> 00:18:05,299
+The gene information, the gene tab
+
+400
+00:18:05,299 --> 00:18:06,299
+is present here.
+
+401
+00:18:06,299 --> 00:18:08,299
+Again, for the sake of time,
+
+402
+00:18:08,299 --> 00:18:10,299
+I will not go too much into it
+
+403
+00:18:10,299 --> 00:18:12,299
+but this really takes the concept
+
+404
+00:18:12,299 --> 00:18:14,299
+that an analysis, an application
+
+405
+00:18:14,299 --> 00:18:16,299
+is based on a gene panel.
+
+406
+00:18:16,299 --> 00:18:18,299
+Gene panel means several genes
+
+407
+00:18:18,299 --> 00:18:20,299
+and you can really have some information
+
+408
+00:18:20,299 --> 00:18:22,299
+which are very relevant at the gene level
+
+409
+00:18:22,299 --> 00:18:24,299
+and you will see them here.
+
+410
+00:18:24,299 --> 00:18:26,299
+Now where I want to spend maybe
+
+411
+00:18:26,299 --> 00:18:27,299
+a little bit more time
+
+412
+00:18:27,299 --> 00:18:29,299
+is about on the variant table.
+
+413
+00:18:29,299 --> 00:18:31,299
+The variant table is a list of mutations
+
+414
+00:18:31,299 --> 00:18:32,299
+essentially that you have.
+
+415
+00:18:32,299 --> 00:18:33,299
+So as Shubham said,
+
+416
+00:18:33,299 --> 00:18:35,299
+we are comparing the sample
+
+417
+00:18:35,299 --> 00:18:36,299
+coming from the patient
+
+418
+00:18:36,299 --> 00:18:38,299
+against the reference gene.
+
+419
+00:18:38,299 --> 00:18:40,299
+Here essentially you have the differences.
+
+420
+00:18:40,299 --> 00:18:42,299
+Now you have to imagine that
+
+421
+00:18:42,299 --> 00:18:44,299
+a large number of mutations
+
+422
+00:18:44,299 --> 00:18:46,299
+are completely fine.
+
+423
+00:18:46,299 --> 00:18:49,299
+In general, if you want to have an idea,
+
+424
+00:18:49,299 --> 00:18:51,299
+you can divide essentially
+
+425
+00:18:51,299 --> 00:18:53,299
+those mutations in three parts.
+
+426
+00:18:53,299 --> 00:18:55,299
+Something which is benign.
+
+427
+00:18:55,299 --> 00:18:57,299
+So it's fine.
+
+428
+00:18:57,299 --> 00:18:59,299
+There are differences compared to the reference
+
+429
+00:18:59,299 --> 00:19:01,299
+but that's completely okay.
+
+430
+00:19:01,299 --> 00:19:02,299
+And in general you see here
+
+431
+00:19:02,299 --> 00:19:04,299
+with more on the color green
+
+432
+00:19:04,299 --> 00:19:08,299
+in this screen here.
+
+433
+00:19:08,299 --> 00:19:10,299
+Then you have a bucket of variants
+
+434
+00:19:10,299 --> 00:19:12,299
+that we don't know much.
+
+435
+00:19:12,299 --> 00:19:13,299
+They are called VUS,
+
+436
+00:19:13,299 --> 00:19:16,299
+Variants of Unknown Significance.
+
+437
+00:19:16,299 --> 00:19:18,299
+And you see them in blue here.
+
+438
+00:19:18,299 --> 00:19:21,299
+And then I will just remove one filter.
+
+439
+00:19:21,299 --> 00:19:25,299
+You might have also some pathogenic ones
+
+440
+00:19:25,299 --> 00:19:29,299
+which are in the indirect column.
+
+441
+00:19:29,299 --> 00:19:31,299
+Without going too much in details,
+
+442
+00:19:31,299 --> 00:19:33,299
+however, you will see that
+
+443
+00:19:33,299 --> 00:19:35,299
+there are a lot of information
+
+444
+00:19:35,299 --> 00:19:39,299
+which are present in the analysis.
+
+445
+00:19:39,299 --> 00:19:42,299
+We have really quite a lot of information
+
+446
+00:19:42,299 --> 00:19:44,299
+because this is actually what
+
+447
+00:19:44,299 --> 00:19:46,299
+the pathologies will look like.
+
+448
+00:19:46,299 --> 00:19:48,299
+If they have to go deeper
+
+449
+00:19:48,299 --> 00:19:50,299
+and understand well how a mutation works,
+
+450
+00:19:50,299 --> 00:19:52,299
+if it's really pathogenic or not,
+
+451
+00:19:52,299 --> 00:19:54,299
+they need to have more details.
+
+452
+00:19:54,299 --> 00:19:56,299
+So they need to go deeper and deeper.
+
+453
+00:19:56,299 --> 00:19:58,299
+For doing that and also for helping
+
+454
+00:19:58,299 --> 00:20:01,299
+the pathologies to navigate
+
+455
+00:20:01,299 --> 00:20:02,299
+through those lists of good.
+
+456
+00:20:02,299 --> 00:20:04,299
+This information, this quantity of information,
+
+457
+00:20:04,299 --> 00:20:06,299
+there is also a series of filters
+
+458
+00:20:06,299 --> 00:20:07,299
+that can be filled.
+
+459
+00:20:07,299 --> 00:20:08,299
+Again, for the sake of time,
+
+460
+00:20:08,299 --> 00:20:09,299
+I will not go through it.
+
+461
+00:20:09,299 --> 00:20:11,299
+But here the main idea is that
+
+462
+00:20:11,299 --> 00:20:13,299
+really you can build filters.
+
+463
+00:20:13,299 --> 00:20:15,299
+For example, you have the different columns
+
+464
+00:20:15,299 --> 00:20:16,299
+which are present here.
+
+465
+00:20:16,299 --> 00:20:18,299
+And then indeed you can select
+
+466
+00:20:18,299 --> 00:20:19,299
+some of those information
+
+467
+00:20:19,299 --> 00:20:21,299
+and then you can pick up some category
+
+468
+00:20:21,299 --> 00:20:23,299
+or put filters greater than a certain value,
+
+469
+00:20:23,299 --> 00:20:25,299
+lower than a certain value,
+
+470
+00:20:25,299 --> 00:20:28,299
+whatever is more relevant for the pathologies.
+
+471
+00:20:28,299 --> 00:20:31,299
+Maybe a couple of things before finishing.
+
+472
+00:20:31,299 --> 00:20:33,299
+There are also some information
+
+473
+00:20:33,299 --> 00:20:36,299
+that can be included by the pathologies.
+
+474
+00:20:36,299 --> 00:20:38,299
+For example, you can say,
+
+475
+00:20:38,299 --> 00:20:41,299
+I really believe that this information here,
+
+476
+00:20:41,299 --> 00:20:44,299
+this variant here is really pathogenic.
+
+477
+00:20:44,299 --> 00:20:46,299
+I'm going essentially to apply that
+
+478
+00:20:46,299 --> 00:20:48,299
+and then creating a plug.
+
+479
+00:20:48,299 --> 00:20:50,299
+This is a bit of what also
+
+480
+00:20:50,299 --> 00:20:51,299
+Abi was saying at the beginning
+
+481
+00:20:51,299 --> 00:20:53,299
+about creating the community
+
+482
+00:20:53,299 --> 00:20:54,299
+and sharing this information
+
+483
+00:20:54,299 --> 00:20:56,299
+in different fashion.
+
+484
+00:20:56,299 --> 00:20:58,299
+Those information are shared.
+
+485
+00:20:58,299 --> 00:21:00,299
+So, for example, if I'm plugging something here
+
+486
+00:21:00,299 --> 00:21:01,299
+because I strongly believe
+
+487
+00:21:01,299 --> 00:21:03,299
+and I have evidences about that,
+
+488
+00:21:03,299 --> 00:21:05,299
+this information is propagated, right?
+
+489
+00:21:05,299 --> 00:21:07,299
+And other clients around the world
+
+490
+00:21:07,299 --> 00:21:09,299
+can see also those information.
+
+491
+00:21:09,299 --> 00:21:12,299
+Finally, we can indeed add
+
+492
+00:21:12,299 --> 00:21:14,299
+this information to a report.
+
+493
+00:21:14,299 --> 00:21:17,299
+Typically, there is a button
+
+494
+00:21:17,299 --> 00:21:19,299
+for doing this information
+
+495
+00:21:19,299 --> 00:21:21,299
+and going into the record.
+
+496
+00:21:21,299 --> 00:21:23,299
+Indeed, you can see that variant
+
+497
+00:21:23,299 --> 00:21:25,299
+popping up there.
+
+498
+00:21:25,299 --> 00:21:27,299
+So here, I will stop here.
+
+499
+00:21:27,299 --> 00:21:28,299
+As you can imagine,
+
+500
+00:21:28,299 --> 00:21:30,299
+I try to be very concise
+
+501
+00:21:30,299 --> 00:21:32,299
+to summarize all the information
+
+502
+00:21:32,299 --> 00:21:35,299
+in a few minutes.
+
+503
+00:21:35,299 --> 00:21:37,299
+However, please,
+
+504
+00:21:37,299 --> 00:21:39,299
+in the person who are following up
+
+505
+00:21:39,299 --> 00:21:41,299
+in our session, don't hesitate.
+
+506
+00:21:41,299 --> 00:21:42,299
+I'm happy also to continue
+
+507
+00:21:42,299 --> 00:21:43,299
+with the explanation
+
+508
+00:21:43,299 --> 00:21:45,299
+to go a little bit more deeper.
+
+509
+00:21:45,299 --> 00:21:47,299
+So, yeah, available anytime.
+
+510
+00:21:47,299 --> 00:21:49,299
+And on that, I'll pass to Jesus
+
+511
+00:21:49,299 --> 00:21:51,299
+for showing the chat.
+
+512
+00:21:52,299 --> 00:21:53,299
+Ah, yeah, okay.
+
+513
+00:21:53,299 --> 00:21:55,299
+Sure thing.
+
+514
+00:21:55,299 --> 00:21:57,299
+On request, we are also
+
+515
+00:21:57,299 --> 00:21:59,299
+showing a record.
+
+516
+00:21:59,299 --> 00:22:01,299
+So, okay, we can preview that.
+
+517
+00:22:03,299 --> 00:22:04,299
+The reason we do that
+
+518
+00:22:04,299 --> 00:22:05,299
+is because, okay,
+
+519
+00:22:05,299 --> 00:22:06,299
+you've been in this platform,
+
+520
+00:22:06,299 --> 00:22:07,299
+you have all this information,
+
+521
+00:22:07,299 --> 00:22:09,299
+you make your data selection.
+
+522
+00:22:09,299 --> 00:22:11,299
+What's the ultimate output?
+
+523
+00:22:11,299 --> 00:22:12,299
+The ultimate output,
+
+524
+00:22:12,299 --> 00:22:13,299
+believe it or not,
+
+525
+00:22:13,299 --> 00:22:15,299
+is this PDF.
+
+526
+00:22:15,299 --> 00:22:18,299
+That goes out with the signatures, okay?
+
+527
+00:22:18,299 --> 00:22:20,299
+That's the reality, right?
+
+528
+00:22:20,299 --> 00:22:21,299
+So, if someone is more
+
+529
+00:22:21,299 --> 00:22:22,299
+sort of integrated work,
+
+530
+00:22:22,299 --> 00:22:23,299
+it will be a JSON
+
+531
+00:22:23,299 --> 00:22:24,299
+that will get into some
+
+532
+00:22:24,299 --> 00:22:27,299
+electronic health record system, right?
+
+533
+00:22:27,299 --> 00:22:28,299
+So, after all of this
+
+534
+00:22:28,299 --> 00:22:30,299
+fancy analysis and AI
+
+535
+00:22:30,299 --> 00:22:32,299
+and bioinformatics pipelines
+
+536
+00:22:32,299 --> 00:22:34,299
+and, you know, fancy AI
+
+537
+00:22:34,299 --> 00:22:35,299
+and machine learning
+
+538
+00:22:35,299 --> 00:22:36,299
+to synthesize the data,
+
+539
+00:22:36,299 --> 00:22:38,299
+it's this PDF.
+
+540
+00:22:38,299 --> 00:22:40,299
+Yes.
+
+541
+00:22:40,299 --> 00:22:41,299
+That's good.
+
+542
+00:22:41,299 --> 00:22:45,299
+So, yeah?
+
+543
+00:22:45,299 --> 00:22:48,299
+Come on.
+
+544
+00:22:48,299 --> 00:22:56,660
+Thank you.
+
+545
+00:22:56,660 --> 00:22:57,660
+Yeah.
+
+546
+00:22:57,660 --> 00:22:58,660
+So, now I will just tell you
+
+547
+00:22:58,660 --> 00:22:59,660
+a little bit about
+
+548
+00:22:59,660 --> 00:23:00,660
+what we would like you to do.
+
+549
+00:23:00,660 --> 00:23:01,660
+Okay.
+
+550
+00:23:01,660 --> 00:23:02,660
+So, basically the goal
+
+551
+00:23:02,660 --> 00:23:04,660
+of the hackathon is rather open.
+
+552
+00:23:04,660 --> 00:23:06,660
+We would like you to build something
+
+553
+00:23:06,660 --> 00:23:07,660
+that is going to improve
+
+554
+00:23:07,660 --> 00:23:09,660
+this workflow that we have just discussed.
+
+555
+00:23:09,660 --> 00:23:12,660
+And we would like you to build something
+
+556
+00:23:12,660 --> 00:23:14,660
+on top of the PDF, obviously,
+
+557
+00:23:14,660 --> 00:23:15,660
+not something that might,
+
+558
+00:23:15,660 --> 00:23:16,660
+nice idea that you have
+
+559
+00:23:16,660 --> 00:23:19,660
+that you can build on Monday.
+
+560
+00:23:19,660 --> 00:23:20,660
+Today you have to build something
+
+561
+00:23:20,660 --> 00:23:21,660
+on top of the PDF
+
+562
+00:23:21,660 --> 00:23:23,660
+that is going to improve the workflow
+
+563
+00:23:23,660 --> 00:23:25,660
+for the pathogenesis.
+
+564
+00:23:25,660 --> 00:23:26,660
+For the pathologist
+
+565
+00:23:26,660 --> 00:23:28,660
+or for any of the users
+
+566
+00:23:28,660 --> 00:23:29,660
+of Soviet Union, right?
+
+567
+00:23:29,660 --> 00:23:31,660
+So, for example,
+
+568
+00:23:31,660 --> 00:23:32,660
+you can build something
+
+569
+00:23:32,660 --> 00:23:33,660
+that is going to look
+
+570
+00:23:33,660 --> 00:23:36,660
+at everything that is in the interface,
+
+571
+00:23:36,660 --> 00:23:38,660
+apply some NLM into it
+
+572
+00:23:38,660 --> 00:23:40,660
+and come up with some sort of
+
+573
+00:23:40,660 --> 00:23:42,660
+automatic report,
+
+574
+00:23:42,660 --> 00:23:44,660
+like what we said,
+
+575
+00:23:44,660 --> 00:23:46,660
+the report is what is being shared
+
+576
+00:23:46,660 --> 00:23:47,660
+with the other doctors,
+
+577
+00:23:47,660 --> 00:23:48,660
+with the other people
+
+578
+00:23:48,660 --> 00:23:49,660
+that are treating the patients.
+
+579
+00:23:49,660 --> 00:23:51,660
+So, the more precise
+
+580
+00:23:51,660 --> 00:23:52,660
+that is, the better,
+
+581
+00:23:52,660 --> 00:23:53,660
+but this is something
+
+582
+00:23:53,660 --> 00:23:54,660
+that is also very important
+
+583
+00:23:54,660 --> 00:23:57,660
+and generally is an obstacle
+
+584
+00:23:57,660 --> 00:23:58,660
+that we have in our space
+
+585
+00:23:58,660 --> 00:24:00,660
+is that it has to be precise.
+
+586
+00:24:00,660 --> 00:24:02,660
+So, you cannot just say
+
+587
+00:24:02,660 --> 00:24:05,660
+to Claude or to Chad GPT
+
+588
+00:24:05,660 --> 00:24:07,660
+just write whatever
+
+589
+00:24:07,660 --> 00:24:09,660
+because any hallucination
+
+590
+00:24:09,660 --> 00:24:11,660
+can be very critical
+
+591
+00:24:11,660 --> 00:24:12,660
+for the patient
+
+592
+00:24:12,660 --> 00:24:13,660
+because if it is not correct
+
+593
+00:24:13,660 --> 00:24:14,660
+then the patient will get misdiagnosed.
+
+594
+00:24:14,660 --> 00:24:15,660
+So, this is something
+
+595
+00:24:15,660 --> 00:24:17,660
+that you need to take into account.
+
+596
+00:24:17,660 --> 00:24:18,660
+You can also work on
+
+597
+00:24:18,660 --> 00:24:19,660
+pre-flagging the variants.
+
+598
+00:24:19,660 --> 00:24:21,660
+So, this would be,
+
+599
+00:24:21,660 --> 00:24:22,660
+you have all these variants
+
+600
+00:24:22,660 --> 00:24:23,660
+with all that information.
+
+601
+00:24:23,660 --> 00:24:26,660
+We try to flag it for our users,
+
+602
+00:24:26,660 --> 00:24:27,660
+but maybe you can come up
+
+603
+00:24:27,660 --> 00:24:28,660
+with a different system.
+
+604
+00:24:28,660 --> 00:24:29,660
+For this, we will provide you
+
+605
+00:24:29,660 --> 00:24:31,660
+an API that you can use
+
+606
+00:24:31,660 --> 00:24:32,660
+to query all the information
+
+607
+00:24:32,660 --> 00:24:33,660
+of those variants.
+
+608
+00:24:33,660 --> 00:24:35,660
+You can also create
+
+609
+00:24:35,660 --> 00:24:38,660
+some sort of filter editor,
+
+610
+00:24:38,660 --> 00:24:39,660
+let's say,
+
+611
+00:24:39,660 --> 00:24:40,660
+in which you just write
+
+612
+00:24:40,660 --> 00:24:41,660
+a sentence and it is going
+
+613
+00:24:41,660 --> 00:24:42,660
+to just show you the variants
+
+614
+00:24:42,660 --> 00:24:43,660
+that meet that filter.
+
+615
+00:24:43,660 --> 00:24:46,660
+Or you can also work
+
+616
+00:24:46,660 --> 00:24:48,660
+on the pathologist
+
+617
+00:24:48,660 --> 00:24:51,660
+by improving the way
+
+618
+00:24:51,660 --> 00:24:52,660
+in which he handles
+
+619
+00:24:52,660 --> 00:24:53,660
+some of the cases.
+
+620
+00:24:53,660 --> 00:24:54,660
+He or she will have
+
+621
+00:24:54,660 --> 00:24:56,660
+maybe hundreds of cases
+
+622
+00:24:56,660 --> 00:24:57,660
+that he needs to go through.
+
+623
+00:24:57,660 --> 00:24:58,660
+So, you can work on something
+
+624
+00:24:58,660 --> 00:25:00,660
+that is going to make this faster.
+
+625
+00:25:00,660 --> 00:25:02,660
+That is also good.
+
+626
+00:25:02,660 --> 00:25:03,660
+Or any other thing
+
+627
+00:25:03,660 --> 00:25:04,660
+that you can think of.
+
+628
+00:25:04,660 --> 00:25:05,660
+Okay, so this is an open problem.
+
+629
+00:25:05,660 --> 00:25:06,660
+You can do whatever you want.
+
+630
+00:25:06,660 --> 00:25:09,660
+Play around with Sophia DDM.
+
+631
+00:25:09,660 --> 00:25:10,660
+It's a test account, okay?
+
+632
+00:25:10,660 --> 00:25:12,660
+So, it's a test instance.
+
+633
+00:25:12,660 --> 00:25:13,660
+In theory, we expect
+
+634
+00:25:13,660 --> 00:25:15,660
+that it's going to handle
+
+635
+00:25:15,660 --> 00:25:16,660
+any load that you give it,
+
+636
+00:25:16,660 --> 00:25:19,660
+but yeah, okay.
+
+637
+00:25:19,660 --> 00:25:20,660
+Relax a little bit,
+
+638
+00:25:20,660 --> 00:25:22,660
+but generally it should work, okay?
+
+639
+00:25:22,660 --> 00:25:23,660
+So, you can do
+
+640
+00:25:23,660 --> 00:25:24,660
+whatever you want.
+
+641
+00:25:24,660 --> 00:25:25,660
+If you have problems,
+
+642
+00:25:25,660 --> 00:25:26,660
+you can contact me.
+
+643
+00:25:26,660 --> 00:25:27,660
+You can contact Antonio
+
+644
+00:25:27,660 --> 00:25:28,660
+or you can contact Zubam
+
+645
+00:25:28,660 --> 00:25:29,660
+or Abhi.
+
+646
+00:25:29,660 --> 00:25:30,660
+That should not be a problem.
+
+647
+00:25:30,660 --> 00:25:33,660
+Yeah?
+
+648
+00:25:33,660 --> 00:25:37,380
+No?
+
+649
+00:25:37,380 --> 00:25:38,380
+Okay, I'll just shout.
+
+650
+00:25:38,380 --> 00:25:39,380
+I do that all day.
+
+651
+00:25:39,380 --> 00:25:46,380
+So, I think the key point is
+
+652
+00:25:46,380 --> 00:25:48,380
+we need to get information
+
+653
+00:25:48,380 --> 00:25:49,380
+to patients faster.
+
+654
+00:25:49,380 --> 00:25:50,380
+That's your challenge.
+
+655
+00:25:50,380 --> 00:25:51,380
+You have this interface.
+
+656
+00:25:51,380 --> 00:25:52,380
+You have the data.
+
+657
+00:25:52,380 --> 00:25:53,380
+You have the data.
+
+658
+00:25:53,380 --> 00:25:55,380
+And the problem statement
+
+659
+00:25:55,380 --> 00:25:56,380
+requires a combination
+
+660
+00:25:56,380 --> 00:25:58,380
+of genomics knowledge,
+
+661
+00:25:58,380 --> 00:25:59,380
+variants, VUS,
+
+662
+00:25:59,380 --> 00:26:02,380
+RACAV, and so on and so forth.
+
+663
+00:26:02,380 --> 00:26:05,380
+It requires some sort of
+
+664
+00:26:05,380 --> 00:26:07,380
+process know-how and thinking
+
+665
+00:26:07,380 --> 00:26:08,380
+and because, you know,
+
+666
+00:26:08,380 --> 00:26:09,380
+a lot of it is
+
+667
+00:26:09,380 --> 00:26:10,380
+how do you manage the workflow
+
+668
+00:26:10,380 --> 00:26:12,380
+and how do you process things faster
+
+669
+00:26:12,380 --> 00:26:14,380
+or I have a lab.
+
+670
+00:26:14,380 --> 00:26:16,380
+I have 120 people.
+
+671
+00:26:16,380 --> 00:26:17,380
+I have 200 reports a day.
+
+672
+00:26:17,380 --> 00:26:20,380
+How do I handle that?
+
+673
+00:26:20,380 --> 00:26:21,380
+And obviously,
+
+674
+00:26:21,380 --> 00:26:22,380
+it requires tech knowledge
+
+675
+00:26:22,380 --> 00:26:23,380
+because you're going to be
+
+676
+00:26:23,380 --> 00:26:27,380
+working with APIs and tech
+
+677
+00:26:27,380 --> 00:26:28,380
+and whatever else
+
+678
+00:26:28,380 --> 00:26:29,380
+that you guys want to use.
+
+679
+00:26:29,380 --> 00:26:30,380
+Right?
+
+680
+00:26:30,380 --> 00:26:31,380
+And obviously,
+
+681
+00:26:31,380 --> 00:26:32,380
+it requires data science
+
+682
+00:26:32,380 --> 00:26:33,380
+knowledge because you might
+
+683
+00:26:33,380 --> 00:26:34,380
+want to apply AI
+
+684
+00:26:34,380 --> 00:26:35,380
+in some context or the other.
+
+685
+00:26:35,380 --> 00:26:36,380
+Right?
+
+686
+00:26:36,380 --> 00:26:37,380
+So, again,
+
+687
+00:26:37,380 --> 00:26:38,380
+it's very multidisciplinary.
+
+688
+00:26:38,380 --> 00:26:39,380
+Right?
+
+689
+00:26:39,380 --> 00:26:40,380
+Do not be...
+
+690
+00:26:40,380 --> 00:26:41,380
+I'm just trying to make
+
+691
+00:26:41,380 --> 00:26:42,380
+some encouragement.
+
+692
+00:26:42,380 --> 00:26:45,380
+It seems complicated,
+
+693
+00:26:45,380 --> 00:26:46,380
+but when you really
+
+694
+00:26:46,380 --> 00:26:47,380
+take a step back,
+
+695
+00:26:47,380 --> 00:26:48,380
+it can be very, very simple.
+
+696
+00:26:48,380 --> 00:26:49,380
+Right?
+
+697
+00:26:50,380 --> 00:26:52,380
+So, embrace the simplicity
+
+698
+00:26:52,380 --> 00:26:54,380
+and give us some creative
+
+699
+00:26:54,380 --> 00:26:57,380
+solutions to solve that problem.
+
+700
+00:26:57,380 --> 00:26:58,380
+How to get the information
+
+701
+00:26:58,380 --> 00:27:00,380
+out to patients faster.
+
+702
+00:27:00,380 --> 00:27:04,869
+I think that in the
+
+703
+00:27:04,869 --> 00:27:05,869
+interest of time,
+
+704
+00:27:05,869 --> 00:27:06,869
+I'm just going to go very quickly.
+
+705
+00:27:06,869 --> 00:27:07,869
+So, as we already said
+
+706
+00:27:07,869 --> 00:27:08,869
+multiple times,
+
+707
+00:27:08,869 --> 00:27:09,869
+we are going to be here.
+
+708
+00:27:09,869 --> 00:27:10,869
+We are going to share
+
+709
+00:27:10,869 --> 00:27:11,869
+with the guys
+
+710
+00:27:11,869 --> 00:27:13,869
+that take this challenge,
+
+711
+00:27:13,869 --> 00:27:15,869
+the credentials to log into
+
+712
+00:27:15,869 --> 00:27:16,869
+the interface that
+
+713
+00:27:16,869 --> 00:27:17,869
+Antonia just showed
+
+714
+00:27:17,869 --> 00:27:18,869
+and some information
+
+715
+00:27:18,869 --> 00:27:19,869
+on how it works
+
+716
+00:27:19,869 --> 00:27:20,869
+and also the APIs
+
+717
+00:27:20,869 --> 00:27:23,869
+that you can connect to.
+
+718
+00:27:23,869 --> 00:27:26,869
+And, yeah,
+
+719
+00:27:26,869 --> 00:27:28,869
+I think that that's it.
+
+720
+00:27:28,869 --> 00:27:29,869
+Ah, yes.
+
+721
+00:27:29,869 --> 00:27:30,869
+How we will evaluate your build.
+
+722
+00:27:30,869 --> 00:27:31,869
+So, basically,
+
+723
+00:27:31,869 --> 00:27:32,869
+we are interested in,
+
+724
+00:27:32,869 --> 00:27:33,869
+as Avi said,
+
+725
+00:27:33,869 --> 00:27:34,869
+we are interested
+
+726
+00:27:34,869 --> 00:27:36,869
+in making things faster
+
+727
+00:27:36,869 --> 00:27:38,869
+so that our patients
+
+728
+00:27:38,869 --> 00:27:39,869
+or not our patients,
+
+729
+00:27:39,869 --> 00:27:40,869
+the patients of the hospitals
+
+730
+00:27:40,869 --> 00:27:41,869
+that work with us
+
+731
+00:27:41,869 --> 00:27:43,869
+have a better treatment
+
+732
+00:27:43,869 --> 00:27:45,869
+and have a...
+
+733
+00:27:45,869 --> 00:27:46,869
+so that it is to a better outcome.
+
+734
+00:27:46,869 --> 00:27:47,869
+Right?
+
+735
+00:27:47,869 --> 00:27:48,869
+So, we are going to be
+
+736
+00:27:48,869 --> 00:27:49,869
+judging how much
+
+737
+00:27:49,869 --> 00:27:52,869
+you are going to be improving
+
+738
+00:27:52,869 --> 00:27:55,869
+our user experience, let's say.
+
+739
+00:27:55,869 --> 00:27:56,869
+What's important is that
+
+740
+00:27:56,869 --> 00:27:58,869
+generally in tech,
+
+741
+00:27:58,869 --> 00:28:00,869
+people are judging the software
+
+742
+00:28:00,869 --> 00:28:02,869
+by the time that people spend
+
+743
+00:28:02,869 --> 00:28:03,869
+in the software.
+
+744
+00:28:03,869 --> 00:28:04,869
+In our case,
+
+745
+00:28:04,869 --> 00:28:05,869
+it's a bit the opposite.
+
+746
+00:28:05,869 --> 00:28:06,869
+We want people to spend
+
+747
+00:28:06,869 --> 00:28:07,869
+as little as possible
+
+748
+00:28:07,869 --> 00:28:08,869
+in our software
+
+749
+00:28:08,869 --> 00:28:10,869
+so that they provide the results
+
+750
+00:28:10,869 --> 00:28:11,869
+to the user
+
+751
+00:28:11,869 --> 00:28:12,869
+as soon as possible.
+
+752
+00:28:12,869 --> 00:28:13,869
+Right?
+
+753
+00:28:13,869 --> 00:28:14,869
+But, as I said,
+
+754
+00:28:14,869 --> 00:28:15,869
+these results have to be correct.
+
+755
+00:28:15,869 --> 00:28:16,869
+We are going to judge
+
+756
+00:28:16,869 --> 00:28:17,869
+on the technical execution,
+
+757
+00:28:17,869 --> 00:28:18,869
+so we would like you
+
+758
+00:28:18,869 --> 00:28:19,869
+to explain to us
+
+759
+00:28:19,869 --> 00:28:20,869
+what you are doing.
+
+760
+00:28:20,869 --> 00:28:22,869
+If you don't get to the end,
+
+761
+00:28:22,869 --> 00:28:24,869
+explain to us how you would build it
+
+762
+00:28:24,869 --> 00:28:26,869
+and we are going to evaluate this.
+
+763
+00:28:26,869 --> 00:28:27,869
+And we are also going to
+
+764
+00:28:27,869 --> 00:28:28,869
+evaluate the innovation.
+
+765
+00:28:28,869 --> 00:28:31,869
+So, the more that you impress us,
+
+766
+00:28:31,869 --> 00:28:34,869
+the more a new idea this is,
+
+767
+00:28:34,869 --> 00:28:37,869
+the better the score is going to be.
+
+768
+00:28:37,869 --> 00:28:38,869
+Okay.
+
+769
+00:28:38,869 --> 00:28:39,869
+Now, they say this is
+
+770
+00:28:39,869 --> 00:28:40,869
+what I want to share with you
+
+771
+00:28:40,869 --> 00:28:43,539
+and this is who we are.
+
+772
+00:28:43,539 --> 00:28:51,900
+Yep.
+
+773
+00:28:51,900 --> 00:28:52,900
+Okay.
+
+774
+00:28:52,900 --> 00:28:54,900
+So, most of you are interested
+
+775
+00:28:54,900 --> 00:28:55,900
+maybe if you didn't,
+
+776
+00:28:55,900 --> 00:28:57,900
+take a photo of this one,
+
+777
+00:28:57,900 --> 00:28:59,900
+of all the information
+
+778
+00:28:59,900 --> 00:29:00,900
+that will be provided.
+
+779
+00:29:00,900 --> 00:29:01,900
+We are going to share
+
+780
+00:29:01,900 --> 00:29:02,900
+the information.
+
+781
+00:29:02,900 --> 00:29:03,900
+We will share the full email
+
+782
+00:29:03,900 --> 00:29:04,900
+also the demo video.
+
+783
+00:29:04,900 --> 00:29:05,900
+Okay.
+
+784
+00:29:05,900 --> 00:29:06,900
+Thank you.
+
+785
+00:29:06,900 --> 00:29:07,900
+Thank you.
+
