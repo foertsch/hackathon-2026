@@ -10,6 +10,7 @@ import {
   alertnessCurve,
   schedule,
   TASKS,
+  WORK_HABITS,
 } from "./messi.mjs";
 
 // Helpers --------------------------------------------------------------------
@@ -284,4 +285,95 @@ test("microscopy has the highest cogLoad; emails the lowest", () => {
   const sorted = Object.entries(TASKS).sort((a, b) => b[1].cogLoad - a[1].cogLoad);
   assert.equal(sorted[0][0], "microscopy");
   assert.equal(sorted[sorted.length - 1][0], "emails");
+});
+
+// 7. Work habit (optional, soft preference) -------------------------------
+
+const HABIT_CASES = [
+  { id: "h1", taskType: "microscopy",             durationMin: 60, urgency: 0.3 },
+  { id: "h2", taskType: "tissue_assessment_fish", durationMin: 60, urgency: 0.3 },
+  { id: "h3", taskType: "departmental_meetings",  durationMin: 60, urgency: 0.2 },
+  { id: "h4", taskType: "technical_validation",   durationMin: 60, urgency: 0.1 },
+  { id: "h5", taskType: "emails",                 durationMin: 60, urgency: 0.0 },
+];
+
+test("WORK_HABITS exposes the 6 expected ids in order", () => {
+  assert.deepEqual(WORK_HABITS.map((h) => h.id), [
+    "none", "finish_asap", "long_lunch", "chill_morning", "focus_window", "crash_evening",
+  ]);
+});
+
+test("workHabit defaults to none and is reflected in the output", () => {
+  const z = { MA: 1.0, EV: -1.0, DI: 0 };
+  const out = schedule(HABIT_CASES, z);
+  assert.equal(out.workHabit, "none");
+  const out2 = schedule(HABIT_CASES, z, { workHabit: "finish_asap" });
+  assert.equal(out2.workHabit, "finish_asap");
+});
+
+test("habit 'finish_asap' shifts overall placement earlier vs 'none'", () => {
+  const z = { MA: 1.0, EV: -1.0, DI: 0 };
+  const baseline = schedule(HABIT_CASES, z);
+  const asap = schedule(HABIT_CASES, z, { workHabit: "finish_asap" });
+  const meanStart = (out) =>
+    out.scheduled.reduce((sum, s) => sum + s.startSlot, 0) / out.scheduled.length;
+  assert.ok(meanStart(asap) <= meanStart(baseline), `asap mean ${meanStart(asap)} should be <= baseline ${meanStart(baseline)}`);
+});
+
+test("habit 'crash_evening' shifts overall placement later vs 'none'", () => {
+  // Use an evening type to get a positive-alertness window in the afternoon/evening.
+  const z = { MA: -1.0, EV: 1.0, DI: 0 };
+  const baseline = schedule(HABIT_CASES, z);
+  const crash = schedule(HABIT_CASES, z, { workHabit: "crash_evening" });
+  const meanStart = (out) =>
+    out.scheduled.reduce((sum, s) => sum + s.startSlot, 0) / out.scheduled.length;
+  assert.ok(meanStart(crash) >= meanStart(baseline), `crash mean ${meanStart(crash)} should be >= baseline ${meanStart(baseline)}`);
+});
+
+test("habit 'long_lunch' tends to leave the 12:00-13:30 band emptier", () => {
+  const z = { MA: 1.0, EV: -1.0, DI: 0 };
+  const overlapsLunch = (s) => s.startHour < 13.5 && s.endHour > 12;
+  const baseline = schedule(HABIT_CASES, z);
+  const longLunch = schedule(HABIT_CASES, z, { workHabit: "long_lunch" });
+  const baseLunchCount = baseline.scheduled.filter(overlapsLunch).length;
+  const habitLunchCount = longLunch.scheduled.filter(overlapsLunch).length;
+  assert.ok(
+    habitLunchCount <= baseLunchCount,
+    `long_lunch overlapped lunch ${habitLunchCount}, baseline ${baseLunchCount}`,
+  );
+});
+
+test("habit 'chill_morning' shifts the average start time later", () => {
+  const z = { MA: 0.5, EV: -0.5, DI: 0 };
+  const baseline = schedule(HABIT_CASES, z);
+  const chill = schedule(HABIT_CASES, z, { workHabit: "chill_morning" });
+  const earliestStart = (out) => Math.min(...out.scheduled.map((s) => s.startHour));
+  assert.ok(
+    earliestStart(chill) >= earliestStart(baseline),
+    `chill earliest ${earliestStart(chill)} should be >= baseline ${earliestStart(baseline)}`,
+  );
+});
+
+test("habit 'focus_window' anchors a high-cog task close to the user's peak", () => {
+  const z = { MA: 1.5, EV: -1.5, DI: 0 };
+  const out = schedule(HABIT_CASES, z, { workHabit: "focus_window" });
+  const top = out.scheduled.find((s) => s.taskType === "microscopy");
+  // For a strong morning type, peak is ~09:00. Microscopy block should sit within ~2h of it.
+  assert.ok(top, "top task scheduled");
+  assert.ok(Math.abs(top.startHour - 9) < 2.5, `expected near peak, got ${top.startLabel}`);
+});
+
+test("habit weight is small: never overrides a strong alertness preference", () => {
+  // A strong morning type with a single high-cog task. Even with finish_asap or crash_evening,
+  // the task should remain inside the morning's high-alertness window (the alertness term
+  // dominates the soft habit nudge).
+  const z = { MA: 1.5, EV: -1.5, DI: 0 };
+  const cases = [{ id: "deep", taskType: "microscopy", durationMin: 90, urgency: 0.3 }];
+  const baseline = schedule(cases, z).scheduled[0];
+  const asap = schedule(cases, z, { workHabit: "finish_asap" }).scheduled[0];
+  const crash = schedule(cases, z, { workHabit: "crash_evening" }).scheduled[0];
+  // All three placements should stay within the morning peak (06:00 - 12:00).
+  for (const r of [baseline, asap, crash]) {
+    assert.ok(r.startHour >= 6 && r.startHour < 12, `morning-peak placement violated: ${r.startLabel}`);
+  }
 });

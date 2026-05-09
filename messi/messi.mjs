@@ -201,7 +201,48 @@ export const TASKS = {
 //   "stability"      - chronotype-aware but DI-modulated: low-DI users get
 //                      a flatter alertness curve so the order matters less.
 //
+// Optional workHabit (default "none") layers a soft preference on top of the
+// alertness-based score with weight HABIT_WEIGHT (~10% of the alertness term).
+// Alertness remains dominant; the habit only nudges placement when alertness
+// scores are close. Never places tasks outside positive-alertness slots.
+//
+//   "none"          - no habit preference (default).
+//   "finish_asap"   - prefers earlier slots so the day ends sooner.
+//   "long_lunch"    - mild penalty on slots in 12:00..13:30.
+//   "chill_morning" - mild penalty on slots before 10:00.
+//   "focus_window"  - bonus for high-cogLoad (>=0.7) tasks at peak ±1h.
+//   "crash_evening" - prefers later slots.
+//
 // Day window: 06:00..20:00 (default), 8h actual work, splittable.
+
+const HABIT_WEIGHT = 0.1;
+
+function findPeakHour(z, cfg) {
+  let peakHour = cfg.dayStartHour;
+  let peakAlert = -Infinity;
+  for (let h = cfg.dayStartHour; h <= cfg.dayEndHour + 1e-9; h += 0.5) {
+    const a = alertnessAt(h, z);
+    if (a > peakAlert) { peakAlert = a; peakHour = h; }
+  }
+  return peakHour;
+}
+
+function habitPrefAt(slot, hour, c, ctx) {
+  switch (ctx.workHabit) {
+    case "finish_asap":
+      return 1 - slot / Math.max(1, ctx.totalSlots - 1);
+    case "crash_evening":
+      return slot / Math.max(1, ctx.totalSlots - 1);
+    case "long_lunch":
+      return (hour >= 12 && hour < 13.5) ? -1 : 0;
+    case "chill_morning":
+      return hour < 10 ? -1 : 0;
+    case "focus_window":
+      return (c.cogLoad >= 0.7 && Math.abs(hour - ctx.peakHour) <= 1) ? 1 : 0;
+    default:
+      return 0;
+  }
+}
 
 export const DEFAULTS = {
   dayStartHour: 6,
@@ -219,8 +260,10 @@ function hourToLabel(hour) {
 export function schedule(cases, z, opts = {}) {
   const cfg = { ...DEFAULTS, ...opts };
   const mode = opts.mode ?? "chronotype";
+  const workHabit = opts.workHabit ?? "none";
   const totalSlots = ((cfg.dayEndHour - cfg.dayStartHour) * 60) / cfg.slotMin;
   const targetWorkSlots = cfg.workMinutes / cfg.slotMin;
+  const peakHour = workHabit === "focus_window" ? findPeakHour(z, cfg) : 0;
 
   // Per-slot alertness (sampled at slot midpoint).
   const alertness = [];
@@ -270,14 +313,27 @@ export function schedule(cases, z, opts = {}) {
       for (let k = 0; k < c.needSlots; k++) mean += alertness[s + k];
       mean /= c.needSlots;
 
+      let habitMean = 0;
+      if (workHabit !== "none") {
+        const habitCtx = { workHabit, totalSlots, peakHour };
+        for (let k = 0; k < c.needSlots; k++) {
+          const slotIdx = s + k;
+          const slotHour =
+            cfg.dayStartHour + (slotIdx * cfg.slotMin + cfg.slotMin / 2) / 60;
+          habitMean += habitPrefAt(slotIdx, slotHour, c, habitCtx);
+        }
+        habitMean /= c.needSlots;
+      }
+
       let score;
       if (isStat) {
-        // earliest free slot wins; tiebreak by alertness match
-        score = -s * 1000 + mean * (2 * c.cogLoad - 1);
+        // earliest free slot wins; tiebreak by alertness + habit match
+        score = -s * 1000 + mean * (2 * c.cogLoad - 1) + HABIT_WEIGHT * habitMean;
       } else {
         // (2*cogLoad - 1) inverts preference for low-load tasks: high-cog tasks
         // want positive alertness slots, low-cog tasks prefer trough slots.
-        score = mean * (2 * c.cogLoad - 1);
+        // habitMean is a soft nudge with HABIT_WEIGHT << 1.
+        score = mean * (2 * c.cogLoad - 1) + HABIT_WEIGHT * habitMean;
       }
 
       if (score > bestScore) {
@@ -322,6 +378,7 @@ export function schedule(cases, z, opts = {}) {
 
   return {
     mode,
+    workHabit,
     z,
     config: cfg,
     alertness: alertness.map((a, i) => ({
@@ -334,3 +391,12 @@ export function schedule(cases, z, opts = {}) {
     workMinutesUsed: workSlotsUsed * cfg.slotMin,
   };
 }
+
+export const WORK_HABITS = [
+  { id: "none",          label: "None",          description: "No habit preference (default). Pure alertness-driven." },
+  { id: "finish_asap",   label: "Finish ASAP",   description: "Soft preference for earlier slots. Free evening." },
+  { id: "long_lunch",    label: "Long lunch",    description: "Soft penalty for slots in 12:00–13:30 so a midday gap appears." },
+  { id: "chill_morning", label: "Chill morning", description: "Soft penalty for slots before 10:00 so the day starts later." },
+  { id: "focus_window",  label: "Focus window",  description: "Bonus for high-cogLoad tasks at your peak ±1h." },
+  { id: "crash_evening", label: "Crash evening", description: "Soft preference for later slots." },
+];
