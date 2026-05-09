@@ -50,3 +50,6 @@ Should return JSON with 524 columns × 10 rows. To grab `key`/`analysisId`/`inte
 - `docs/` — Sophia VQS API reference + screenshots + sample response.
 - `scripts/vqs_query.py` — minimal VQS client (stdlib only, no deps).
 - `decisions.md`, `mentors.md` — team working docs.
+
+### Projects
+- [`ai-triage-extension/`](ai-triage-extension/): Chrome MV3 extension that injects an AI case summary card into the Gen2 sample side panel, paired with a FastAPI backend that builds the bundle from VQS and drafts the summary with Gemini 2.5 Flash. Priority is computed deterministically from typed ACMG / ClinVar / ABCD fields; bullet text passes through a token-level verifier against the source bundle. See [`ai-triage-extension/extension/README.md`](ai-triage-extension/extension/README.md) for setup.
