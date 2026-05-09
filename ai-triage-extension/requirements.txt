@@ -1,0 +1,7 @@
+playwright>=1.40
+requests>=2.31
+pydantic>=2.5
+anthropic>=0.40
+google-genai>=1.0
+fastapi>=0.110
+uvicorn[standard]>=0.27

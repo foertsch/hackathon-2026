@@ -1,0 +1,30 @@
+{
+  "manifest_version": 3,
+  "name": "SOPHiA DDM AI Triage",
+  "version": "0.1.0",
+  "description": "AI-generated case summaries injected into the SOPHiA DDM Gen2 worklist.",
+  "permissions": [
+    "storage"
+  ],
+  "host_permissions": [
+    "https://platform-vandv1.sophiagenetics.com/*",
+    "http://127.0.0.1:8000/*",
+    "http://localhost:8000/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://platform-vandv1.sophiagenetics.com/web/genomics*"
+      ],
+      "js": ["content.js"],
+      "css": ["content.css"],
+      "run_at": "document_idle"
+    }
+  ],
+  "action": {
+    "default_title": "SOPHiA AI Triage"
+  }
+}

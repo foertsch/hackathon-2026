@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>SOPHiA DDM · AI Triage</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+    :root {
+      --bg: #0d2240;
+      --bg-2: #122a4d;
+      --panel: #ffffff;
+      --panel-border: #d8dde5;
+      --text: #0d2240;
+      --text-soft: #5d6b80;
+      --accent: #e91157;
+      --accent-soft: #ffe1ec;
+      --high: #b91c4c;
+      --medium: #b78207;
+      --low: #166534;
+      --pass: #166534;
+      --warn: #b78207;
+      --fail: #b91c4c;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", sans-serif;
+      background: linear-gradient(180deg, var(--bg) 0%, var(--bg-2) 280px, #f1f3f7 280px);
+      color: var(--text);
+      min-height: 100vh;
+    }
+    header {
+      padding: 36px 48px 60px;
+      color: white;
+    }
+    header .eyebrow {
+      letter-spacing: 0.18em;
+      font-size: 12px;
+      color: #aac1e0;
+      margin-bottom: 8px;
+    }
+    header h1 {
+      margin: 0 0 6px;
+      font-size: 28px;
+      font-weight: 700;
+    }
+    header .lede {
+      color: #cfdbef;
+      font-size: 15px;
+      max-width: 640px;
+      line-height: 1.4;
+    }
+    main {
+      max-width: 1180px;
+      margin: -36px auto 60px;
+      padding: 0 24px;
+    }
+    .toolbar {
+      display: flex;
+      gap: 12px;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 16px;
+      color: var(--text-soft);
+      font-size: 13px;
+    }
+    .toolbar button {
+      background: white;
+      border: 1px solid var(--panel-border);
+      color: var(--text);
+      padding: 8px 14px;
+      border-radius: 6px;
+      font-size: 13px;
+      font-weight: 500;
+      cursor: pointer;
+      transition: 0.12s;
+    }
+    .toolbar button:hover { background: #f7f9fc; }
+    .toolbar button[data-active] {
+      background: var(--accent);
+      color: white;
+      border-color: var(--accent);
+    }
+    .filters { display: flex; gap: 6px; }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+      gap: 16px;
+    }
+    .card {
+      background: var(--panel);
+      border: 1px solid var(--panel-border);
+      border-left: 5px solid var(--panel-border);
+      border-radius: 8px;
+      padding: 18px 20px;
+      box-shadow: 0 1px 2px rgba(0,0,0,0.04);
+      transition: 0.15s;
+    }
+    .card:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    }
+    .card.priority-HIGH   { border-left-color: var(--high); }
+    .card.priority-MEDIUM { border-left-color: var(--medium); }
+    .card.priority-LOW    { border-left-color: var(--low); }
+    .card .row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8px;
+      margin-bottom: 6px;
+    }
+    .card .case-id {
+      font-family: ui-monospace, "SF Mono", Menlo, monospace;
+      font-size: 11px;
+      color: var(--text-soft);
+    }
+    .badges { display: flex; gap: 6px; }
+    .badge {
+      display: inline-block;
+      padding: 3px 9px;
+      border-radius: 999px;
+      font-size: 10.5px;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+    .badge-priority-HIGH   { background: #fde2e9; color: var(--high); }
+    .badge-priority-MEDIUM { background: #fdebcd; color: var(--medium); }
+    .badge-priority-LOW    { background: #d8eedc; color: var(--low); }
+    .badge-qc-PASS         { background: #d8eedc; color: var(--pass); }
+    .badge-qc-WARN         { background: #fdebcd; color: var(--warn); }
+    .badge-qc-FAIL         { background: #fde2e9; color: var(--fail); }
+    .card h3 {
+      margin: 8px 0 4px;
+      font-size: 16px;
+      line-height: 1.35;
+      color: var(--text);
+    }
+    .meta {
+      font-size: 12.5px;
+      color: var(--text-soft);
+      margin-bottom: 10px;
+    }
+    .meta strong { color: var(--text); }
+    .bullets {
+      margin: 10px 0 0;
+      padding-left: 18px;
+      font-size: 13px;
+      line-height: 1.5;
+      color: var(--text);
+    }
+    .bullets li { margin-bottom: 4px; }
+    .footer-row {
+      margin-top: 12px;
+      padding-top: 10px;
+      border-top: 1px dashed #e3e8ef;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 11.5px;
+      color: var(--text-soft);
+    }
+    .cite-tag {
+      display: inline-block;
+      background: #eef2f8;
+      border-radius: 3px;
+      padding: 1px 6px;
+      font-family: ui-monospace, monospace;
+      font-size: 10px;
+      margin: 1px 2px 0 0;
+      color: #4a5b78;
+    }
+    .empty {
+      padding: 40px;
+      text-align: center;
+      color: var(--text-soft);
+      background: white;
+      border: 1px dashed var(--panel-border);
+      border-radius: 8px;
+    }
+    .loader { animation: pulse 1.4s ease-in-out infinite; }
+    @keyframes pulse { 0%,100%{opacity:1} 50%{opacity:0.5} }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="eyebrow">SOPHiA DDM™ · AI Case Triage</div>
+    <h1>My work · Smart summary</h1>
+    <p class="lede">
+      AI-generated triage cards for every pending interpretation. Each card cites
+      the variants and bundle fields it referenced — every claim traces back to
+      a real value in the SOPHiA DDM data layer.
+    </p>
+  </header>
+
+  <main>
+    <div class="toolbar">
+      <div id="status">Loading…</div>
+      <div class="filters">
+        <button data-filter="ALL" data-active>All</button>
+        <button data-filter="HIGH">High</button>
+        <button data-filter="MEDIUM">Medium</button>
+        <button data-filter="LOW">Low</button>
+      </div>
+    </div>
+
+    <div id="grid" class="grid loader"></div>
+  </main>
+
+  <script>
+    const grid = document.getElementById('grid');
+    const status = document.getElementById('status');
+    let allRows = [];
+    let filter = 'ALL';
+
+    function fmtDate(ms) {
+      if (!ms) return '';
+      const d = new Date(Number(ms));
+      return d.toLocaleDateString(undefined, { month: 'short', day: 'numeric' });
+    }
+
+    function render() {
+      const rows = filter === 'ALL'
+        ? allRows
+        : allRows.filter(r => r.summary.priority === filter);
+      if (!rows.length) {
+        grid.innerHTML = `<div class="empty">No cases match the current filter.</div>`;
+        return;
+      }
+      grid.innerHTML = rows.map(r => {
+        const s = r.summary;
+        const bullets = (s.bullets || []).map(b => `<li>${escapeHtml(b)}</li>`).join('');
+        const cites = (s.cites_fields || []).map(f => `<span class="cite-tag">${escapeHtml(f)}</span>`).join('');
+        return `
+          <div class="card priority-${s.priority}">
+            <div class="row">
+              <span class="case-id">${escapeHtml(r.interpretation_id)}</span>
+              <div class="badges">
+                <span class="badge badge-priority-${s.priority}">${s.priority}</span>
+                <span class="badge badge-qc-${s.qc_status}">QC ${s.qc_status}</span>
+              </div>
+            </div>
+            <h3>${escapeHtml(s.headline)}</h3>
+            <div class="meta">
+              <strong>${escapeHtml(r.sample_user_ref || '—')}</strong>
+              · ${escapeHtml(r.panel_label || 'panel unknown')}
+              · ${fmtDate(r.edited_at)}
+            </div>
+            <ul class="bullets">${bullets}</ul>
+            <div class="footer-row">
+              <span>${(s.cites_sg_ids || []).length} variants cited</span>
+              <span>${cites}</span>
+            </div>
+          </div>
+        `;
+      }).join('');
+    }
+
+    function escapeHtml(s) {
+      return String(s ?? '')
+        .replace(/&/g, '&amp;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;')
+        .replace(/"/g, '&quot;');
+    }
+
+    document.querySelectorAll('.filters button').forEach(btn => {
+      btn.addEventListener('click', () => {
+        document.querySelectorAll('.filters button').forEach(b => b.removeAttribute('data-active'));
+        btn.setAttribute('data-active', '');
+        filter = btn.dataset.filter;
+        render();
+      });
+    });
+
+    fetch('/api/summaries')
+      .then(r => r.json())
+      .then(data => {
+        allRows = data.summaries || [];
+        grid.classList.remove('loader');
+        const counts = allRows.reduce((acc, r) => {
+          acc[r.summary.priority] = (acc[r.summary.priority] || 0) + 1;
+          return acc;
+        }, {});
+        status.textContent = `${allRows.length} cases · ` +
+          Object.entries(counts).map(([k,v]) => `${v} ${k.toLowerCase()}`).join(' · ');
+        render();
+      })
+      .catch(err => {
+        grid.classList.remove('loader');
+        status.textContent = 'Failed to load summaries';
+        grid.innerHTML = `<div class="empty">Error: ${escapeHtml(err.message)}</div>`;
+      });
+  </script>
+</body>
+</html>
