@@ -1,0 +1,77 @@
+{
+  "_comment": "Synthetic pathologist workdays for demoing the MESSi scheduler. Task types match TASKS keys in messi.mjs: microscopy, tissue_assessment_fish, departmental_meetings, technical_validation, emails. Urgency: 0=routine, 0.5=priority, 0.9-1.0=STAT.",
+  "days": [
+    {
+      "id": "monday_typical",
+      "label": "Typical Monday — weekend backlog",
+      "description": "Each of the 5 daily activities once or twice; sums to ~8h.",
+      "cases": [
+        { "id": "M1", "taskType": "microscopy",             "durationMin": 120, "urgency": 0.4, "note": "Morning slide review, weekend backlog" },
+        { "id": "M2", "taskType": "microscopy",             "durationMin": 60,  "urgency": 0.3, "note": "Second microscopy block" },
+        { "id": "M3", "taskType": "tissue_assessment_fish", "durationMin": 60,  "urgency": 0.3, "note": "FISH workup A" },
+        { "id": "M4", "taskType": "tissue_assessment_fish", "durationMin": 60,  "urgency": 0.3, "note": "FISH workup B" },
+        { "id": "M5", "taskType": "technical_validation",   "durationMin": 60,  "urgency": 0.2, "note": "Lab tech support" },
+        { "id": "M6", "taskType": "departmental_meetings",  "durationMin": 60,  "urgency": 0.2, "note": "Tumor board / department sync" },
+        { "id": "M7", "taskType": "emails",                 "durationMin": 30,  "urgency": 0.0, "note": "Morning inbox" },
+        { "id": "M8", "taskType": "emails",                 "durationMin": 30,  "urgency": 0.0, "note": "Afternoon inbox" }
+      ]
+    },
+    {
+      "id": "stat_day",
+      "label": "STAT day — urgent referral overrides",
+      "description": "Two STAT cases must go first regardless of chronotype peak.",
+      "cases": [
+        { "id": "S1", "taskType": "microscopy",             "durationMin": 90,  "urgency": 1.0, "note": "STAT — pediatric oncology slide" },
+        { "id": "S2", "taskType": "tissue_assessment_fish", "durationMin": 60,  "urgency": 0.9, "note": "STAT — leukemia suspected" },
+        { "id": "S3", "taskType": "microscopy",             "durationMin": 60,  "urgency": 0.4 },
+        { "id": "S4", "taskType": "tissue_assessment_fish", "durationMin": 60,  "urgency": 0.3 },
+        { "id": "S5", "taskType": "departmental_meetings",  "durationMin": 60,  "urgency": 0.2 },
+        { "id": "S6", "taskType": "technical_validation",   "durationMin": 60,  "urgency": 0.1 },
+        { "id": "S7", "taskType": "emails",                 "durationMin": 30,  "urgency": 0.0 }
+      ]
+    },
+    {
+      "id": "microscopy_heavy",
+      "label": "Microscopy-heavy day",
+      "description": "Slide review dominates — chronotype matters most here.",
+      "cases": [
+        { "id": "I1", "taskType": "microscopy",             "durationMin": 120, "urgency": 0.4 },
+        { "id": "I2", "taskType": "microscopy",             "durationMin": 90,  "urgency": 0.3 },
+        { "id": "I3", "taskType": "microscopy",             "durationMin": 60,  "urgency": 0.3 },
+        { "id": "I4", "taskType": "tissue_assessment_fish", "durationMin": 60,  "urgency": 0.2 },
+        { "id": "I5", "taskType": "emails",                 "durationMin": 30,  "urgency": 0.0 },
+        { "id": "I6", "taskType": "technical_validation",   "durationMin": 30,  "urgency": 0.1 }
+      ]
+    },
+    {
+      "id": "admin_heavy",
+      "label": "Admin-heavy day — quarter close",
+      "description": "Meetings, validations, emails dominate; only one deep-focus block.",
+      "cases": [
+        { "id": "A1", "taskType": "microscopy",             "durationMin": 60,  "urgency": 0.3 },
+        { "id": "A2", "taskType": "departmental_meetings",  "durationMin": 90,  "urgency": 0.3, "note": "Quarterly review" },
+        { "id": "A3", "taskType": "departmental_meetings",  "durationMin": 60,  "urgency": 0.2, "note": "All-hands" },
+        { "id": "A4", "taskType": "technical_validation",   "durationMin": 90,  "urgency": 0.2 },
+        { "id": "A5", "taskType": "tissue_assessment_fish", "durationMin": 60,  "urgency": 0.2 },
+        { "id": "A6", "taskType": "emails",                 "durationMin": 60,  "urgency": 0.0, "note": "Quarter-close paperwork" },
+        { "id": "A7", "taskType": "emails",                 "durationMin": 60,  "urgency": 0.0 }
+      ]
+    },
+    {
+      "id": "overcapacity",
+      "label": "Over-capacity day — something has to give",
+      "description": "9 cases × 60min = 540min > 480min cap. Demonstrates skipping.",
+      "cases": [
+        { "id": "O1", "taskType": "microscopy",             "durationMin": 60, "urgency": 0.5 },
+        { "id": "O2", "taskType": "microscopy",             "durationMin": 60, "urgency": 0.4 },
+        { "id": "O3", "taskType": "tissue_assessment_fish", "durationMin": 60, "urgency": 0.4 },
+        { "id": "O4", "taskType": "tissue_assessment_fish", "durationMin": 60, "urgency": 0.3 },
+        { "id": "O5", "taskType": "microscopy",             "durationMin": 60, "urgency": 0.3 },
+        { "id": "O6", "taskType": "departmental_meetings",  "durationMin": 60, "urgency": 0.2 },
+        { "id": "O7", "taskType": "technical_validation",   "durationMin": 60, "urgency": 0.1 },
+        { "id": "O8", "taskType": "departmental_meetings",  "durationMin": 60, "urgency": 0.1 },
+        { "id": "O9", "taskType": "emails",                 "durationMin": 60, "urgency": 0.0 }
+      ]
+    }
+  ]
+}

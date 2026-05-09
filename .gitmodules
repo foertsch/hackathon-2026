@@ -1,0 +1,3 @@
+[submodule "patho-chrono-companion"]
+	path = patho-chrono-companion
+	url = https://github.com/foertsch/patho-chrono-companion.git
