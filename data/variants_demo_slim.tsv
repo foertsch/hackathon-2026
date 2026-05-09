@@ -1,0 +1,334 @@
+transcriptome.gene.symbol	transcriptome.gene.code	transcriptome.transcript.name	short.called.variant.location.chromosome.fullSeqName	short.called.variant.type	short.annotated.transcriptContext.transcriptVariant.cnomen.base	short.annotated.transcriptContext.proteinVariant.pnomen.hgvsRefSeq	short.annotated.transcriptContext.proteinVariant.consequence.sophiaName	short.called.alleleFrequency	short.called.readDepth	short.annotated.catalogs.gnomadGenomes.global.global.value	short.annotated.catalogs.gnomadExomes.global.global.value	short.annotated.catalogs.clinvar.CLNSIG	short.annotated.catalogs.clinvar.CLNREVSTAT
+BRCA1	7006	NM_007294	chr17	INDEL	c.4185+21_4185+22del	NP_009225.1:p.(=)	intronic	6.4	1370		0.00024841	Benign/Likely_benign	criteria_provided,multiple_submitters,no_conflicts
+BRCA1	7006	NM_007294	chr17	SNV	c.5407-193A>G	NP_009225.1:p.(=)	intronic	100.0	151	0.48208		Benign	reviewed_by_expert_panel
+BRIP1	39800	NM_032043	chr17	SNV	c.457G>C	NP_114432.2:p.(Asp153His)	missense	1.2	1368			Uncertain_significance	criteria_provided,single_submitter
+BARD1	13735	NM_000465	chr2	SNV	c.1314+238G>A	NP_000456.2:p.(=)	intronic	51.9	79	0.714478		Benign	criteria_provided,single_submitter
+BARD1	13735	NM_000465	chr2	SNV	c.158+46A>C	NP_000456.2:p.(=)	intronic	53.6	1292	0.737546	0.71454	Benign	criteria_provided,multiple_submitters,no_conflicts
+MSH6	38283	NM_000179	chr2	SNV	c.3646+91T>C	NP_000170.1:p.(=)	intronic	99.8	610	0.777678	0.74131	Benign	reviewed_by_expert_panel
+MSH2	1183	NM_000251	chr2	SNV	c.2210+175G>A	NP_000242.1:p.(=)	intronic	52.17	299	0.500947		Benign	criteria_provided,single_submitter
+MSH6	38283	NM_000179	chr2	INDEL	c.3646+35_3646+38del	NP_000170.1:p.(=)	intronic	99.5	939	0.706371	0.673376	Benign	reviewed_by_expert_panel
+C11orf65	1327	NM_001330368	chr11	SNV	c.641-23971C>T	NP_001317297.1:p.(=)	intronic	100.0	575	0.997584	0.99972	Benign	criteria_provided,multiple_submitters,no_conflicts
+RPL21P4	33016	RPL21P4	chr17	SNV	n.239C>T		non-coding	99.9	842	0.316458	0.356357		
+C11orf65	1327	NM_001330368	chr11	SNV	c.641-20344A>C	NP_001317297.1:p.(=)	intronic	48.36	122	0.515418	0.55924	Benign	criteria_provided,single_submitter
+APC	32582	NM_000038	chr5	SNV	c.5268T>G	NP_000029.2:p.(Ser1756=)	synonymous	49.6	1560	0.602803	0.629121	Benign	criteria_provided,multiple_submitters,no_conflicts
+ATM	32283	NM_000051	chr11	SNV	c.2250+221T>C	NP_000042.3:p.(=)	intronic	100.0	66	0.993642		Benign	criteria_provided,single_submitter
+CHEK2	15907	NM_007194	chr22	SNV	c.1260-70A>G	NP_009125.1:p.(=)	intronic	4.4	894		2.75708e-06		
+TRNAN-GUU	44974	rna-TRNAN-GUU-4	chr1	SNV			non-coding	50.7	1297	0.269611	0.260121		
+TRNAN-GUU	44974	rna-TRNAN-GUU-4	chr1	SNV			non-coding	1.52	984				
+PTEN	40111	NM_001304717	chr10	SNV	c.10G>A	NP_001291646.4:p.(Gly4Arg)	missense	56.4	163	0.126202	0.153733	Benign/Likely_benign	criteria_provided,multiple_submitters,no_conflicts
+PTEN	40111	NM_000314	chr10	SNV		NP_000305.3:p.(=)	intergenic	65.71	35				
+TP53	31869	NM_000546	chr17	SNV	c.376-283T>C	NP_000537.3:p.(=)	intronic	59.4	133	0.847199	0.877907	Benign	criteria_provided,multiple_submitters,no_conflicts
+MRPS18C	693	NM_016067	chr4	SNV	c.*925A>G	NP_057151.1:p.(=)	3'UTR	100.0	1178	0.995542	0.993849		
+PMS2	4760	NM_000535	chr7	INDEL	c.705+117_705+118del	NP_000526.2:p.(=)	intronic	27.2	530	0.00334335	0.170012		
+CDH1	7701	NM_004360	chr16	INDEL	c.1937-145_1937-144del	NP_004351.1:p.(=)	intronic	3.6	111	0.000961651	0.128166		
+BRCA2	6646	NM_000059	chr13	SNV	c.7806-14T>C	NP_000050.3:p.(=)	intronic	47.4	1447	0.53712	0.524307	Benign	reviewed_by_expert_panel
+BRCA2	6646	NM_000059	chr13	SNV	c.9257-219A>G	NP_000050.3:p.(=)	intronic	52.08	96	0.516794		Benign	reviewed_by_expert_panel
+MLH1	38918	NM_000249	chr3	SNV	c.1897-167T>C	NP_000240.1:p.(=)	intronic	3.56	281				
+BRCA1	7006	NM_007294	chr17	INDEL	c.441+36_441+49del	NP_009225.1:p.(=)	intronic	6.7	623	0.307067		Benign/Likely_benign	criteria_provided,multiple_submitters,no_conflicts
+BARD1	13735	NM_000465	chr2	SNV	c.1518T>C	NP_000456.2:p.(His506=)	synonymous	100.0	1401	0.755592	0.807653	Benign	criteria_provided,multiple_submitters,no_conflicts
+MSH6	38283	NM_000179	chr2	SNV	c.3438+14A>T	NP_000170.1:p.(=)	intronic	47.1	1471	0.334013	0.393714	Benign	reviewed_by_expert_panel
+MSH2	1183	NM_001258281	chr2	SNV	c.-132T>C	NP_001245210.1:p.(=)	5'UTR	54.4	1216	0.103793	0.125955	Benign	reviewed_by_expert_panel
+EPCAM	26450	NM_002354	chr2	SNV	c.344T>C	NP_002345.2:p.(Met115Thr)	missense	51.7	1453	0.577079	0.467442	Benign	criteria_provided,multiple_submitters,no_conflicts
+TP53	31869	NM_001126118	chr17	SNV	c.-123C>G	NP_001119590.1:p.(=)	5'UTR	44.7	913	0.659786	0.708485	Benign	criteria_provided,multiple_submitters,no_conflicts
+PIK3CA	27835	NM_006218	chr3	INDEL	c.2016-27_2016-26del	NP_006209.2:p.(=)	intronic	5.6	665				
+RAD51L3-RFFL	42277	NR_037714	chr17	SNV	n.233-320T>C		non-coding	100.0	432	0.510513			
+ABRAXAS1	15085	NM_139076	chr4	SNV	c.215+176C>T	NP_620775.2:p.(=)	intronic	50.09	543	0.590324		Benign	criteria_provided,single_submitter
+PMS2	4760	NM_000535	chr7	SNV	c.538-223A>G	NP_000526.2:p.(=)	intronic	46.05	152	0.211282		Benign	reviewed_by_expert_panel
+BRCA2	6646	NM_000059	chr13	SNV	c.7242A>G	NP_000050.3:p.(Ser2414=)	synonymous	51.9	1689	0.221322	0.221527	Benign	reviewed_by_expert_panel
+CDH1	7701	NM_004360	chr16	INDEL	c.48+62_48+63insCGTGCCCCAGCCC	NP_004351.1:p.(=)	intronic	80.4	903	0.807183	0.850697	Benign	criteria_provided,multiple_submitters,no_conflicts
+BRCA2	6646	NM_000059	chr13	SNV	c.7397T>C	NP_000050.3:p.(Val2466Ala)	missense	100.0	1610	0.980573	0.997912	Benign	criteria_provided,multiple_submitters,no_conflicts
+CDH1	7701	NM_004360	chr16	INDEL		NP_004351.1:p.(=)	intergenic	100.0	60	0.805511			
+CDH1	7701	NM_004360	chr16	INDEL	c.48+62_48+63insCGGGCCCCAGCCC	NP_004351.1:p.(=)	intronic	0.4	903				
+CDH1	7701	NM_004360	chr16	SNV	c.2076T>C	NP_004351.1:p.(Ala692=)	synonymous	51.5	1532	0.698601	0.635441	Benign	reviewed_by_expert_panel
+BRCA1	7006	NM_007294	chr17	SNV	c.4358-2885G>A	NP_009225.1:p.(=)	intronic	99.9	842	0.316458	0.356357	Benign	reviewed_by_expert_panel
+MLH1	38918	NM_000249	chr3	SNV	c.1038+86T>C	NP_000240.1:p.(=)	intronic	49.5	980	0.406288	0.431903	Benign	reviewed_by_expert_panel
+BRCA1	7006	NM_007294	chr17	SNV	c.5074+65G>A	NP_009225.1:p.(=)	intronic	100.0	1061	0.247106	0.270243	Benign	reviewed_by_expert_panel
+MLH1	38918	NM_000249	chr3	SNV	c.1039-78A>G	NP_000240.1:p.(=)	intronic	41.1	141	0.360439	0.472016	Benign	reviewed_by_expert_panel
+TRNAG-CCC	42210	rna-TRNAG-CCC-2	chr1	SNV			non-coding	5.29	454				
+BRIP1	39800	NM_032043	chr17	SNV	c.1795-47G>C	NP_114432.2:p.(=)	intronic	99.9	996	0.777576	0.746468	Benign	criteria_provided,multiple_submitters,no_conflicts
+BARD1	13735	NM_000465	chr2	SNV	c.1315-196T>C	NP_000456.2:p.(=)	intronic	100.0	162	0.755321		Benign	criteria_provided,single_submitter
+MSH2	1183	NM_000251	chr2	SNV	c.646-224A>G	NP_000242.1:p.(=)	intronic	55.26	333	0.0885326		Benign	criteria_provided,single_submitter
+MUTYH	1779	NM_001048174	chr1	SNV	c.420+35A>G	NP_001041639.1:p.(=)	intronic	50.4	1773	0.932677	0.9139	Benign	criteria_provided,multiple_submitters,no_conflicts
+APC	32582	NM_000038	chr5	SNV	c.5034G>A	NP_000029.2:p.(Gly1678=)	synonymous	53.8	1574	0.60469	0.632156	Benign	criteria_provided,multiple_submitters,no_conflicts
+ATM	32283	NM_000051	chr11	SNV	c.4611+213A>G	NP_000042.3:p.(=)	intronic	53.73	134	0.523234		Benign	criteria_provided,single_submitter
+APC	32582	NM_000038	chr5	INDEL	c.1548+297dup	NP_000029.2:p.(=)	intronic	45.56	90	0.613435		Benign	criteria_provided,single_submitter
+ATM	32283	NM_000051	chr11	SNV	c.3403-15T>A	NP_000042.3:p.(=)	intronic	3.9	1072	0.0279446		Benign/Likely_benign	criteria_provided,multiple_submitters,no_conflicts
+PALB2	6701	NM_024675	chr16	INDEL	c.1684+39_1684+41del	NP_078951.2:p.(=)	intronic	10.0	1330	0.000269666	0.000223916	Likely_benign	criteria_provided,single_submitter
+CHEK2	15907	NM_007194	chr22	SNV	c.1376-258C>T	NP_009125.1:p.(=)	intronic	66.67	54	0.404592		Benign	criteria_provided,single_submitter
+CHEK2	15907	NM_007194	chr22	SNV	c.1375+78C>G	NP_009125.1:p.(=)	intronic	51.8	991	0.605339	0.649162	Benign	criteria_provided,multiple_submitters,no_conflicts
+TRNAN-GUU	44974	rna-TRNAN-GUU-4	chr1	SNV			non-coding	100.0	892	0.9903	0.987234		
+PTEN	40111	NM_000314	chr10	SNV	c.1026+32T>G	NP_000305.3:p.(=)	intronic	46.7	1300	0.399728	0.358325	Benign	reviewed_by_expert_panel
+RAD51D	30171	NM_002878	chr17	SNV	c.480+187T>C	NP_002869.3:p.(=)	intronic	100.0	432	0.510513		Benign	criteria_provided,multiple_submitters,no_conflicts
+PMS2	4760	NM_000535	chr7	SNV	c.2570G>C	NP_000526.2:p.(Gly857Ala)	missense	39.2	2580	0.310293	0.286648	Benign	reviewed_by_expert_panel
+BRCA2	6646	NM_000059	chr13	INDEL	c.6841+80_6841+83del	NP_000050.3:p.(=)	intronic	48.8	1214	0.28111	0.305917	Benign	reviewed_by_expert_panel
+BRCA2	6646	NM_000059	chr13	SNV	c.6841+191C>A	NP_000050.3:p.(=)	intronic	42.81	292	0.282323		Benign	reviewed_by_expert_panel
+BRCA1	7006	NM_007294	chr17	SNV	c.4987-92A>G	NP_009225.1:p.(=)	intronic	100.0	427	0.314115	0.334402	Benign	reviewed_by_expert_panel
+BRCA1	7006	NM_007294	chr17	SNV	c.2082C>T	NP_009225.1:p.(Ser694=)	synonymous	99.9	1516	0.315666	0.33826	Benign	reviewed_by_expert_panel
+NBN	9156	NM_002485	chr8	SNV	c.*273G>A	NP_002476.2:p.(=)	3'UTR	47.62	567	0.305419	0.319479	Benign	criteria_provided,multiple_submitters,no_conflicts
+TRNAG-CCC	42210	rna-TRNAG-CCC-2	chr1	SNV			non-coding	51.0	1203	0.929437	0.912662		
+BRIP1	39800	NM_032043	chr17	INDEL	c.1794+109_1794+111del	NP_114432.2:p.(=)	intronic	26.0	808	0.000197239	0.00294114		
+BARD1	13735	NM_000465	chr2	SNV	c.1903+221A>G	NP_000456.2:p.(=)	intronic	53.16	79	0.178199		Benign	criteria_provided,multiple_submitters,no_conflicts
+BRIP1	39800	NM_032043	chr17	SNV	c.2379+204G>T	NP_114432.2:p.(=)	intronic	100.0	135	0.771457		Benign	criteria_provided,single_submitter
+MSH2	1183	NM_000251	chr2	SNV	c.1277-118G>A	NP_000242.1:p.(=)	intronic	48.7	439	0.719054	0.64889	Benign	reviewed_by_expert_panel
+C11orf65	1327	NM_001330368	chr11	INDEL	c.641-16917_641-16915del	NP_001317297.1:p.(=)	intronic	53.0	1032	0.500752	0.555674	Benign	criteria_provided,multiple_submitters,no_conflicts
+C11orf65	1327	NM_001330368	chr11	SNV	c.641-16711C>G	NP_001317297.1:p.(=)	intronic	47.06	51	0.537417		Benign	criteria_provided,multiple_submitters,no_conflicts
+MUTYH	1779	NM_001048174	chr1	SNV	c.-7+21T>G	NP_001041639.1:p.(=)	intronic	5.29	454				
+APC	32582	NM_000038	chr5	SNV	c.933+261G>T	NP_000029.2:p.(=)	intronic	56.16	73	0.537785		Benign	criteria_provided,single_submitter
+TRNAN-GUU	44974	rna-TRNAN-GUU-4	chr1	SNV			non-coding	48.4	642	0.127861	0.117918		
+PTEN	40111	NM_001304717	chr10	INDEL	c.154+1_157del	NP_001291646.4:p.?	unknown	8.4	429	0.00704225	0.00667203		
+PTEN	40111	NM_000314	chr10	SNV	c.80-96A>G	NP_000305.3:p.(=)	intronic	50.7	720	0.387766	0.341794	Benign	criteria_provided,multiple_submitters,no_conflicts
+RAD51D	30171	NM_002878	chr17	SNV	c.345+64T>A	NP_002869.3:p.(=)	intronic	1.7	1270				
+ABRAXAS1	15085	NM_139076	chr4	SNV	c.*347T>C	NP_620775.2:p.(=)	3'UTR	100.0	1178	0.995542	0.993849		
+CDH1	7701	NM_004360	chr16	INDEL	c.48+57_48+58insCGCCCCGGGCCCC	NP_004351.1:p.(=)	intronic	8.0	903				
+BRCA2	6646	NM_000059	chr13	SNV	c.9501+178A>G	NP_000050.3:p.(=)	intronic	44.84	339	0.156199		Benign	reviewed_by_expert_panel
+BRCA2	6646	NM_000059	chr13	INDEL	c.6841+206_6841+207insAGA	NP_000050.3:p.(=)	intronic	4.17	264				
+BRCA2	6646	NM_000059	chr13	SNV	c.8754+183A>C	NP_000050.3:p.(=)	intronic	54.34	357	0.202845		Benign	reviewed_by_expert_panel
+BRCA1	7006	NM_007294	chr17	SNV	c.4837A>G	NP_009225.1:p.(Ser1613Gly)	missense	99.7	1458	0.317829	0.339841	Benign	reviewed_by_expert_panel
+BRCA1	7006	NM_007294	chr17	INDEL	c.548-58del	NP_009225.1:p.(=)	intronic	99.5	830	0.299626	0.331595	Benign	reviewed_by_expert_panel
+BRIP1	39800	NM_032043	chr17	SNV	c.454G>C	NP_114432.2:p.(Asp152His)	missense	1.3	1366	6.57497e-06		Uncertain_significance	criteria_provided,multiple_submitters,no_conflicts
+TRNAG-CCC	42210	rna-TRNAG-CCC-2	chr1	SNV			non-coding	50.4	1773	0.932677	0.9139		
+BRIP1	39800	NM_032043	chr17	SNV	c.3039T>C	NP_114432.2:p.(Thr1013=)	synonymous	1.5	1534		1.36815e-06	Benign/Likely_benign	criteria_provided,multiple_submitters,no_conflicts
+BARD1	13735	NM_000465	chr2	SNV	c.1903+146T>C	NP_000456.2:p.(=)	intronic	58.84	294	0.489049	0.478272	Benign	criteria_provided,multiple_submitters,no_conflicts
+BARD1	13735	NM_000465	chr2	SNV	c.1315-200A>G	NP_000456.2:p.(=)	intronic	99.37	158	0.755457		Benign	criteria_provided,single_submitter
+MSH6	38283	NM_000179	chr2	SNV	c.3802-40C>G	NP_000170.1:p.(=)	intronic	99.9	1479	0.77248	0.737937	Benign	reviewed_by_expert_panel
+MSH6	38283	NM_000179	chr2	SNV	c.116G>A	NP_000170.1:p.(Gly39Glu)	missense	47.5	1012	0.188764	0.183533	Benign	reviewed_by_expert_panel
+MSH6	38283	NM_000179	chr2	INDEL	c.457+50_457+53del	NP_000170.1:p.(=)	intronic	9.1	1060	0.000385234	0.000587787	Benign/Likely_benign	criteria_provided,multiple_submitters,no_conflicts
+MSH6	38283	NM_000179	chr2	INDEL	c.457+52_457+53dup	NP_000170.1:p.(=)	intronic	1.1	1011	0.0362605	0.00727197	Benign/Likely_benign	criteria_provided,multiple_submitters,no_conflicts
+MSH2	1183	NM_000251	chr2	SNV	c.1510+111T>C	NP_000242.1:p.(=)	intronic	51.3	913	0.455416	0.338282	Benign	criteria_provided,multiple_submitters,no_conflicts
+MSH2	1183	NM_000251	chr2	SNV	c.2210+274T>G	NP_000242.1:p.(=)	intronic	36.67	30	0.189777		Benign	reviewed_by_expert_panel
+ATM	32283	NM_000051	chr11	INDEL	c.3403-13dup	NP_000042.3:p.(=)	intronic	43.7	1108	0.551333	0.557245	Benign/Likely_benign	criteria_provided,multiple_submitters,no_conflicts
+CHEK2	15907	NM_007194	chr22	SNV	c.684-224T>C	NP_009125.1:p.(=)	intronic	50.0	70	0.645263	0.718517	Benign	criteria_provided,multiple_submitters,no_conflicts
+TP53	31869	NM_000546	chr17	SNV	c.215C>G	NP_000537.3:p.(Pro72Arg)	missense	48.0	1142	0.626776	0.716318	Benign	reviewed_by_expert_panel
+PMS2	4760	NM_000535	chr7	SNV	c.353+209G>A	NP_000526.2:p.(=)	intronic	35.0	60	0.588747	0.642744		
+CDH1	7701	NM_004360	chr16	INDEL	c.48+57_48+58insCGCCCCGTGCCCC	NP_004351.1:p.(=)	intronic	9.1	903				
+CDH1	7701	NM_004360	chr16	SNV		NP_004351.1:p.(=)	intergenic	99.84	637	0.246192	0.269646	Benign	reviewed_by_expert_panel
+CDH1	7701	NM_004360	chr16	SNV	c.1272C>T	NP_004351.1:p.(Val424=)	synonymous	48.7	1531	0.00143148	0.00113487	Benign/Likely_benign	criteria_provided,multiple_submitters,no_conflicts
+BRCA2	6646	NM_000059	chr13	SNV	c.6513G>C	NP_000050.3:p.(Val2171=)	synonymous	100.0	1345	0.978495	0.997669	Benign	reviewed_by_expert_panel
+BRCA1	7006	NM_007294	chr17	SNV	c.4485-63C>G	NP_009225.1:p.(=)	intronic	100.0	1026	0.316509	0.340673	Benign	reviewed_by_expert_panel
+BRCA1	7006	NM_007294	chr17	SNV	c.2311T>C	NP_009225.1:p.(Leu771=)	synonymous	100.0	1528	0.299324	0.336032	Benign	reviewed_by_expert_panel
+BRCA1	7006	NM_007294	chr17	SNV	c.5075-237C>A	NP_009225.1:p.(=)	intronic	98.94	94	0.237176		Benign	reviewed_by_expert_panel
+BRCA1	7006	NM_007294	chr17	SNV	c.594-225G>A	NP_009225.1:p.(=)	intronic	98.78	82	0.299247		Benign	reviewed_by_expert_panel
+BRCA1	7006	NM_007294	chr17	INDEL	c.441+36_441+52del	NP_009225.1:p.(=)	intronic	5.7	629				
+NBN	9156	NM_002485	chr8	SNV	c.320+19G>A	NP_002476.2:p.(=)	intronic	2.1	1404				
+BARD1	13735	NM_000465	chr2	SNV	c.2002-139A>C	NP_000456.2:p.(=)	intronic	53.3	514	0.64176	0.602018	Benign	criteria_provided,single_submitter
+TRNAG-CCC	42210	rna-TRNAG-CCC-2	chr1	SNV			non-coding	100.0	892	0.9903	0.987234		
+BARD1	13735	NM_000465	chr2	SNV	c.1053G>C	NP_000456.2:p.(Thr351=)	synonymous	51.2	1605	0.197155	0.216256	Benign	criteria_provided,multiple_submitters,no_conflicts
+MSH2	1183	NM_000251	chr2	SNV	c.211+9C>G	NP_000242.1:p.(=)	intronic	48.9	1294	0.530385	0.42111	Benign	reviewed_by_expert_panel
+C11orf65	1327	NM_001330368	chr11	SNV	c.640+31950C>T	NP_001317297.1:p.(=)	intronic	100.0	611	0.999783	0.999969	Benign	criteria_provided,multiple_submitters,no_conflicts
+APC	32582	NM_000038	chr5	SNV	c.645+173A>G	NP_000029.2:p.(=)	intronic	50.76	593	0.423118		Benign	criteria_provided,single_submitter
+MUTYH	1779	NM_001048174	chr1	SNV	c.1460C>T	NP_001041639.1:p.(Ser487Phe)	missense	49.6	1285	0.0097528	0.0111986	Benign/Likely_benign	criteria_provided,multiple_submitters,no_conflicts
+ATM	32283	NM_000051	chr11	SNV	c.7927+142G>A	NP_000042.3:p.(=)	intronic	100.0	575	0.997584	0.99972	Benign	criteria_provided,multiple_submitters,no_conflicts
+MUTYH	1779	NM_001048174	chr1	SNV	c.930G>C	NP_001041639.1:p.(Gln310His)	missense	50.7	1297	0.269611	0.260121	Benign	criteria_provided,multiple_submitters,no_conflicts
+ATM	32283	NM_000051	chr11	INDEL	c.3402+32_3402+34del	NP_000042.3:p.(=)	intronic	50.0	1098	0.00149685	0.00146187	Benign/Likely_benign	criteria_provided,multiple_submitters,no_conflicts
+ATM	32283	NM_000051	chr11	SNV	c.6807+238G>C	NP_000042.3:p.(=)	intronic	47.06	51	0.537417		Benign	criteria_provided,multiple_submitters,no_conflicts
+ATM	32283	NM_000051	chr11	SNV	c.2839-90G>T	NP_000042.3:p.(=)	intronic	51.9	630	0.362387	0.426066	Benign	criteria_provided,multiple_submitters,no_conflicts
+APC	32582	NM_000038	chr5	SNV	c.1743+193G>A	NP_000029.2:p.(=)	intronic	48.61	251	0.408828	0.500256	Benign	criteria_provided,single_submitter
+CHEK2	15907	NM_007194	chr22	SNV	c.1095+250T>C	NP_009125.1:p.(=)	intronic	100.0	62	0.999527		Benign	criteria_provided,single_submitter
+TRNAN-GUU	44974	rna-TRNAN-GUU-4	chr1	SNV			non-coding	5.29	454				
+PIK3CA	27835	NM_006218	chr3	SNV	c.2187+146G>T	NP_006209.2:p.(=)	intronic	49.72	529	0.0317687	0.0372974		
+PMS2	4760	NM_000535	chr7	SNV	c.989-162G>A	NP_000526.2:p.(=)	intronic	40.35	114	0.34826			
+PMS2	4760	NM_000535	chr7	SNV	c.1621A>G	NP_000526.2:p.(Lys541Glu)	missense	100.0	2476	0.86532	0.848681	Benign	criteria_provided,multiple_submitters,no_conflicts
+PMS2	4760	NM_000535	chr7	SNV	c.706-178T>C	NP_000526.2:p.(=)	intronic	48.23	141	0.0943994			
+PMS2	4760	NM_000535	chr7	SNV	c.537+248A>T	NP_000526.2:p.(=)	intronic	65.12	43	0.339817	0.375491		
+MLH1	38918	NM_000249	chr3	SNV	c.1990-121C>T	NP_000240.1:p.(=)	intronic	51.8	711	0.40291	0.410416	Benign	reviewed_by_expert_panel
+MLH1	38918	NM_000249	chr3	SNV	c.1410-169C>T	NP_000240.1:p.(=)	intronic	50.6	502	0.351426		Benign	criteria_provided,multiple_submitters,no_conflicts
+MSH6	38283	NM_000179	chr2	SNV	c.458-133A>G	NP_000170.1:p.(=)	intronic	100.0	252	0.799034	0.764925	Benign	criteria_provided,multiple_submitters,no_conflicts
+MSH6	38283	NM_000179	chr2	SNV	c.3172+211T>G	NP_000170.1:p.(=)	intronic	25.71	70		6.07371e-06		
+MSH2	1183	NM_000251	chr2	SNV	c.943-244C>G	NP_000242.1:p.(=)	intronic	55.04	129	0.581203		Benign	criteria_provided,single_submitter
+MSH6	38283	NM_000179	chr2	SNV	c.3173-101G>C	NP_000170.1:p.(=)	intronic	99.9	769	0.783209	0.746744	Benign	reviewed_by_expert_panel
+ATM	32283	NM_000051	chr11	SNV	c.8850+60A>G	NP_000042.3:p.(=)	intronic	46.2	1012	0.618012	0.58335	Benign	criteria_provided,multiple_submitters,no_conflicts
+ATM	32283	NM_000051	chr11	SNV	c.2377-56A>G	NP_000042.3:p.(=)	intronic	45.2	1052	0.494331	0.556002	Benign	criteria_provided,multiple_submitters,no_conflicts
+APC	32582	NM_000038	chr5	SNV	c.423-16A>T	NP_000029.2:p.(=)	intronic	3.4	996	0.00112263	0.0112205	Benign/Likely_benign	criteria_provided,multiple_submitters,no_conflicts
+APC	32582	NM_000038	chr5	INDEL	c.934-132del	NP_000029.2:p.(=)	intronic	9.2	303	0.585573	0.280605	Benign	criteria_provided,single_submitter
+PIK3CA	27835	NM_006218	chr3	SNV	c.2295-145G>C	NP_006209.2:p.(=)	intronic	5.6	179		5.82931e-06		
+ABRAXAS1	15085	NM_139076	chr4	SNV	c.597-224G>A	NP_620775.2:p.(=)	intronic	39.78	93	0.101443		Benign	criteria_provided,single_submitter
+BRCA2	6646	NM_000059	chr13	SNV	c.8755-66T>C	NP_000050.3:p.(=)	intronic	46.4	884	0.517419	0.521994	Benign	reviewed_by_expert_panel
+BRCA2	6646	NM_000059	chr13	SNV	c.3396A>G	NP_000050.3:p.(Lys1132=)	synonymous	50.2	1536	0.284122	0.308745	Benign	reviewed_by_expert_panel
+BRCA2	6646	NM_000059	chr13	INDEL	c.5722_5723del	NP_000050.3:p.(Leu1908Argfs*2)	frameshift	49.1	1661		1.5052e-05	Pathogenic	reviewed_by_expert_panel
+BRCA2	6646	NM_000059	chr13	SNV	c.681+107T>C	NP_000050.3:p.(=)	intronic	49.4	908		1.27609e-06		
+BRCA2	6646	NM_000059	chr13	SNV	c.6938-120T>C	NP_000050.3:p.(=)	intronic	100.0	354	0.978531	0.997246	Benign	reviewed_by_expert_panel
+MLH1	38918	NM_000249	chr3	SNV	c.453+79A>G	NP_000240.1:p.(=)	intronic	46.8	929	0.406288	0.425464	Benign	reviewed_by_expert_panel
+BRCA1	7006	NM_007294	chr17	SNV	c.4357+117G>A	NP_009225.1:p.(=)	intronic	47.1	894	0.0704631	0.0823817	Benign	reviewed_by_expert_panel
+NBN	9156	NM_002485	chr8	SNV	c.320+18T>C	NP_002476.2:p.(=)	intronic	2.3	1399		6.87041e-07		
+BARD1	13735	NM_000465	chr2	SNV		NP_000456.2:p.(=)	intergenic	87.9	972	0.999566		Benign	criteria_provided,multiple_submitters,no_conflicts
+MSH2	1183	NM_000251	chr2	SNV	c.1277-212T>A	NP_000242.1:p.(=)	intronic	45.57	79	0.392856		Benign	reviewed_by_expert_panel
+MSH2	1183	NM_000251	chr2	SNV	c.1759+183G>A	NP_000242.1:p.(=)	intronic	47.06	187	0.418546		Benign	criteria_provided,multiple_submitters,no_conflicts
+RAD51C	621	NM_058216	chr17	SNV		NP_478123.1:p.(=)	intergenic	37.5	758	0.184646	0.199327	Benign	criteria_provided,multiple_submitters,no_conflicts
+RAD51C	621	NM_058216	chr17	SNV	c.904+34T>C	NP_478123.1:p.(=)	intronic	48.2	1466	0.29735	0.31699	Benign	criteria_provided,multiple_submitters,no_conflicts
+APC	32582	NM_000038	chr5	SNV	c.5465T>A	NP_000029.2:p.(Val1822Asp)	missense	99.9	1620	0.820117	0.776691	Benign	reviewed_by_expert_panel
+APC	32582	NM_000038	chr5	SNV	c.4479G>A	NP_000029.2:p.(Thr1493=)	synonymous	49.1	1603	0.601555	0.62748	Benign	criteria_provided,multiple_submitters,no_conflicts
+ATM	32283	NM_000051	chr11	INDEL	c.663-144del	NP_000042.3:p.(=)	intronic	61.7	201	0.979185		Benign	criteria_provided,multiple_submitters,no_conflicts
+ATM	32283	NM_000051	chr11	SNV	c.4777-248_4777-247delinsAG	NP_000042.3:p.(=)	intronic	54.76	126				
+APC	32582	NM_000038	chr5	SNV	c.1744-290G>A	NP_000029.2:p.(=)	intronic	50.0	60	0.656501		Benign	criteria_provided,single_submitter
+ATM	32283	NM_000051	chr11	INDEL	c.6808-60_6808-58del	NP_000042.3:p.(=)	intronic	53.0	1032	0.500752	0.555674	Benign	criteria_provided,multiple_submitters,no_conflicts
+ATM	32283	NM_000051	chr11	SNV	c.496+221C>T	NP_000042.3:p.(=)	intronic	46.51	129	0.648932	0.596951	Benign	criteria_provided,multiple_submitters,no_conflicts
+CHEK2	15907	NM_007194	chr22	SNV	c.847-200A>G	NP_009125.1:p.(=)	intronic	44.03	134	0.358841		Benign	criteria_provided,single_submitter
+TRNAN-GUU	44974	rna-TRNAN-GUU-4	chr1	SNV			non-coding	49.6	1285	0.0097528	0.0111986		
+RAD51L3-RFFL	42277	NR_037714	chr17	SNV	n.233-821T>A		non-coding	1.7	1270				
+PMS2	4760	NM_000535	chr7	SNV	c.2276-135T>C	NP_000526.2:p.(=)	intronic	51.4	628	0.225221	0.1847		
+PMS2	4760	NM_000535	chr7	SNV	c.163+138A>G	NP_000526.2:p.(=)	intronic	57.6	745	0.341239	0.393993		
+BRCA2	6646	NM_000059	chr13	SNV	c.4563A>G	NP_000050.3:p.(Leu1521=)	synonymous	100.0	1428	0.978627	0.997681	Benign	reviewed_by_expert_panel
+BRCA2	6646	NM_000059	chr13	SNV	c.-52A>G	NP_000050.3:p.(=)	5'UTR	57.8	1281	0.157294	0.117021	Benign	reviewed_by_expert_panel
+BRCA2	6646	NM_000059	chr13	SNV	c.-40+164G>A	NP_000050.3:p.(=)	intronic	99.35	308	0.72755		Benign	reviewed_by_expert_panel
+MLH1	38918	NM_000249	chr3	SNV	c.655A>G	NP_000240.1:p.(Ile219Val)	missense	48.8	1511	0.226462	0.290039	Benign	reviewed_by_expert_panel
+BRCA1	7006	NM_007294	chr17	SNV	c.5152+66G>A	NP_009225.1:p.(=)	intronic	99.8	910	0.310524	0.335797	Benign	reviewed_by_expert_panel
+BRCA1	7006	NM_007294	chr17	SNV	c.547+146A>T	NP_009225.1:p.(=)	intronic	100.0	253	0.315459	0.350401	Benign	reviewed_by_expert_panel
+BRCA1	7006	NM_007294	chr17	INDEL	c.671-248_671-246dup	NP_009225.1:p.(=)	intronic	80.36	56	0.337361		Benign	reviewed_by_expert_panel
+BRCA1	7006	NM_007294	chr17	SNV	c.4986+222A>G	NP_009225.1:p.(=)	intronic	100.0	109	0.301403		Benign	reviewed_by_expert_panel
+TRNAG-CCC	42210	rna-TRNAG-CCC-2	chr1	SNV			non-coding	50.7	1297	0.269611	0.260121		
+MSH2	1183	NM_000251	chr2	SNV	c.1511-9A>T	NP_000242.1:p.(=)	intronic	46.1	1110	0.0880993	0.115775	Benign	reviewed_by_expert_panel
+MSH6	38283	NM_000179	chr2	SNV	c.3556+146G>A	NP_000170.1:p.(=)	intronic	100.0	117	0.560868	0.535257	Benign	reviewed_by_expert_panel
+MUTYH	1779	NM_001048174	chr1	SNV	c.1393-125C>A	NP_001041639.1:p.(=)	intronic	48.4	642	0.127861	0.117918	Benign	criteria_provided,multiple_submitters,no_conflicts
+ATM	32283	NM_000051	chr11	INDEL	c.3403-15_3403-14insTA	NP_000042.3:p.(=)	intronic	1.0	1057	0.00021074	0.000570048	Benign/Likely_benign	criteria_provided,multiple_submitters,no_conflicts
+ATM	32283	NM_000051	chr11	SNV	c.3078-77C>T	NP_000042.3:p.(=)	intronic	53.3	912	0.64683	0.583543	Benign	criteria_provided,multiple_submitters,no_conflicts
+TP53	31869	NM_000546	chr17	SNV	c.376-91G>A	NP_000537.3:p.(=)	intronic	49.4	1146	0.837317	0.867267	Benign	criteria_provided,multiple_submitters,no_conflicts
+TP53	31869	NM_000546	chr17	SNV	c.672+62A>G	NP_000537.3:p.(=)	intronic	50.5	1315	0.830452	0.867534	Benign	criteria_provided,multiple_submitters,no_conflicts
+TP53	31869	NM_000546	chr17	INDEL	c.96+41_97-54del	NP_000537.3:p.(=)	intronic	46.0	744	0.826858	0.850885	Benign	criteria_provided,multiple_submitters,no_conflicts
+PIK3CA	27835	NM_006218	chr3	SNV	c.2295-57C>G	NP_006209.2:p.(=)	intronic	55.1	729	0.668585	0.592678	Benign	criteria_provided,multiple_submitters,no_conflicts
+ABRAXAS1	15085	NM_139076	chr4	SNV	c.216-44T>C	NP_620775.2:p.(=)	intronic	51.4	907	0.101009	0.0900383	Benign	criteria_provided,multiple_submitters,no_conflicts
+PMS2	4760	NM_000535	chr7	INDEL	c.23+261_23+265delinsTG	NP_000526.2:p.(=)	intronic	38.1	84				
+MLH1	38918	NM_000249	chr3	SNV		NP_000240.1:p.(=)	intergenic	42.7	1094	0.00533591	0.00605716	Likely_benign	reviewed_by_expert_panel
+MLH1	38918	NM_000249	chr3	SNV	c.2104-283A>G	NP_000240.1:p.(=)	intronic	69.05	42	0.0517853		Benign	criteria_provided,multiple_submitters,no_conflicts
+BRCA1	7006	NM_007294	chr17	INDEL	c.4485-203_4485-199del	NP_009225.1:p.(=)	intronic	69.89	176	0.298977		Benign	reviewed_by_expert_panel
+BRCA1	7006	NM_007294	chr17	SNV	c.-20+101C>G	NP_009225.1:p.(=)	intronic	98.3	461	0.505568	0.401118	Benign	reviewed_by_expert_panel
+BARD1	13735	NM_000465	chr2	SNV	c.1134G>C	NP_000456.2:p.(Arg378Ser)	missense	47.4	1680	0.529993	0.586152	Benign	criteria_provided,multiple_submitters,no_conflicts
+MSH2	1183	NM_000251	chr2	SNV	c.1661+12G>A	NP_000242.1:p.(=)	intronic	52.5	1648	0.399354	0.297872	Benign	reviewed_by_expert_panel
+MSH2	1183	NM_000251	chr2	SNV	c.367-168C>T	NP_000242.1:p.(=)	intronic	45.13	277	0.0879113		Benign	criteria_provided,multiple_submitters,no_conflicts
+MSH2	1183	NM_000251	chr2	SNV	c.2006-127C>T	NP_000242.1:p.(=)	intronic	100.0	589	0.996324	0.995701	Benign	criteria_provided,multiple_submitters,no_conflicts
+ATM	32283	NM_000051	chr11	SNV	c.3746+98T>C	NP_000042.3:p.(=)	intronic	3.0	800		4.19524e-05		
+MUTYH	1779	NM_001048174	chr1	SNV	c.1393-40C>G	NP_001041639.1:p.(=)	intronic	51.0	1203	0.929437	0.912662	Benign	criteria_provided,multiple_submitters,no_conflicts
+APC	32582	NM_000038	chr5	SNV	c.3165A>T	NP_000029.2:p.(Ile1055=)	synonymous	47.5	1892	0.00276363	0.00438152	Benign/Likely_benign	criteria_provided,multiple_submitters,no_conflicts
+APC	32582	NM_000038	chr5	SNV	c.5880G>A	NP_000029.2:p.(Pro1960=)	synonymous	48.3	1589	0.602759	0.627579	Benign	criteria_provided,multiple_submitters,no_conflicts
+APC	32582	NM_000038	chr5	INDEL	c.1959-143_1959-140dup	NP_000029.2:p.(=)	intronic	46.5	1133	0.612944	0.643588	Benign	criteria_provided,single_submitter
+ATM	32283	NM_000051	chr11	INDEL	c.72+37_72+38del	NP_000042.3:p.(=)	intronic	47.8	1350	0.362546	0.418862	Benign	criteria_provided,multiple_submitters,no_conflicts
+EPCAM	26450	NM_002354	chr2	SNV	c.658-134A>G	NP_002345.2:p.(=)	intronic	53.4	369	0.57194	0.460469	Benign	criteria_provided,single_submitter
+CHEK2	15907	NM_007194	chr22	SNV	c.319+91G>A	NP_009125.1:p.(=)	intronic	46.4	809	0.294794	0.274899	Benign	criteria_provided,multiple_submitters,no_conflicts
+PMS2CL	37414	NR_002217	chr7	SNV	n.947-150G>A		non-coding	2.54	512	0.000708112	9.90891e-05		
+PTEN	40111	NM_001304717	chr10	INDEL	c.154+1del	NP_001291646.4:p.?	unknown	89.9	424	0.999261	0.94609	Benign	criteria_provided,multiple_submitters,no_conflicts
+ABRAXAS1	15085	NM_139076	chr4	SNV	c.681+132G>A	NP_620775.2:p.(=)	intronic	50.1	735	0.223555	0.103746	Benign	criteria_provided,multiple_submitters,no_conflicts
+ABRAXAS1	15085	NM_139076	chr4	SNV	c.596+97T>C	NP_620775.2:p.(=)	intronic	41.1	1256	0.227887	0.099156	Benign	criteria_provided,multiple_submitters,no_conflicts
+PMS2	4760	NM_000535	chr7	SNV	c.705+17A>G	NP_000526.2:p.(=)	intronic	49.8	1079	0.341037	0.393968	Benign	reviewed_by_expert_panel
+PMS2	4760	NM_000535	chr7	INDEL	c.989-105dup	NP_000526.2:p.(=)	intronic	29.4	323	0.161034	0.202566		
+BRCA2	6646	NM_000059	chr13	INDEL	c.6841+213_6841+215del	NP_000050.3:p.(=)	intronic	4.66	236				
+BRCA2	6646	NM_000059	chr13	SNV	c.9257-235G>A	NP_000050.3:p.(=)	intronic	53.52	71	0.532782		Benign	reviewed_by_expert_panel
+MLH1	38918	NM_000249	chr3	INDEL	c.1897-162del	NP_000240.1:p.(=)	intronic	50.18	281	0.448535		Benign	criteria_provided,single_submitter
+MLH1	38918	NM_000249	chr3	INDEL	c.678-211del	NP_000240.1:p.(=)	intronic	5.46	183				
+BRCA1	7006	NM_007294	chr17	SNV	c.5278-191A>T	NP_009225.1:p.(=)	intronic	100.0	231	0.310403		Benign	reviewed_by_expert_panel
+BRCA1	7006	NM_007294	chr17	INDEL	c.441+52_441+63del	NP_009225.1:p.(=)	intronic	62.6	540	0.00161201	0.000812209	Benign	reviewed_by_expert_panel
+BARD1	13735	NM_000465	chr2	SNV	c.-30G>C	NP_000456.2:p.(=)	5'UTR	46.8	1203	0.736985	0.712225	Benign	criteria_provided,multiple_submitters,no_conflicts
+BARD1	13735	NM_000465	chr2	SNV	c.1904-208A>T	NP_000456.2:p.(=)	intronic	44.93	69	0.347297		Benign	criteria_provided,single_submitter
+MSH2	1183	NM_000251	chr2	SNV	c.1077-80G>A	NP_000242.1:p.(=)	intronic	49.6	335	0.526362	0.421238	Benign	reviewed_by_expert_panel
+MSH6	38283	NM_000179	chr2	INDEL	c.457+52_457+53del	NP_000170.1:p.(=)	intronic	15.1	1026	0.0243747	0.035642	Benign	criteria_provided,multiple_submitters,no_conflicts
+MSH6	38283	NM_000179	chr2	SNV	c.457+52T>A	NP_000170.1:p.(=)	intronic	3.2	1046	0.287368	0.305785	Benign	reviewed_by_expert_panel
+MSH2	1183	NM_000251	chr2	SNV	c.1759+107A>G	NP_000242.1:p.(=)	intronic	47.5	687	0.414044	0.322146	Benign	criteria_provided,multiple_submitters,no_conflicts
+MSH2	1183	NM_000251	chr2	SNV	c.2006-265A>G	NP_000242.1:p.(=)	intronic	39.53	43	0.472964		Benign	reviewed_by_expert_panel
+C11orf65	1327	NM_001330368	chr11	SNV	c.640+31164G>A	NP_001317297.1:p.(=)	intronic	46.7	1171	0.537332	0.565812	Benign	criteria_provided,multiple_submitters,no_conflicts
+C11orf65	1327	NM_001330368	chr11	SNV	c.641-8032A>T	NP_001317297.1:p.(=)	intronic	56.25	32	0.998455		Benign	criteria_provided,single_submitter
+ATM	32283	NM_000051	chr11	SNV	c.3993+197G>A	NP_000042.3:p.(=)	intronic	42.16	204	0.536868		Benign	criteria_provided,multiple_submitters,no_conflicts
+MUTYH	1779	NM_001048174	chr1	SNV	c.-7+5C>G	NP_001041639.1:p.(=)	intronic	100.0	892	0.9903	0.987234	Benign	criteria_provided,multiple_submitters,no_conflicts
+ATM	32283	NM_000051	chr11	SNV	c.2467-123T>A	NP_000042.3:p.(=)	intronic	46.6	757	0.663481	0.592827	Benign	criteria_provided,multiple_submitters,no_conflicts
+APC	32582	NM_000038	chr5	SNV	c.423-256G>A	NP_000029.2:p.(=)	intronic	100.0	70	0.981908		Benign	criteria_provided,single_submitter
+PMS2CL	37414	NR_002217	chr7	SNV	n.1510G>C		non-coding	12.4	2620	0.00410959	0.00502723		
+PTEN	40111	NM_000314	chr10	INDEL	c.253+109_253+110insTCTTA	NP_000305.3:p.(=)	intronic	48.9	734	0.393545	0.34019	Benign	criteria_provided,multiple_submitters,no_conflicts
+PIK3CA	27835	NM_006218	chr3	INDEL	c.2495+163_2495+164insGACTT	NP_006209.2:p.(=)	intronic	71.76	386	0.998607		Benign	criteria_provided,single_submitter
+ABRAXAS1	15085	NM_139076	chr4	SNV	c.216-34G>A	NP_620775.2:p.(=)	intronic	52.8	969	0.614816	0.519288	Benign	criteria_provided,multiple_submitters,no_conflicts
+PMS2	4760	NM_000535	chr7	SNV	c.780C>G	NP_000526.2:p.(Ser260=)	synonymous	99.7	686	0.816833	0.813122	Benign	reviewed_by_expert_panel
+PMS2	4760	NM_000535	chr7	SNV	c.804-164T>G	NP_000526.2:p.(=)	intronic	47.47	257	0.342847			
+BRCA2	6646	NM_000059	chr13	SNV	c.3807T>C	NP_000050.3:p.(Val1269=)	synonymous	48.2	1273	0.181028	0.1763	Benign	reviewed_by_expert_panel
+MLH1	38918	NM_000249	chr3	INDEL	c.678-209_678-208insGAGG	NP_000240.1:p.(=)	intronic	33.33	186	0.334032		Benign	criteria_provided,single_submitter
+BRCA1	7006	NM_007294	chr17	SNV	c.670+259T>G	NP_009225.1:p.(=)	intronic	100.0	77	0.314515		Benign	reviewed_by_expert_panel
+NBN	9156	NM_002485	chr8	INDEL		NP_002476.2:p.(=)	intergenic	30.56	72	0.032242	0.0363507	Benign	criteria_provided,multiple_submitters,no_conflicts
+TRNAG-CCC	42210	rna-TRNAG-CCC-2	chr1	SNV			non-coding	48.4	642	0.127861	0.117918		
+BARD1	13735	NM_000465	chr2	SNV	c.1810+133C>A	NP_000456.2:p.(=)	intronic	46.7	828	0.489037	0.481532	Benign	criteria_provided,multiple_submitters,no_conflicts
+BRIP1	39800	NM_032043	chr17	SNV	c.2637A>G	NP_114432.2:p.(Glu879=)	synonymous	99.9	1392	0.74246	0.681255	Benign	criteria_provided,multiple_submitters,no_conflicts
+ATM	32283	NM_000051	chr11	SNV	c.8787-55C>T	NP_000042.3:p.(=)	intronic	46.7	1171	0.537332	0.565812	Benign	criteria_provided,multiple_submitters,no_conflicts
+EPCAM	26450	NM_002354	chr2	SNV	c.*118T>C	NP_002345.2:p.(=)	3'UTR	48.4	1397	0.103934	0.12573	Benign	criteria_provided,multiple_submitters,no_conflicts
+EPCAM	26450	NM_002354	chr2	SNV	c.859-81C>T	NP_002345.2:p.(=)	intronic	48.4	926	0.304307	0.279265	Benign	criteria_provided,multiple_submitters,no_conflicts
+CDH1	7701	NM_004360	chr16	SNV	c.2439+52G>A	NP_004351.1:p.(=)	intronic	43.5	774	0.0438217	0.0598247	Benign	criteria_provided,multiple_submitters,no_conflicts
+BRCA2	6646	NM_000059	chr13	SNV	c.8754+187C>T	NP_000050.3:p.(=)	intronic	56.67	330	0.217443		Benign	reviewed_by_expert_panel
+BRCA2	6646	NM_000059	chr13	SNV	c.8633-3T>A	NP_000050.3:p.(=)	intronic	2.1	1068			Uncertain_significance	criteria_provided,multiple_submitters,no_conflicts
+BRCA1	7006	NM_007294	chr17	SNV	c.3548A>G	NP_009225.1:p.(Lys1183Arg)	missense	99.8	1620	0.315439	0.338301	Benign	reviewed_by_expert_panel
+BRCA1	7006	NM_007294	chr17	SNV	c.2612C>T	NP_009225.1:p.(Pro871Leu)	missense	100.0	1657	0.487427	0.364494	Benign	reviewed_by_expert_panel
+BRCA1	7006	NM_007294	chr17	SNV	c.4485-137T>A	NP_009225.1:p.(=)	intronic	99.8	475	0.451726	0.370433	Benign	reviewed_by_expert_panel
+TRNAG-CCC	42210	rna-TRNAG-CCC-2	chr1	SNV			non-coding	49.6	1285	0.0097528	0.0111986		
+APC	32582	NM_000038	chr5	SNV	c.1458T>C	NP_000029.2:p.(Tyr486=)	synonymous	49.6	1558	0.481939	0.586759	Benign	reviewed_by_expert_panel
+APC	32582	NM_000038	chr5	SNV	c.2507C>G	NP_000029.2:p.(Ser836*)	nonsense	2.0	1779			Pathogenic	criteria_provided,single_submitter
+PMS2CL	37414	NR_002217	chr7	INDEL			non-coding	5.2	1434	6.82342e-06	0.0002858		
+TRNAN-GUU	44974	rna-TRNAN-GUU-4	chr1	SNV			non-coding	51.0	1203	0.929437	0.912662		
+KLLN	13656	NM_001126049	chr10	SNV	c.-694T>G	NP_001119521.1:p.(=)	5'UTR	65.71	35				
+PMS2	4760	NM_000535	chr7	SNV	c.*330G>C	NP_000526.2:p.(=)	3'UTR	54.65	419	0.290931			
+PMS2	4760	NM_000535	chr7	SNV	c.1408C>T	NP_000526.2:p.(Pro470Ser)	missense	46.8	2404	0.371987	0.401957	Benign	reviewed_by_expert_panel
+BRCA2	6646	NM_000059	chr13	SNV	c.9648+244T>C	NP_000050.3:p.(=)	intronic	100.0	90	0.981151		Benign	reviewed_by_expert_panel
+BRCA1	7006	NM_007294	chr17	SNV	c.4987-68A>G	NP_009225.1:p.(=)	intronic	99.8	645	0.315532	0.341682	Benign	reviewed_by_expert_panel
+BRCA1	7006	NM_007294	chr17	SNV	c.213-161A>G	NP_009225.1:p.(=)	intronic	100.0	250	0.492105		Benign	reviewed_by_expert_panel
+BRCA1	7006	NM_007294	chr17	SNV	c.4358-2590T>G	NP_009225.1:p.(=)	intronic	99.9	674	0.300405	0.348438	Benign	reviewed_by_expert_panel
+BRCA1	7006	NM_007294	chr17	SNV	c.*421G>T	NP_009225.1:p.(=)	3'UTR	99.93	1453	0.294196	0.346106	Benign	reviewed_by_expert_panel
+BRCA1	7006	NM_007294	chr17	SNV	c.3113A>G	NP_009225.1:p.(Glu1038Gly)	missense	100.0	1485	0.300105	0.337279	Benign	reviewed_by_expert_panel
+BRCA1	7006	NM_007294	chr17	SNV	c.-19-115T>C	NP_009225.1:p.(=)	intronic	100.0	125	0.316491	0.348571	Benign	reviewed_by_expert_panel
+BARD1	13735	NM_000465	chr2	SNV	c.*167A>G	NP_000456.2:p.(=)	3'UTR	46.1	909	0.645643	0.597715	Benign	criteria_provided,multiple_submitters,no_conflicts
+BARD1	13735	NM_000465	chr2	SNV	c.-48T>C	NP_000456.2:p.(=)	5'UTR	53.7	1144	0.737106	0.71262	Benign	criteria_provided,multiple_submitters,no_conflicts
+BRIP1	39800	NM_032043	chr17	INDEL	c.1140+91dup	NP_114432.2:p.(=)	intronic	96.8	634	0.791824	0.727967	Benign	criteria_provided,single_submitter
+BARD1	13735	NM_000465	chr2	SNV	c.2002-119C>G	NP_000456.2:p.(=)	intronic	51.9	680	0.641712	0.609912	Benign	criteria_provided,single_submitter
+MSH2	1183	NM_000251	chr2	SNV	c.1511-91G>T	NP_000242.1:p.(=)	intronic	42.7	681	0.399225	0.29571	Benign	reviewed_by_expert_panel
+C11orf65	1327	NM_001330368	chr11	SNV	c.640+30986T>C	NP_001317297.1:p.(=)	intronic	46.2	1012	0.618012	0.58335	Benign	criteria_provided,multiple_submitters,no_conflicts
+ATM	32283	NM_000051	chr11	SNV	c.8671+104T>C	NP_000042.3:p.(=)	intronic	44.4	806	0.620752	0.587028	Benign	criteria_provided,multiple_submitters,no_conflicts
+APC	32582	NM_000038	chr5	INDEL	c.934-132_934-131del	NP_000029.2:p.(=)	intronic	13.9	303	0.00088054	0.0511025		
+APC	32582	NM_000038	chr5	SNV	c.136-230C>A	NP_000029.2:p.(=)	intronic	47.33	243	0.662252		Benign	criteria_provided,single_submitter
+ATM	32283	NM_000051	chr11	SNV	c.6199-270T>A	NP_000042.3:p.(=)	intronic	56.25	32	0.998455		Benign	criteria_provided,single_submitter
+PALB2	6701	NM_024675	chr16	SNV	c.1010T>C	NP_078951.2:p.(Leu337Ser)	missense	51.3	1509	0.0145579	0.0191034	Conflicting_classifications_of_pathogenicity	conflicting_classifications,criteria_provided
+TRNAN-GUU	44974	rna-TRNAN-GUU-4	chr1	SNV			non-coding	50.4	1773	0.932677	0.9139		
+PTEN	40111	NM_000314	chr10	SNV	c.1026+219C>T	NP_000305.3:p.(=)	intronic	100.0	192	0.921391	0.906129	Benign	criteria_provided,multiple_submitters,no_conflicts
+TP53	31869	NM_000546	chr17	INDEL	c.376-160_376-158del	NP_000537.3:p.(=)	intronic	46.05	797			Benign/Likely_benign	criteria_provided,multiple_submitters,no_conflicts
+PTEN	40111	NM_000314	chr10	SNV		NP_000305.3:p.(=)	intergenic	27.12	59				
+KLLN	13656	NM_001126049	chr10	SNV	c.-705T>G	NP_001119521.1:p.(=)	5'UTR	27.12	59				
+ABRAXAS1	15085	NM_139076	chr4	SNV	c.178+129C>A	NP_620775.2:p.(=)	intronic	46.8	489	0.0634993	0.0839216	Benign	criteria_provided,multiple_submitters,no_conflicts
+ABRAXAS1	15085	NM_139076	chr4	INDEL	c.88-95_88-94insC	NP_620775.2:p.(=)	intronic	49.1	711	0.595283	0.534044	Benign	criteria_provided,single_submitter
+PMS2	4760	NM_000535	chr7	SNV	c.904-116C>A	NP_000526.2:p.(=)	intronic	8.6	514	0.000254032			
+PMS2	4760	NM_000535	chr7	SNV	c.803+155T>C	NP_000526.2:p.(=)	intronic	42.48	113	0.28305			
+STK11	38520	NM_000455	chr19	SNV	c.291-195A>C	NP_000446.1:p.(=)	intronic	14.67	75				
+BRCA1	7006	NM_007294	chr17	SNV	c.4097-141A>C	NP_009225.1:p.(=)	intronic	99.8	493	0.451455	0.363921	Benign	reviewed_by_expert_panel
+BRIP1	39800	NM_032043	chr17	SNV	c.3040G>A	NP_114432.2:p.(Gly1014Ser)	missense	1.6	1556			Uncertain_significance	criteria_provided,single_submitter
+BARD1	13735	NM_000465	chr2	SNV	c.-78G>A	NP_000456.2:p.(=)	5'UTR	39.1	1078	0.63856	0.632343	Benign	criteria_provided,multiple_submitters,no_conflicts
+BRIP1	39800	NM_032043	chr17	INDEL	c.1141-126_1141-125del	NP_114432.2:p.(=)	intronic	99.6	507	0.98888	0.998772	Benign	criteria_provided,single_submitter
+BARD1	13735	NM_000465	chr2	SNV	c.158+199G>A	NP_000456.2:p.(=)	intronic	53.81	236	0.737514		Benign	criteria_provided,single_submitter
+MSH2	1183	NM_000251	chr2	SNV	c.2006-216G>A	NP_000242.1:p.(=)	intronic	47.22	108	0.0917913		Benign	criteria_provided,single_submitter
+MSH6	38283	NM_000179	chr2	SNV	c.458-52G>T	NP_000170.1:p.(=)	intronic	48.1	860	0.208477	0.179234	Benign	reviewed_by_expert_panel
+RAD51C	621	NM_058216	chr17	SNV	c.-26C>T	NP_478123.1:p.(=)	5'UTR	42.7	1035	0.184586	0.204168	Benign/Likely_benign	criteria_provided,multiple_submitters,no_conflicts
+C11orf65	1327	NM_001330368	chr11	SNV	c.641-38398A>G	NP_001317297.1:p.(=)	intronic	44.4	806	0.620752	0.587028	Benign	criteria_provided,multiple_submitters,no_conflicts
+C11orf65	1327	NM_001330368	chr11	INDEL	c.641-3617_641-3616del	NP_001317297.1:p.(=)	intronic	48.94	141	0.522877		Benign	criteria_provided,single_submitter
+APC	32582	NM_000038	chr5	SNV	c.1548+298A>T	NP_000029.2:p.(=)	intronic	11.76	85			other	no_assertion_criteria_provided
+MUTYH	1779	NM_001048173	chr1	SNV	c.-56A>C	NP_001041638.1:p.(=)	5'UTR	1.52	984				
+ATM	32283	NM_000051	chr11	SNV	c.5006-170G>A	NP_000042.3:p.(=)	intronic	43.94	198	0.501935	0.560236	Benign	criteria_provided,multiple_submitters,no_conflicts
+EPCAM	26450	NM_002354	chr2	SNV	c.426-195A>T	NP_002345.2:p.(=)	intronic	50.0	162	0.0880325		Benign	criteria_provided,single_submitter
+PIK3CA	27835	NM_006218	chr3	SNV	c.1060-17C>A	NP_006209.2:p.(=)	intronic	46.0	1349	0.636961	0.571832	Benign	criteria_provided,multiple_submitters,no_conflicts
+PMS2	4760	NM_000535	chr7	SNV	c.2007-287A>G	NP_000526.2:p.(=)	intronic	44.0	50	0.226178			
+PMS2	4760	NM_000535	chr7	SNV	c.354-255G>A	NP_000526.2:p.(=)	intronic	53.33	45	0.340904			
+CDH1	7701	NM_004360	chr16	SNV	c.48+181G>C	NP_004351.1:p.(=)	intronic	99.77	439	0.805455		Benign	criteria_provided,multiple_submitters,no_conflicts
+BRCA2	6646	NM_000059	chr13	SNV	c.631+183T>A	NP_000050.3:p.(=)	intronic	50.0	166	0.33385		Benign	reviewed_by_expert_panel
+CDH1	7701	NM_004360	chr16	SNV	c.48+6C>T	NP_004351.1:p.(=)	intronic	99.9	744	0.804646	0.866552	Benign	reviewed_by_expert_panel
+BRCA2	6646	NM_000059	chr13	SNV	c.7617+190G>A	NP_000050.3:p.(=)	intronic	100.0	265	0.99832		Benign	reviewed_by_expert_panel
+BRCA2	6646	NM_000059	chr13	SNV	c.793+98G>A	NP_000050.3:p.(=)	intronic	99.8	604	0.978641	0.997503	Benign	reviewed_by_expert_panel
+BRCA1	7006	NM_007294	chr17	INDEL	c.441+36_441+38del	NP_009225.1:p.(=)	intronic	84.4	583	0.00177369	0.00191811	Benign	reviewed_by_expert_panel
+MLH1	38918	NM_000249	chr3	SNV	c.1668-19A>G	NP_000240.1:p.(=)	intronic	47.7	1509	0.408678	0.414053	Benign	reviewed_by_expert_panel
+BRCA1	7006	NM_007294	chr17	SNV	c.593+167T>C	NP_009225.1:p.(=)	intronic	100.0	190	0.315386		Benign	reviewed_by_expert_panel
+BRCA1	7006	NM_007294	chr17	SNV	c.4308T>C	NP_009225.1:p.(Ser1436=)	synonymous	100.0	1637	0.300623	0.337584	Benign	reviewed_by_expert_panel
+BRCA1	7006	NM_007294	chr17	INDEL	c.441+52_441+64del	NP_009225.1:p.(=)	intronic	13.7	541	8.2824e-06	1.69579e-06		
+TRNAG-CCC	42210	rna-TRNAG-CCC-2	chr1	SNV			non-coding	1.52	984				
+BRIP1	39800	NM_032043	chr17	SNV	c.628-192A>G	NP_114432.2:p.(=)	intronic	99.25	134	0.0706676		Benign	criteria_provided,single_submitter
+BARD1	13735	NM_000465	chr2	SNV	c.1678-162T>A	NP_000456.2:p.(=)	intronic	99.26	404	0.978581		Benign	criteria_provided,single_submitter
+BARD1	13735	NM_000465	chr2	SNV	c.70C>T	NP_000456.2:p.(Pro24Ser)	missense	41.8	1417	0.332676	0.365782	Benign	criteria_provided,multiple_submitters,no_conflicts
+BARD1	13735	NM_000465	chr2	SNV	c.1314+149T>C	NP_000456.2:p.(=)	intronic	44.31	325	0.737553	0.755715	Benign	criteria_provided,single_submitter
+MSH2	1183	NM_000251	chr2	SNV	c.1510+47C>G	NP_000242.1:p.(=)	intronic	2.0	1541		1.19031e-05	Likely_benign	criteria_provided,single_submitter
+MSH6	38283	NM_000179	chr2	SNV	c.3557-144G>A	NP_000170.1:p.(=)	intronic	99.5	377	0.715266	0.682855	Benign	criteria_provided,multiple_submitters,no_conflicts
+MSH2	1183	NM_000251	chr2	SNV	c.1510+115_1510+118delinsGTCC	NP_000242.1:p.(=)	intronic	51.8	897				
+MSH2	1183	NM_000251	chr2	SNV	c.211+98T>C	NP_000242.1:p.(=)	intronic	53.4	747	0.529784	0.413769	Benign	reviewed_by_expert_panel
+APC	32582	NM_000038	chr5	SNV	c.934-132G>T	NP_000029.2:p.(=)	intronic	10.7	300	0.253182	0.265945	Benign	criteria_provided,single_submitter
+ATM	32283	NM_000051	chr11	SNV	c.8786+90G>A	NP_000042.3:p.(=)	intronic	100.0	611	0.999783	0.999969	Benign	criteria_provided,multiple_submitters,no_conflicts
+APC	32582	NM_000038	chr5	SNV	c.1959-320T>C	NP_000029.2:p.(=)	intronic	43.33	30	0.480022		other	no_assertion_criteria_provided
+APC	32582	NM_000038	chr5	SNV	c.2510C>G	NP_000029.2:p.(Ser837*)	nonsense	2.1	1780			Pathogenic	criteria_provided,multiple_submitters,no_conflicts
+APC	32582	NM_000038	chr5	SNV	c.1635G>A	NP_000029.2:p.(Ala545=)	synonymous	51.0	1497	0.601356	0.627537	Benign	reviewed_by_expert_panel
+ATM	32283	NM_000051	chr11	INDEL	c.6006+191_6006+192del	NP_000042.3:p.(=)	intronic	48.94	141	0.522877		Benign	criteria_provided,single_submitter
+ATM	32283	NM_000051	chr11	SNV	c.7307+177T>G	NP_000042.3:p.(=)	intronic	48.36	122	0.515418	0.55924	Benign	criteria_provided,single_submitter
+PTEN	40111	NM_001304717	chr10	SNV	c.194G>C	NP_001291646.4:p.(Cys65Ser)	missense	98.6	642	0.999921	0.99193	Benign	criteria_provided,multiple_submitters,no_conflicts
+PMS2	4760	NM_000535	chr7	INDEL	c.*217_*218del	NP_000526.2:p.(=)	3'UTR	1.44	1601		0.000367338		
+BRCA2	6646	NM_000059	chr13	SNV	c.*105A>C	NP_000050.3:p.(=)	3'UTR	48.8	1607	0.156378	0.204396	Benign	reviewed_by_expert_panel
