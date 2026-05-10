@@ -50,6 +50,8 @@ The two extensions coexist within the Chrome browser, so a pathologist running b
 
 An example pathologist's schedule is available here: [example_morning_week.pdf](https://github.com/foertsch/hackathon-2026/blob/main/messi/example_morning_week.pdf)
 
+<img width="1279" height="915" alt="example_schedule" src="https://github.com/user-attachments/assets/48f71a1a-c385-48c2-ac43-d0ada09a577e" />
+
 The extensions have been implemented into the platform. TODO screenshots
 
 
