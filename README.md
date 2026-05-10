@@ -11,7 +11,7 @@ Genomics track.
 - Arion Förtsch
 
 ## Status
-Pre-event setup. Tooling: Python · R · Claude · Lovable · Hugging Face.
+Hackathon weekend. Two products live in this repo, both wired into the Sophia Gen2 worklist via Chrome extensions. Tooling: Python · R · Claude · Lovable · Hugging Face.
 
 ## Challenge
 Sponsor: **Sophia Genetics**. Goal: build a tool on top of **Sophia DDM** that makes the genomic pathologist faster without compromising correctness.
@@ -52,4 +52,14 @@ Should return JSON with 524 columns × 10 rows. To grab `key`/`analysisId`/`inte
 - `decisions.md`, `mentors.md` — team working docs.
 
 ### Projects
+
+Two complementary products, both reachable from the pathologist's existing Sophia Gen2 worklist:
+
 - [`ai-triage-extension/`](ai-triage-extension/): Chrome MV3 extension that injects an AI case summary card into the Gen2 sample side panel, paired with a FastAPI backend that builds the bundle from VQS and drafts the summary with Gemini 2.5 Flash. Priority is computed deterministically from typed ACMG / ClinVar / ABCD fields; bullet text passes through a token-level verifier against the source bundle. See [`ai-triage-extension/extension/README.md`](ai-triage-extension/extension/README.md) for setup.
+
+- **PathoChrono** — chronotype-aware scheduler that orders the pathologist's day so high-cogLoad work (microscopy, FISH) lines up with their personal alertness peak. Pathologist answers the 15-item MESSi questionnaire (Randler 2016) once, the scheduler matches case `cogLoad` × per-slot alertness across Mon–Fri 06:00–20:00. Three pieces:
+  - [`messi/`](messi/) — node ESM scoring + scheduler core (`messi.mjs`, 33 tests in `messi.test.mjs`), synthetic caseloads, and a headless-Chrome PDF report generator.
+  - [`patho-chrono-companion/`](patho-chrono-companion/) — submodule pointing at the Lovable React app. Live at <https://patho-chrono-flow.lovable.app/>.
+  - [`pathochrono-launcher/`](pathochrono-launcher/) — tiny Chrome MV3 extension that adds a **Scheduler** button next to the "Welcome" greeting on the Gen2 landing page; click it, the live PathoChrono app opens in a new tab. No backend.
+
+The two extensions coexist (Chrome isolates content scripts per-extension, and they touch different DOM regions), so a pathologist running both sees: AI summary in the side panel, Scheduler button on the landing page.
