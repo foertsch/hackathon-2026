@@ -48,7 +48,9 @@ The two extensions coexist within the Chrome browser, so a pathologist running b
 
 ## Demo
 
-TODO screenshots
+An example pathologist's schedule is available here: [example_morning_week.pdf](https://github.com/foertsch/hackathon-2026/blob/main/messi/example_morning_week.pdf)
+
+The extensions have been implemented into the platform. TODO screenshots
 
 
 ## API access (Variant Query Service)
