@@ -24,11 +24,11 @@ Tooling: Python · R · Claude · Lovable · Hugging Face.
 
 
 ## Repo layout
-- `challenge_transcript.md` — structured briefing summary (LLM-friendly).
-- `transcripts/` — raw transcription (txt/srt/vtt) of the Sat morning briefing.
-- `docs/` — Sophia VQS API reference + screenshots + sample response.
-- `scripts/vqs_query.py` — minimal VQS client (stdlib only, no deps).
-- `decisions.md`, `mentors.md` — team working docs.
+- `challenge_transcript.md` — structured briefing summary
+- `transcripts/` — raw transcription of the challenge briefing on the first day of the hackathon
+- `docs/` — Sophia VQS API reference + screenshots + sample response
+- `scripts/vqs_query.py` — minimal VQS client.
+- `decisions.md`, `mentors.md` — team working docs
 
 ### Products
 
