@@ -34,7 +34,7 @@ Tooling: Python · R · Claude · Lovable · Hugging Face
 
 Two complementary products, both reachable from the pathologist's existing Sophia Genetics Platform:
 
-- [`ai-triage-extension/`](ai-triage-extension/): Chrome extension that injects a case-specific bullet point summary the sample side panel, paired with a backend that drafts the summary with Gemini 2.5 Flash. The priority of information in the summary is computed based on genomic variant classifications (ACMG / ClinVar / Sophia ABCD). See [`ai-triage-extension/extension/README.md`](ai-triage-extension/extension/README.md) for setup.
+- [`ai-triage-extension/`](ai-triage-extension/): Chrome extension that injects a case-specific bullet point summary plus a per-case chatbot into the sample side panel, paired with a backend that drafts the summary with Gemini 2.5 Flash (or Claude). The priority of information in the summary is computed based on genomic variant classifications (ACMG / ClinVar / Sophia ABCD); LLM prose passes through a token-level verifier; the chatbot is single-case scoped. **Full install + usage guide:** [`ai-triage-extension/README.md`](ai-triage-extension/README.md).
 
 - **PathoChrono** — chronotype-based planner that orders the pathologist's day-to-day tasks (e.g. microscopy, FISH) according to with their personal alertness peak. Pathologist answers a short 3-minute questionnaire (MESSi, Randler 2016) at the account set-up, then scheduler matches their alertness across Monday–Friday work time. This product has three parts:
   - [`messi/`](messi/) — node ESM scoring + scheduler core (`messi.mjs`, tests in `messi.test.mjs`), synthetic caseloads, and a PDF report generator.
