@@ -1,21 +1,53 @@
-# hackathon-2026
+> **The Future of Health Hackathon** (ETH Zürich, May 8–10, 2026)
 
-Team repository for **The Future of Health Hackathon** (ETH Zürich, May 8–10, 2026).
-Genomics track.
+# Alleles in Wonderland
 
-## Team
+## Challenge 
+
+Hackathon weekend. Genomics track. Aim: build a tool on top of **Sophia Genetics Platform** that facilitates the genomic pathologist's work.
+
+Two products live in this repo, both wired into the Sophia Genetics Platform via Chrome extensions.
+
+Briefing summary → [`challenge_transcript.md`](challenge_transcript.md).
+
+Raw transcript → [`transcripts/`](transcripts/).
+
+Tooling: Python · R · Claude · Lovable · Hugging Face.
+
+
+## Contributors
 - Jędrzej Kubica
 - Herman Galioulline
 - Evangelia N.
 - Nat Graff
 - Arion Förtsch
 
-## Status
-Hackathon weekend. Two products live in this repo, both wired into the Sophia Gen2 worklist via Chrome extensions. Tooling: Python · R · Claude · Lovable · Hugging Face.
 
-## Challenge
-Sponsor: **Sophia Genetics**. Goal: build a tool on top of **Sophia DDM** that makes the genomic pathologist faster without compromising correctness.
-Briefing summary → [`challenge_transcript.md`](challenge_transcript.md). Raw transcript → [`transcripts/`](transcripts/).
+## Repo layout
+- `challenge_transcript.md` — structured briefing summary (LLM-friendly).
+- `transcripts/` — raw transcription (txt/srt/vtt) of the Sat morning briefing.
+- `docs/` — Sophia VQS API reference + screenshots + sample response.
+- `scripts/vqs_query.py` — minimal VQS client (stdlib only, no deps).
+- `decisions.md`, `mentors.md` — team working docs.
+
+### Products
+
+Two complementary products, both reachable from the pathologist's existing Sophia Platform:
+
+- [`ai-triage-extension/`](ai-triage-extension/): Chrome extension that injects a case-specific bullet point summary the sample side panel, paired with a backend that drafts the summary with Gemini 2.5 Flash. The priority of information in the summary is computed based on genomic variant classifications (ACMG / ClinVar / Sophia ABCD). See [`ai-triage-extension/extension/README.md`](ai-triage-extension/extension/README.md) for setup.
+
+- **PathoChrono** — chronotype-based planner that orders the pathologist's day-to-day tasks (e.g. microscopy, FISH) according to with their personal alertness peak. During the hackathon it is available at <https://patho-chrono-flow.lovable.app/>. Pathologist answers a short 3-minute questionnaire (MESSi, Randler 2016) at the account set-up, then scheduler matches their alertness across Monday–Friday work time. This product has three parts:
+  - [`messi/`](messi/) — node ESM scoring + scheduler core (`messi.mjs`, tests in `messi.test.mjs`), synthetic caseloads, and a PDF report generator.
+  - [`patho-chrono-companion/`](patho-chrono-companion/) — submodule pointing at the webapp (Lovable React).
+  - [`pathochrono-launcher/`](pathochrono-launcher/) — tiny Chrome MV3 extension that adds a **Scheduler** button next to the "Welcome" greeting on the Gen2 landing page; click it, the live PathoChrono app opens in a new tab. No backend.
+
+The two extensions coexist within the Chrome browser, so a pathologist running both sees: a Scheduler button on the landing page and a case summary in the side panel.
+
+
+## Demo
+
+TODO screenshots
+
 
 ## API access (Variant Query Service)
 
@@ -43,23 +75,3 @@ Should return JSON with 524 columns × 10 rows. To grab `key`/`analysisId`/`inte
 **Decode a key:** `./scripts/vqs_query.py decode-key "<base64>"` → prints the JSON inside.
 
 > Note on doc inconsistency: the live API expects bare query params (`key=`, `plan.parameters.X=`, `plan.transformers=`), not the `parameters.`-prefixed form shown in some snippets of `VQS-API.md`. The wrapper handles this.
-
-## Repo layout
-- `challenge_transcript.md` — structured briefing summary (LLM-friendly).
-- `transcripts/` — raw transcription (txt/srt/vtt) of the Sat morning briefing.
-- `docs/` — Sophia VQS API reference + screenshots + sample response.
-- `scripts/vqs_query.py` — minimal VQS client (stdlib only, no deps).
-- `decisions.md`, `mentors.md` — team working docs.
-
-### Projects
-
-Two complementary products, both reachable from the pathologist's existing Sophia Gen2 worklist:
-
-- [`ai-triage-extension/`](ai-triage-extension/): Chrome MV3 extension that injects an AI case summary card into the Gen2 sample side panel, paired with a FastAPI backend that builds the bundle from VQS and drafts the summary with Gemini 2.5 Flash. Priority is computed deterministically from typed ACMG / ClinVar / ABCD fields; bullet text passes through a token-level verifier against the source bundle. See [`ai-triage-extension/extension/README.md`](ai-triage-extension/extension/README.md) for setup.
-
-- **PathoChrono** — chronotype-aware scheduler that orders the pathologist's day so high-cogLoad work (microscopy, FISH) lines up with their personal alertness peak. Pathologist answers the 15-item MESSi questionnaire (Randler 2016) once, the scheduler matches case `cogLoad` × per-slot alertness across Mon–Fri 06:00–20:00. Three pieces:
-  - [`messi/`](messi/) — node ESM scoring + scheduler core (`messi.mjs`, 33 tests in `messi.test.mjs`), synthetic caseloads, and a headless-Chrome PDF report generator.
-  - [`patho-chrono-companion/`](patho-chrono-companion/) — submodule pointing at the Lovable React app. Live at <https://patho-chrono-flow.lovable.app/>.
-  - [`pathochrono-launcher/`](pathochrono-launcher/) — tiny Chrome MV3 extension that adds a **Scheduler** button next to the "Welcome" greeting on the Gen2 landing page; click it, the live PathoChrono app opens in a new tab. No backend.
-
-The two extensions coexist (Chrome isolates content scripts per-extension, and they touch different DOM regions), so a pathologist running both sees: AI summary in the side panel, Scheduler button on the landing page.
