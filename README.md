@@ -8,11 +8,11 @@ Hackathon weekend. Genomics track. Aim: build a tool on top of **Sophia Genetics
 
 Two products live in this repo, both wired into the Sophia Genetics Platform via Chrome extensions.
 
-Briefing summary → [`challenge_transcript.md`](challenge_transcript.md).
+Briefing summary → [`challenge_transcript.md`](challenge_transcript.md)
 
-Raw transcript → [`transcripts/`](transcripts/).
+Raw transcript → [`transcripts/`](transcripts/)
 
-Tooling: Python · R · Claude · Lovable · Hugging Face.
+Tooling: Python · R · Claude · Lovable · Hugging Face
 
 
 ## Contributors
@@ -27,19 +27,21 @@ Tooling: Python · R · Claude · Lovable · Hugging Face.
 - `challenge_transcript.md` — structured briefing summary
 - `transcripts/` — raw transcription of the challenge briefing on the first day of the hackathon
 - `docs/` — Sophia VQS API reference + screenshots + sample response
-- `scripts/vqs_query.py` — minimal VQS client.
+- `scripts/vqs_query.py` — minimal VQS client
 - `decisions.md`, `mentors.md` — team working docs
 
 ### Products
 
-Two complementary products, both reachable from the pathologist's existing Sophia Platform:
+Two complementary products, both reachable from the pathologist's existing Sophia Genetics Platform:
 
 - [`ai-triage-extension/`](ai-triage-extension/): Chrome extension that injects a case-specific bullet point summary the sample side panel, paired with a backend that drafts the summary with Gemini 2.5 Flash. The priority of information in the summary is computed based on genomic variant classifications (ACMG / ClinVar / Sophia ABCD). See [`ai-triage-extension/extension/README.md`](ai-triage-extension/extension/README.md) for setup.
 
-- **PathoChrono** — chronotype-based planner that orders the pathologist's day-to-day tasks (e.g. microscopy, FISH) according to with their personal alertness peak. During the hackathon it is available at <https://patho-chrono-flow.lovable.app/>. Pathologist answers a short 3-minute questionnaire (MESSi, Randler 2016) at the account set-up, then scheduler matches their alertness across Monday–Friday work time. This product has three parts:
+- **PathoChrono** — chronotype-based planner that orders the pathologist's day-to-day tasks (e.g. microscopy, FISH) according to with their personal alertness peak. Pathologist answers a short 3-minute questionnaire (MESSi, Randler 2016) at the account set-up, then scheduler matches their alertness across Monday–Friday work time. This product has three parts:
   - [`messi/`](messi/) — node ESM scoring + scheduler core (`messi.mjs`, tests in `messi.test.mjs`), synthetic caseloads, and a PDF report generator.
   - [`patho-chrono-companion/`](patho-chrono-companion/) — submodule pointing at the webapp (Lovable React).
-  - [`pathochrono-launcher/`](pathochrono-launcher/) — tiny Chrome MV3 extension that adds a **Scheduler** button next to the "Welcome" greeting on the Gen2 landing page; click it, the live PathoChrono app opens in a new tab. No backend.
+  - [`pathochrono-launcher/`](pathochrono-launcher/) — tiny Chrome extension that adds a **Scheduler** button next to the "Welcome" greeting on the platform landing page.
+
+During the hackathon **PathoChrono** is available at <https://patho-chrono-flow.lovable.app/>
 
 The two extensions coexist within the Chrome browser, so a pathologist running both sees: a Scheduler button on the landing page and a case summary in the side panel.
 
