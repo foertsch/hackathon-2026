@@ -10,8 +10,6 @@ Two products live in this repo, both wired into the Sophia Genetics Platform via
 
 Briefing summary → [`challenge_transcript.md`](challenge_transcript.md)
 
-Raw transcript → [`transcripts/`](transcripts/)
-
 Tooling: Python · R · Claude · Lovable · Hugging Face
 
 
@@ -25,7 +23,6 @@ Tooling: Python · R · Claude · Lovable · Hugging Face
 
 ## Repo layout
 - `challenge_transcript.md` — structured briefing summary
-- `transcripts/` — raw transcription of the challenge briefing on the first day of the hackathon
 - `docs/` — Sophia VQS API reference + screenshots + sample response
 - `scripts/vqs_query.py` — minimal VQS client
 - `decisions.md`, `mentors.md` — team working docs
