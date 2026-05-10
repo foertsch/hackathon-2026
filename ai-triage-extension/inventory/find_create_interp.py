@@ -4,6 +4,7 @@ into a sample that has NO interpretation (SG220-LPA), and look for any
 '+ Create' / 'New Interpretation' affordance. Whatever clicks fire are
 captured in the HAR.
 """
+import os
 import json
 import sys
 import time
@@ -14,8 +15,8 @@ HAR_OUT = ROOT / "inventory" / "har" / "06_create_interp.har"
 
 from playwright.sync_api import sync_playwright
 
-USER = "hackathon1@hackathon.com"
-PWD = "Naga942443"
+USER = os.environ.get("HACKATHON_USER", "")
+PWD = os.environ.get("HACKATHON_PASSWORD", "")
 LANDING = "https://platform-vandv1.sophiagenetics.com/web/landing"
 GENOMICS = "https://platform-vandv1.sophiagenetics.com/web/gateway/auth/navigate?appPath=/web/genomics"
 FINDER = "https://platform-vandv1.sophiagenetics.com/web/genomics/finder"

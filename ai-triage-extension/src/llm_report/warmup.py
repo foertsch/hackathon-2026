@@ -16,6 +16,7 @@ Cost: ~10s per warmup; cached (we don't warm up the same id twice in one run).
 
 from __future__ import annotations
 
+import os
 import time
 from pathlib import Path
 from typing import Optional
@@ -24,8 +25,8 @@ PLATFORM = "https://platform-vandv1.sophiagenetics.com"
 LANDING_URL = f"{PLATFORM}/web/landing"
 GENOMICS_URL = f"{PLATFORM}/web/gateway/auth/navigate?appPath=/web/genomics"
 
-DEFAULT_USER = "hackathon1@hackathon.com"
-DEFAULT_PASSWORD = "Naga942443"
+DEFAULT_USER = os.environ.get("HACKATHON_USER", "")
+DEFAULT_PASSWORD = os.environ.get("HACKATHON_PASSWORD", "")
 
 REPO_ROOT = Path(__file__).resolve().parents[2]
 WARMED_FILE = REPO_ROOT / "build" / "warmed.json"

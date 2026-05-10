@@ -4,6 +4,7 @@ to populate, click the first case to discover the real interpretation URL,
 then walk the 5 tabs (Overview / Quality / Genes / Variants / Report) capturing
 HAR + screenshots + per-tab VQS calls.
 """
+import os
 import json
 import sys
 import time
@@ -17,8 +18,8 @@ DUMPS = HERE / "dumps"
 
 LANDING = "https://platform-vandv1.sophiagenetics.com/web/landing"
 GENOMICS = "https://platform-vandv1.sophiagenetics.com/web/gateway/auth/navigate?appPath=/web/genomics"
-USER = "hackathon1@hackathon.com"
-PWD = "Naga942443"
+USER = os.environ.get("HACKATHON_USER", "")
+PWD = os.environ.get("HACKATHON_PASSWORD", "")
 
 
 def login(page):

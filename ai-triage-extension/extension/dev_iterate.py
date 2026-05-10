@@ -15,6 +15,7 @@ The persistent profile lives at build/_chrome_profile_dev. To start over
 (e.g. credentials changed), delete that directory.
 """
 
+import os
 import argparse
 import shutil
 import sys
@@ -29,8 +30,8 @@ PROFILE = ROOT / "build" / "_chrome_profile_dev"
 LANDING = "https://platform-vandv1.sophiagenetics.com/web/landing"
 GENOMICS = "https://platform-vandv1.sophiagenetics.com/web/gateway/auth/navigate?appPath=/web/genomics"
 FINDER = "https://platform-vandv1.sophiagenetics.com/web/genomics/finder"
-USER = "hackathon1@hackathon.com"
-PWD = "Naga942443"
+USER = os.environ.get("HACKATHON_USER", "")
+PWD = os.environ.get("HACKATHON_PASSWORD", "")
 TARGET_SAMPLE = "17br088-1-Run1"
 
 
