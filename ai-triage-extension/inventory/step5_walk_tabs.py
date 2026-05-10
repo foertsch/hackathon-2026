@@ -3,6 +3,7 @@ Step 5: navigate directly to interpretation-1047 (Hereditary Cancer / SG063-LPA)
 walk the 5 tabs by clicking the <p>Tab</p> text, capture per-tab API traffic.
 Save the Variants tab's full row payload for downstream report design.
 """
+import os
 import json
 import sys
 import time
@@ -17,8 +18,8 @@ DUMPS = HERE / "dumps"
 LANDING = "https://platform-vandv1.sophiagenetics.com/web/landing"
 GENOMICS = "https://platform-vandv1.sophiagenetics.com/web/gateway/auth/navigate?appPath=/web/genomics"
 INTERP_URL = "https://platform-vandv1.sophiagenetics.com/web/genomics/finder/interpretation-1047"
-USER = "hackathon1@hackathon.com"
-PWD = "Naga942443"
+USER = os.environ.get("HACKATHON_USER", "")
+PWD = os.environ.get("HACKATHON_PASSWORD", "")
 TABS = ["Overview", "Quality", "Genes", "Variants", "Report"]
 
 

@@ -3,6 +3,7 @@ Step 2: from a fresh login, jump straight into the Genomics module,
 inventory what's on the homepage (lists of runs / analyses / interpretations),
 grab the IAM bearer token, and dump the page structure for planning.
 """
+import os
 import json
 import sys
 from pathlib import Path
@@ -16,8 +17,8 @@ DUMPS = HERE / "dumps"
 LANDING = "https://platform-vandv1.sophiagenetics.com/web/landing"
 GENOMICS = "https://platform-vandv1.sophiagenetics.com/web/gateway/auth/navigate?appPath=/web/genomics"
 IAM_TOKEN_URL = "https://iam-vandv.sophiagenetics.com/account/token"
-USER = "hackathon1@hackathon.com"
-PWD = "Naga942443"
+USER = os.environ.get("HACKATHON_USER", "")
+PWD = os.environ.get("HACKATHON_PASSWORD", "")
 
 
 def login(page):

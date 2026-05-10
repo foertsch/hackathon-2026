@@ -6,6 +6,7 @@ and capture all the VQS + GraphQL traffic per tab.
 We discover the right URL by trying the obvious shape; if that fails we fall
 back to the home page and click into the case via UI.
 """
+import os
 import json
 import sys
 from pathlib import Path
@@ -18,8 +19,8 @@ DUMPS = HERE / "dumps"
 
 LANDING = "https://platform-vandv1.sophiagenetics.com/web/landing"
 GENOMICS = "https://platform-vandv1.sophiagenetics.com/web/gateway/auth/navigate?appPath=/web/genomics"
-USER = "hackathon1@hackathon.com"
-PWD = "Naga942443"
+USER = os.environ.get("HACKATHON_USER", "")
+PWD = os.environ.get("HACKATHON_PASSWORD", "")
 
 INTERP_ID = "interpretation-1042"
 ANALYSIS_ID = "200042360"

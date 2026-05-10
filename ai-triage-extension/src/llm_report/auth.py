@@ -14,6 +14,7 @@ Cache state to `build/auth.json`. On 401 or `iam_exp` past, re-login.
 from __future__ import annotations
 
 import json
+import os
 import time
 from pathlib import Path
 from typing import Optional
@@ -24,8 +25,8 @@ PLATFORM = "https://platform-vandv1.sophiagenetics.com"
 LANDING_URL = f"{PLATFORM}/web/landing"
 SESSION_URL = f"{PLATFORM}/web/gateway/api/auth/session"
 
-DEFAULT_USER = "hackathon1@hackathon.com"
-DEFAULT_PASSWORD = "Naga942443"
+DEFAULT_USER = os.environ.get("HACKATHON_USER", "")
+DEFAULT_PASSWORD = os.environ.get("HACKATHON_PASSWORD", "")
 
 REPO_ROOT = Path(__file__).resolve().parents[2]
 CACHE_FILE = REPO_ROOT / "build" / "auth.json"

@@ -5,6 +5,7 @@ Gen2, wait for the AI panels to inject, screenshot the result.
 Requires the backend running at 127.0.0.1:8000.
 """
 
+import os
 import sys
 import time
 from pathlib import Path
@@ -15,8 +16,8 @@ EXT_DIR = Path(__file__).resolve().parent
 ROOT = EXT_DIR.parent
 LANDING = "https://platform-vandv1.sophiagenetics.com/web/landing"
 GENOMICS = "https://platform-vandv1.sophiagenetics.com/web/gateway/auth/navigate?appPath=/web/genomics"
-USER = "hackathon1@hackathon.com"
-PWD = "Naga942443"
+USER = os.environ.get("HACKATHON_USER", "")
+PWD = os.environ.get("HACKATHON_PASSWORD", "")
 
 OUT = ROOT / "build" / "extension_screenshot.png"
 

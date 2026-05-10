@@ -6,6 +6,7 @@ plan the rest of the crawl. Saves a HAR with all network traffic.
 Re-runnable. Headed by default so the user can watch.
 """
 
+import os
 import json
 import sys
 from pathlib import Path
@@ -17,8 +18,8 @@ HAR = HERE / "har"
 DUMPS = HERE / "dumps"
 
 LANDING = "https://platform-vandv1.sophiagenetics.com/web/landing"
-USER = "hackathon1@hackathon.com"
-PWD = "Naga942443"
+USER = os.environ.get("HACKATHON_USER", "")
+PWD = os.environ.get("HACKATHON_PASSWORD", "")
 
 
 def main(headless: bool = False):

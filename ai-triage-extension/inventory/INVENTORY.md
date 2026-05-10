@@ -1,6 +1,7 @@
-# Gen2 / VQS Inventory — `hackathon1@hackathon.com`
+# Gen2 / VQS Inventory
 
-Captured 2026-05-09 by walking the Gen2 SPA with Playwright.
+Captured 2026-05-09 by walking the Gen2 SPA with Playwright using a
+shared hackathon test account (credentials are no longer valid).
 Full HARs in `har/`, screenshots in `screenshots/`, raw dumps in `dumps/`.
 
 ## Auth model

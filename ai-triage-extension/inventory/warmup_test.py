@@ -2,6 +2,7 @@
 Test whether opening an interpretation in Gen2's frontend ('warming' it)
 makes its VQS endpoint stop 500-ing.
 """
+import os
 import sys
 import time
 from pathlib import Path
@@ -11,8 +12,8 @@ sys.path.insert(0, str(ROOT))
 
 from playwright.sync_api import sync_playwright
 
-USER = "hackathon1@hackathon.com"
-PWD = "Naga942443"
+USER = os.environ.get("HACKATHON_USER", "")
+PWD = os.environ.get("HACKATHON_PASSWORD", "")
 LANDING = "https://platform-vandv1.sophiagenetics.com/web/landing"
 INTERP_ID = "interpretation-1046"
 URL = f"https://platform-vandv1.sophiagenetics.com/web/genomics/finder/{INTERP_ID}"

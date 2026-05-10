@@ -92,6 +92,8 @@ Set in `.env` (see `.env.example`):
 | `ANTHROPIC_API_KEY` | _none_ | Used when models do **not** start with `gemini` (Claude path). |
 | `LLM_MODEL` | `gemini-2.5-flash` | Triage card model. Set to e.g. `claude-sonnet-4-6` to use Claude. |
 | `CHAT_MODEL` | `gemini-2.5-flash` | Chatbot model. Independent of triage. |
+| `HACKATHON_USER` | _none_ | Gen2 test-account email. Required for the headless Playwright login on first run; ask the hackathon organizers. |
+| `HACKATHON_PASSWORD` | _none_ | Gen2 test-account password. Pair with `HACKATHON_USER`. |
 | `PORT` | `8000` | Backend port. The extension hardcodes `127.0.0.1:8000`; if you change this, also update `BACKEND` in `extension/content.js` and the manifest's `host_permissions`. |
 
 ## Architecture

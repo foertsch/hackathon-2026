@@ -5,6 +5,7 @@ Hereditary Cancer Run expanded in the Finder with the side panel open on
 the BRCA2 HIGH-priority sample.
 """
 
+import os
 import sys
 import time
 from pathlib import Path
@@ -17,8 +18,8 @@ PROFILE = ROOT / "build" / "_chrome_profile_compare"
 LANDING = "https://platform-vandv1.sophiagenetics.com/web/landing"
 GENOMICS = "https://platform-vandv1.sophiagenetics.com/web/gateway/auth/navigate?appPath=/web/genomics"
 FINDER = "https://platform-vandv1.sophiagenetics.com/web/genomics/finder"
-USER = "hackathon1@hackathon.com"
-PWD = "Naga942443"
+USER = os.environ.get("HACKATHON_USER", "")
+PWD = os.environ.get("HACKATHON_PASSWORD", "")
 VIEWPORT = {"width": 1500, "height": 1100}
 TARGET_SAMPLE = "17br088-1-Run1"
 
