@@ -1,0 +1,26 @@
+.pathochrono-launcher-btn {
+  display: inline-block;
+  margin-left: 12px;
+  padding: 6px 14px;
+  border-radius: 9999px;
+  background: linear-gradient(135deg, #f97316 0%, #7c3aed 100%);
+  color: #ffffff;
+  font-size: 13px;
+  font-weight: 600;
+  text-decoration: none;
+  vertical-align: middle;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  transition: filter 120ms ease, transform 120ms ease;
+}
+
+.pathochrono-launcher-btn:hover {
+  filter: brightness(1.08);
+  transform: translateY(-1px);
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.pathochrono-launcher-btn:active {
+  transform: translateY(0);
+  filter: brightness(0.96);
+}

@@ -1,0 +1,22 @@
+{
+  "manifest_version": 3,
+  "name": "PathoChrono Launcher",
+  "version": "0.1.0",
+  "description": "Adds a Scheduler button next to the Welcome heading on the SOPHiA DDM Gen2 landing page, opening the chronotype-aware scheduler.",
+  "host_permissions": [
+    "https://platform-vandv1.sophiagenetics.com/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "https://platform-vandv1.sophiagenetics.com/web/*"
+      ],
+      "js": ["content.js"],
+      "css": ["content.css"],
+      "run_at": "document_idle"
+    }
+  ],
+  "action": {
+    "default_title": "PathoChrono Launcher"
+  }
+}
