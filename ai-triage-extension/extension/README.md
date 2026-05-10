@@ -35,3 +35,20 @@ Adds an AI-generated triage panel next to each interpretation in Gen2's
 
 The backend is the brains: it owns the Gen2 session, builds bundles via VQS,
 calls Gemini, validates, and caches summaries to disk under `build/`.
+
+## Case chat
+
+Below the triage card, the side panel includes a chat box scoped to the
+currently open sample. The backend endpoint is
+`POST /api/sample-chat/{sample_id}`, body `{messages: [{role, content}]}`,
+returning `{reply}`. It loads the cached bundle + summary + context for the
+sample and runs them through `chat.py` (Gemini by default,
+`CHAT_MODEL=claude-sonnet-4-6` to switch).
+
+History is held in memory per sample for the lifetime of the page; closing
+or reloading Gen2 wipes it. The chat won't activate until the triage
+summary has finished generating for the sample, since both the bundle and
+summary need to be on disk first.
+
+Chat replies are NOT verified by the token-level verifier the triage card
+uses — they're labelled "verify clinical claims independently" in the UI.

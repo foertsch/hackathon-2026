@@ -1,8 +1,8 @@
 {
   "manifest_version": 3,
-  "name": "SOPHiA DDM AI Triage",
-  "version": "0.1.0",
-  "description": "AI-generated case summaries injected into the SOPHiA DDM Gen2 worklist.",
+  "name": "SOPHiA DDM AI Triage + Chatbot",
+  "version": "0.2.0",
+  "description": "AI-generated case summaries plus a per-case chatbot, injected into the SOPHiA DDM Gen2 worklist.",
   "permissions": [
     "storage"
   ],
@@ -25,6 +25,6 @@
     }
   ],
   "action": {
-    "default_title": "SOPHiA AI Triage"
+    "default_title": "SOPHiA AI Triage + Chatbot"
   }
 }

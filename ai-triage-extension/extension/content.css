@@ -238,3 +238,164 @@
   0%   { background-position: 100% 0%; }
   100% { background-position: -100% 0%; }
 }
+
+/* ---- Chat panel (sits below the triage card) ---------------------------- */
+
+.sophia-chat {
+  margin: 0 16px 18px;
+  padding: 12px 14px 12px;
+  background: #ffffff;
+  border-radius: 8px;
+  border: 1px solid #e3e8ef;
+  border-left: 5px solid #aac1e0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", sans-serif;
+  font-size: 12.5px;
+  color: #0d2240;
+  box-shadow: 0 2px 6px rgba(13, 34, 64, 0.06);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.sophia-chat-eyebrow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  flex-wrap: wrap;
+  row-gap: 4px;
+}
+
+.sophia-chat-disclaimer {
+  font-size: 10px;
+  color: #93a0b8;
+  font-style: italic;
+}
+
+.sophia-chat-messages {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  max-height: 280px;
+  overflow-y: auto;
+  padding-right: 2px;
+}
+
+.sophia-chat-messages:empty { display: none; }
+
+.sophia-chat-msg {
+  display: flex;
+}
+
+.sophia-chat-msg-user      { justify-content: flex-end; }
+.sophia-chat-msg-assistant { justify-content: flex-start; }
+
+.sophia-chat-bubble {
+  max-width: 88%;
+  padding: 7px 10px;
+  border-radius: 10px;
+  line-height: 1.4;
+  font-size: 12px;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+.sophia-chat-msg-user .sophia-chat-bubble {
+  background: #e6eefb;
+  color: #0d2240;
+  border-bottom-right-radius: 3px;
+}
+
+.sophia-chat-msg-assistant .sophia-chat-bubble {
+  background: #f4f6fa;
+  color: #1f2a3d;
+  border-bottom-left-radius: 3px;
+}
+
+.sophia-chat-msg-error .sophia-chat-bubble {
+  background: #fde2e9;
+  color: #b91c4c;
+  font-family: ui-monospace, "SF Mono", Menlo, monospace;
+  font-size: 11px;
+}
+
+.sophia-chat-form {
+  display: flex;
+  gap: 6px;
+  align-items: stretch;
+}
+
+.sophia-chat-input {
+  flex: 1;
+  resize: vertical;
+  min-height: 36px;
+  max-height: 140px;
+  padding: 7px 9px;
+  font-family: inherit;
+  font-size: 12px;
+  color: #0d2240;
+  background: #fafbfd;
+  border: 1px solid #d6dde7;
+  border-radius: 6px;
+  outline: none;
+}
+
+.sophia-chat-input:focus {
+  border-color: #8aa4c8;
+  background: #ffffff;
+  box-shadow: 0 0 0 2px rgba(138, 164, 200, 0.18);
+}
+
+.sophia-chat-input:disabled {
+  background: #f1f3f7;
+  color: #93a0b8;
+  cursor: not-allowed;
+}
+
+.sophia-chat-send {
+  align-self: flex-end;
+  padding: 7px 14px;
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: 600;
+  color: #ffffff;
+  background: #2c4a78;
+  border: 1px solid #2c4a78;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.12s ease;
+}
+
+.sophia-chat-send:hover:not(:disabled) { background: #3b5d92; }
+
+.sophia-chat-send:disabled {
+  background: #c0cad9;
+  border-color: #c0cad9;
+  color: #ffffff;
+  cursor: not-allowed;
+}
+
+/* Typing indicator: three dots that pulse while the backend is generating. */
+.sophia-chat-typing {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 9px 12px;
+}
+
+.sophia-chat-typing span {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #93a0b8;
+  display: inline-block;
+  animation: sophia-chat-bounce 1.2s infinite ease-in-out;
+}
+
+.sophia-chat-typing span:nth-child(2) { animation-delay: 0.15s; }
+.sophia-chat-typing span:nth-child(3) { animation-delay: 0.3s; }
+
+@keyframes sophia-chat-bounce {
+  0%, 80%, 100% { transform: translateY(0); opacity: 0.4; }
+  40%           { transform: translateY(-3px); opacity: 1; }
+}

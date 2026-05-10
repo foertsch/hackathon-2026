@@ -6,12 +6,14 @@
 
 const BACKEND = "http://127.0.0.1:8000";
 const PANEL_CARD_ID = "sophia-sidepanel-card";
+const PANEL_CHAT_ID = "sophia-sidepanel-chat";
 
 let allRuns = null;
 let samplesByUserRef = {};      // userRef -> { id, ngs_run_id, ... }
 let summariesBySampleId = {};
 let prewarmed = new Set();
 let inflightFetches = new Map(); // sampleId -> Promise
+let chatBySampleId = {};         // sampleId -> [{role, content}]
 
 // ---- API helpers ----
 //
@@ -410,15 +412,20 @@ async function renderForPanel(panel) {
   if (cached) {
     applyPriorityClass(card, cached);
     card.innerHTML = renderCard(cached);
+    ensureChatPanel(panel, card, sample.id, /*ready=*/ true);
     return;
   }
   card.classList.add("sophia-loading");
   card.innerHTML = renderCard(null, { loading: true });
+  // Chat panel rendered immediately but disabled until the summary lands —
+  // pathologist sees it spawning, so the affordance is obvious from the start.
+  ensureChatPanel(panel, card, sample.id, /*ready=*/ false);
   try {
     const env = await fetchSampleSummary(sample.id);
     if (card.dataset.sampleId === String(sample.id)) {
       applyPriorityClass(card, env);
       card.innerHTML = renderCard(env);
+      ensureChatPanel(panel, card, sample.id, /*ready=*/ true);
     }
   } catch (e) {
     if (card.dataset.sampleId === String(sample.id)) {
@@ -426,6 +433,137 @@ async function renderForPanel(panel) {
       card.innerHTML = renderCard(null, { error: e.message || String(e) });
     }
   }
+}
+
+// ---- Chat panel ----
+
+function ensureChatPanel(panel, anchorCard, sampleId, ready) {
+  let chat = panel.querySelector(`#${PANEL_CHAT_ID}`);
+  const sidStr = String(sampleId);
+  if (!chat) {
+    chat = document.createElement("div");
+    chat.id = PANEL_CHAT_ID;
+    chat.className = "sophia-chat";
+    if (anchorCard && anchorCard.parentNode) {
+      anchorCard.parentNode.insertBefore(chat, anchorCard.nextSibling);
+    } else {
+      panel.appendChild(chat);
+    }
+    chat.dataset.sampleId = sidStr;
+    initChatPanel(chat, sampleId);
+  } else if (chat.dataset.sampleId !== sidStr) {
+    // Sample changed — reset DOM and re-bind handlers for the new sample.
+    chat.dataset.sampleId = sidStr;
+    initChatPanel(chat, sampleId);
+  }
+  setChatReady(chat, ready);
+  renderChatMessages(chat, sampleId);
+  return chat;
+}
+
+function initChatPanel(container, sampleId) {
+  container.innerHTML = `
+    <div class="sophia-chat-eyebrow">
+      <span class="sophia-eyebrow">SOPHiA AI · Chat</span>
+      <span class="sophia-chat-disclaimer">Verify clinical claims independently.</span>
+    </div>
+    <div class="sophia-chat-messages"></div>
+    <form class="sophia-chat-form">
+      <textarea
+        class="sophia-chat-input"
+        rows="2"
+        placeholder="Ask about this case…"
+        spellcheck="false"
+      ></textarea>
+      <button type="submit" class="sophia-chat-send">Send</button>
+    </form>
+  `;
+  const form = container.querySelector(".sophia-chat-form");
+  const input = container.querySelector(".sophia-chat-input");
+  form.addEventListener("submit", (e) => {
+    e.preventDefault();
+    submitChat(container, sampleId);
+  });
+  input.addEventListener("keydown", (e) => {
+    if (e.key === "Enter" && !e.shiftKey) {
+      e.preventDefault();
+      submitChat(container, sampleId);
+    }
+  });
+}
+
+function setChatReady(container, ready) {
+  const input = container.querySelector(".sophia-chat-input");
+  const btn = container.querySelector(".sophia-chat-send");
+  // Loading-during-request state has its own class; don't overwrite it.
+  if (container.classList.contains("sophia-chat-pending")) return;
+  if (input) {
+    input.disabled = !ready;
+    input.placeholder = ready
+      ? "Ask about this case…"
+      : "Generating triage summary…";
+  }
+  if (btn) btn.disabled = !ready;
+}
+
+async function submitChat(container, sampleId) {
+  const input = container.querySelector(".sophia-chat-input");
+  if (!input || input.disabled) return;
+  const text = (input.value || "").trim();
+  if (!text) return;
+  const history = (chatBySampleId[sampleId] = chatBySampleId[sampleId] || []);
+  history.push({ role: "user", content: text });
+  input.value = "";
+  container.classList.add("sophia-chat-pending");
+  const btn = container.querySelector(".sophia-chat-send");
+  if (btn) btn.disabled = true;
+  input.disabled = true;
+  renderChatMessages(container, sampleId);
+  try {
+    const resp = await bgFetch(`${BACKEND}/api/sample-chat/${sampleId}`, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ messages: history }),
+    });
+    history.push({ role: "assistant", content: resp.reply || "(empty reply)" });
+  } catch (err) {
+    history.push({
+      role: "assistant",
+      content: `(error: ${err && err.message ? err.message : String(err)})`,
+      error: true,
+    });
+  } finally {
+    container.classList.remove("sophia-chat-pending");
+    if (btn) btn.disabled = false;
+    input.disabled = false;
+    renderChatMessages(container, sampleId);
+    input.focus();
+  }
+}
+
+function renderChatMessages(container, sampleId) {
+  const msgsEl = container.querySelector(".sophia-chat-messages");
+  if (!msgsEl) return;
+  const history = chatBySampleId[sampleId] || [];
+  const isPending = container.classList.contains("sophia-chat-pending");
+  const items = history.map((m) => {
+    const cls =
+      "sophia-chat-msg sophia-chat-msg-" +
+      m.role +
+      (m.error ? " sophia-chat-msg-error" : "");
+    return `<div class="${cls}"><div class="sophia-chat-bubble">${escapeHtml(m.content)}</div></div>`;
+  });
+  if (isPending) {
+    items.push(
+      `<div class="sophia-chat-msg sophia-chat-msg-assistant">
+         <div class="sophia-chat-bubble sophia-chat-typing">
+           <span></span><span></span><span></span>
+         </div>
+       </div>`
+    );
+  }
+  msgsEl.innerHTML = items.join("");
+  msgsEl.scrollTop = msgsEl.scrollHeight;
 }
 
 function detectExpandedRunsForPrewarm() {

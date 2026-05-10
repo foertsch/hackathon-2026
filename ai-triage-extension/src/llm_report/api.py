@@ -27,6 +27,7 @@ from .auth import get_session
 from .bundle_builder import build_case_bundle
 from .case_bundle import CaseBundle
 from .case_summary import CaseSummary
+from .chat import DEFAULT_MODEL as CHAT_DEFAULT_MODEL, chat_about_sample
 from .sanitizer import clean_summary
 from .summary_drafter import summarize_case
 from .verifier import verify_summary
@@ -184,6 +185,10 @@ def _sample_context_path(sample_id: int) -> Path:
     return BUILD_DIR / f"sample-{sample_id}.context.json"
 
 
+def _sample_bundle_path(sample_id: int) -> Path:
+    return BUILD_DIR / f"sample-{sample_id}.bundle.json"
+
+
 def _ensure_sample_summary(
     sample_id: int, *, model: str, refresh: bool = False
 ) -> tuple[CaseSummary, dict]:
@@ -192,7 +197,10 @@ def _ensure_sample_summary(
     directly (so QC-fail signals don't depend on LLM phrasing)."""
     sp = _sample_summary_path(sample_id)
     cp = _sample_context_path(sample_id)
-    if not refresh and sp.exists() and cp.exists():
+    bp = _sample_bundle_path(sample_id)
+    # Bundle is required for the chat endpoint, so a cache miss on it forces
+    # full regeneration even when summary + context are present.
+    if not refresh and sp.exists() and cp.exists() and bp.exists():
         try:
             return (
                 CaseSummary.model_validate_json(sp.read_text()),
@@ -236,6 +244,9 @@ def _ensure_sample_summary(
     BUILD_DIR.mkdir(parents=True, exist_ok=True)
     sp.write_text(summary.model_dump_json(indent=2))
     cp.write_text(json.dumps(context, indent=2))
+    # Bundle persisted alongside so /api/sample-chat can answer questions
+    # without re-pulling from VQS on every turn.
+    _sample_bundle_path(sample_id).write_text(bundle.model_dump_json(indent=2))
     return summary, context
 
 
@@ -246,6 +257,51 @@ def get_sample_summary(sample_id: int, refresh: bool = False, model: str = DEFAU
     except Exception as e:
         raise HTTPException(status_code=500, detail=f"{type(e).__name__}: {e}")
     return {"summary": clean_summary(summary).model_dump(), **context}
+
+
+@app.post("/api/sample-chat/{sample_id}")
+async def post_sample_chat(sample_id: int, request: Request) -> dict:
+    """Single-case chat. Body: {messages: [{role, content}, ...], model?}.
+    Requires the sample to have already been summarised (bundle, summary,
+    and context cached on disk); 400 if not."""
+    try:
+        body = await request.json()
+    except Exception:
+        raise HTTPException(status_code=400, detail="invalid JSON body")
+    messages = body.get("messages") or []
+    if not isinstance(messages, list) or not messages:
+        raise HTTPException(status_code=400, detail="messages must be a non-empty list")
+    for m in messages:
+        if not isinstance(m, dict) or m.get("role") not in ("user", "assistant"):
+            raise HTTPException(status_code=400, detail="each message needs role=user|assistant")
+        if not isinstance(m.get("content"), str):
+            raise HTTPException(status_code=400, detail="message content must be a string")
+    if messages[-1]["role"] != "user":
+        raise HTTPException(status_code=400, detail="last message must be from the user")
+
+    bp = _sample_bundle_path(sample_id)
+    sp = _sample_summary_path(sample_id)
+    cp = _sample_context_path(sample_id)
+    if not (bp.exists() and sp.exists() and cp.exists()):
+        raise HTTPException(
+            status_code=400,
+            detail=f"sample {sample_id} not summarised yet — open the case to generate it first",
+        )
+    try:
+        bundle = CaseBundle.model_validate_json(bp.read_text())
+        summary = CaseSummary.model_validate_json(sp.read_text())
+        context = json.loads(cp.read_text())
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=f"cache read failed: {type(e).__name__}: {e}")
+
+    model = body.get("model") or CHAT_DEFAULT_MODEL
+    try:
+        reply = chat_about_sample(
+            messages, bundle=bundle, summary=summary, context=context, model=model,
+        )
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=f"{type(e).__name__}: {e}")
+    return {"reply": reply, "model": model}
 
 
 @app.post("/api/run/{run_id}/prewarm")
