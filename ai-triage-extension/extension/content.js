@@ -412,20 +412,20 @@ async function renderForPanel(panel) {
   if (cached) {
     applyPriorityClass(card, cached);
     card.innerHTML = renderCard(cached);
-    ensureChatPanel(panel, card, sample.id, /*ready=*/ true);
+    ensureChatPanel(panel, card, sample, /*ready=*/ true);
     return;
   }
   card.classList.add("sophia-loading");
   card.innerHTML = renderCard(null, { loading: true });
   // Chat panel rendered immediately but disabled until the summary lands —
   // pathologist sees it spawning, so the affordance is obvious from the start.
-  ensureChatPanel(panel, card, sample.id, /*ready=*/ false);
+  ensureChatPanel(panel, card, sample, /*ready=*/ false);
   try {
     const env = await fetchSampleSummary(sample.id);
     if (card.dataset.sampleId === String(sample.id)) {
       applyPriorityClass(card, env);
       card.innerHTML = renderCard(env);
-      ensureChatPanel(panel, card, sample.id, /*ready=*/ true);
+      ensureChatPanel(panel, card, sample, /*ready=*/ true);
     }
   } catch (e) {
     if (card.dataset.sampleId === String(sample.id)) {
@@ -437,7 +437,9 @@ async function renderForPanel(panel) {
 
 // ---- Chat panel ----
 
-function ensureChatPanel(panel, anchorCard, sampleId, ready) {
+function ensureChatPanel(panel, anchorCard, sample, ready) {
+  const sampleId = sample.id;
+  const userRef = sample.user_ref || "";
   let chat = panel.querySelector(`#${PANEL_CHAT_ID}`);
   const sidStr = String(sampleId);
   if (!chat) {
@@ -450,22 +452,28 @@ function ensureChatPanel(panel, anchorCard, sampleId, ready) {
       panel.appendChild(chat);
     }
     chat.dataset.sampleId = sidStr;
-    initChatPanel(chat, sampleId);
+    initChatPanel(chat, sampleId, userRef);
   } else if (chat.dataset.sampleId !== sidStr) {
     // Sample changed — reset DOM and re-bind handlers for the new sample.
     chat.dataset.sampleId = sidStr;
-    initChatPanel(chat, sampleId);
+    initChatPanel(chat, sampleId, userRef);
   }
   setChatReady(chat, ready);
   renderChatMessages(chat, sampleId);
   return chat;
 }
 
-function initChatPanel(container, sampleId) {
+function initChatPanel(container, sampleId, userRef) {
+  const scopeChip = userRef
+    ? `<span class="sophia-chat-scope-chip" title="Chat is scoped to this case only">${escapeHtml(userRef)}</span>`
+    : "";
   container.innerHTML = `
     <div class="sophia-chat-eyebrow">
-      <span class="sophia-eyebrow">SOPHiA AI · Chat</span>
-      <span class="sophia-chat-disclaimer">Verify clinical claims independently.</span>
+      <span class="sophia-chat-eyebrow-left">
+        <span class="sophia-eyebrow">SOPHiA AI · Case Chat</span>
+        ${scopeChip}
+      </span>
+      <span class="sophia-chat-disclaimer">Single-case scope · verify clinical claims</span>
     </div>
     <div class="sophia-chat-messages"></div>
     <form class="sophia-chat-form">
