@@ -45,10 +45,10 @@ function injectIfNeeded() {
   const welcome = findWelcomeElement();
   if (!welcome) return;
   const btn = buildButton();
-  // Place the button immediately after the Welcome element, in the same row.
-  // Wrap in an inline-flex container if the parent isn't already flex,
-  // so the button sits on the same line.
-  welcome.insertAdjacentElement("afterend", btn);
+  // Insert as the last child of the Welcome element so it sits on the same
+  // baseline as the text. Inserting `afterend` puts the button on its own
+  // line because the Welcome heading is a block-level element.
+  welcome.appendChild(btn);
 }
 
 // Initial pass + observe DOM mutations so we re-inject after SPA route
