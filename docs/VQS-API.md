@@ -68,7 +68,7 @@ Authorization: Bearer <IAM_TOKEN>
 
 The IAM_TOKEN you can get from https://iam-vandv.sophiagenetics.com/account/token , field `access_token`, or by checking the requests sent from the front-end to the service. Any token there will be valid for 1 hour.
 
-![alt text](iam-token.png)
+(Screenshot of the token page removed.)
 
 ---
 
