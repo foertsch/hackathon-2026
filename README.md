@@ -49,7 +49,7 @@ An example pathologist's schedule is available here: [example_morning_week.pdf](
 
 <img width="1279" height="915" alt="example_schedule" src="https://github.com/user-attachments/assets/48f71a1a-c385-48c2-ac43-d0ada09a577e" />
 
-The extensions have been implemented into the platform. TODO screenshots
+Both extensions run in Chrome against the hackathon's SOPHiA DDM test instance. Screenshots: TODO.
 
 
 ## API access (Variant Query Service)
